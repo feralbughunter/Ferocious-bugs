@@ -10,6 +10,11 @@ https://feralbughunter.github.io/Ferocious-bugs/
 
 ## Bug reports
 
+### Adding a bug
+Copy one existing bug and change values in the bug_info.txt file, add screenshots.
+Make sure you are using a new number.  
+Add the new bug to the appropriate folder.  
+
 ### Bug Types
 * Item placement - Item incorrectly placed in the world.
 * Collision missing - Incorrect collision between an object an the player.
@@ -25,7 +30,7 @@ https://feralbughunter.github.io/Ferocious-bugs/
 Summarizes how much the bug breaks the game, breaks immersion or how visible it is.
 
 ### Bug Status
-* Unfixed - Bug has not been resolved yet
-* Fixed - Bug has been fixed in a newer version
-* Not a Bug - Reported issue is not considered a bug
+* fixed - Bug has been fixed in a newer version
+* unfixed - Bug has not been resolved yet
+* notabug - Reported issue is not considered a bug
  
