@@ -1,0 +1,10 @@
+Bug #25
+==================================================
+
+Description:
+The ship wreck itself can be reached and obviously should not be accessible. But it is interesting and players will try that.
+Campfire: Shipwreck beach
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always

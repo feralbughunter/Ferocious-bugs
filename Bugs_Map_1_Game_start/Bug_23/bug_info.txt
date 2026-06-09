@@ -1,0 +1,10 @@
+Bug #23
+==================================================
+
+Description:
+Read prompt with nothing to read, paper is invisible. Right behind the campfire. This paper caused a problem with missing progression. The mission here is to find the boat, the map marker is at the boat, but to actually update the quest, you need to read this paper. I thought I needed to find the boat. When you come close to the boat a voice line will play but the map marker will not update. I reloaded a safe here and did not re-read the paper. You can finish the map but get stuck on the cable cart not moving. This quest should either update when you find the boat or say something else to make the player look for the paper which should not be invisible. From this point on all screenshots will show incorrect mark for the boat until I return here after clearing the whole level.
+Campfire: Shipwreck beach
+
+Type: Game breaking
+Severity: High
+Reproducibility: Always

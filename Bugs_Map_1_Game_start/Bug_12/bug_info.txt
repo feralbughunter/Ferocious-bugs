@@ -1,0 +1,10 @@
+Bug #12
+==================================================
+
+Description:
+Non solid rock. Plus the stick in front of the nearby bridge can not be picked up (only from further distance).
+Campfire: Plateau
+
+Type: Collision missing, Interaction issue
+Severity: Low
+Reproducibility: Always

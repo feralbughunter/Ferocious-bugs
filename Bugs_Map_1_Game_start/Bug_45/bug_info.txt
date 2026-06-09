@@ -1,0 +1,9 @@
+Bug #45
+==================================================
+
+Description:
+Floating object in the distance behind the final base.
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

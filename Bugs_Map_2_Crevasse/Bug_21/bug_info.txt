@@ -1,0 +1,9 @@
+Bug #21
+==================================================
+
+Description:
+Is this dinosaur supposed to be making any sound? He looks like he is, but he is silent.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always

@@ -1,0 +1,10 @@
+Bug #39
+==================================================
+
+Description:
+The back of these boats have no collision. These boats have some sort of a marker on them which is not explained in the map legend. These markers appeared with no explanation when you come closer. I do not know what to do here. They are probably for a side quest, so they should appear only when the side quest is active. You can not blow the boats up, or damage them.
+Campfire: Manifesto Dock Beach
+
+Type: Collision missing, Player confusion, Game breaking
+Severity: High
+Reproducibility: Always

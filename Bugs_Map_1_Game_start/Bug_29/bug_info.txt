@@ -1,0 +1,9 @@
+Bug #29
+==================================================
+
+Description:
+North island temple can be accessed without the key by jumping through a non solid rock. The rocks up here look walkable, I thought I could just go this way and I should not be able to.
+
+Type: Invisible wall
+Severity: Medium
+Reproducibility: Always

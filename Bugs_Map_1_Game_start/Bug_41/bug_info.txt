@@ -1,0 +1,9 @@
+Bug #41
+==================================================
+
+Description:
+The final cable cart base of the map inside the cell, the ceiling light is very low. This issue is present in multiple locations and throws too much blinding light on the table.
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

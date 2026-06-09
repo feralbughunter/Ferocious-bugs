@@ -1,0 +1,10 @@
+Bug #22
+==================================================
+
+Description:
+This forklift has an invisible wall on top of the box which blocks bullets.
+Campfire: Shipwreck beach
+
+Type: Invisible wall
+Severity: Medium
+Reproducibility: Always

@@ -1,0 +1,9 @@
+Bug #10
+==================================================
+
+Description:
+Dryosaurs sometimes make a very loud running sound not appropriate for their size which sounds like someone dragging a rock on the floor. It sounds odd.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Sometimes

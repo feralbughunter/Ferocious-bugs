@@ -1,0 +1,9 @@
+Bug #46
+==================================================
+
+Description:
+A hole in the level. You can swim here from the final base and you can escape the map from here.
+
+Type: Level escape
+Severity: Medium
+Reproducibility: Always

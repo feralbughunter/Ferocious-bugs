@@ -1,0 +1,10 @@
+Bug #34
+==================================================
+
+Description:
+The bridge generator on the roof is not solid if you stand too close. Activating it makes no sound either.
+Campfire: Bridge South
+
+Type: Player confusion, Broken logic
+Severity: High
+Reproducibility: Always

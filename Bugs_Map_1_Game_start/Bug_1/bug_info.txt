@@ -1,0 +1,10 @@
+Bug #1
+==================================================
+
+Description:
+Floating objects in the cave area with the first mechanical door on the bridge. When I came back here later, these objects were gone. They showed up only when passing through here after starting the game from the beginning.
+Campfire: Burning Variant
+
+Type: Item placement
+Severity: Low
+Reproducibility: On first passthrough

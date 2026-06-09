@@ -1,0 +1,9 @@
+Bug #7
+==================================================
+
+Description:
+Shells clipping through shotgun. Happens only sometimes, sometimes the game starts without this.
+
+Type: Broken model
+Severity: High
+Reproducibility: Sometimes

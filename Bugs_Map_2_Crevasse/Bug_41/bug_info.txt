@@ -1,0 +1,10 @@
+Bug #41
+==================================================
+
+Description:
+Empty readable paper in the radio tower locked room.
+Campfire: Lowlands gate
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always

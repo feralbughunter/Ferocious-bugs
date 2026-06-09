@@ -1,0 +1,10 @@
+Bug #19
+==================================================
+
+Description:
+In waterfall temple the statue and rope are floating.
+Campfire: River valley
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

@@ -1,0 +1,10 @@
+Bug #32
+==================================================
+
+Description:
+Multiple Hold ladder prompts out of place. Right in front of the bridge on the first barricade.
+Campfire: Bridge South
+
+Type: Interaction issue
+Severity: Medium
+Reproducibility: Always

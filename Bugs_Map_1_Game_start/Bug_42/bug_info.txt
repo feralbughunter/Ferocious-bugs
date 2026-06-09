@@ -1,0 +1,10 @@
+Bug #42
+==================================================
+
+Description:
+Plesiosaurs stuck in the ground.
+Campfire: Manifesto Dock Beach
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

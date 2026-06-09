@@ -1,0 +1,10 @@
+Bug #2
+==================================================
+
+Description:
+Non-solid rock in front of the first temple and first soldier fight.
+Campfire: First Manifesto Camp
+
+Type: Collision missing
+Severity: Low
+Reproducibility: Always

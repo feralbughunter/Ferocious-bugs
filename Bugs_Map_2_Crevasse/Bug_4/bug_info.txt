@@ -1,0 +1,9 @@
+Bug #4
+==================================================
+
+Description:
+Max health potion has a None string instead of description in the diary.
+
+Type: Game breaking
+Severity: High
+Reproducibility: Always

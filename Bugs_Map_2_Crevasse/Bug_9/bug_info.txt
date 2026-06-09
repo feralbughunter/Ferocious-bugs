@@ -1,0 +1,9 @@
+Bug #9
+==================================================
+
+Description:
+The rope symbol is not explained in the map legend.
+
+Type: Player confusion, Broken logic
+Severity: High
+Reproducibility: Always

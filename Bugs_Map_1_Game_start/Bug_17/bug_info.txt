@@ -1,0 +1,10 @@
+Bug #17
+==================================================
+
+Description:
+The door is not solid on the first outside floor of the tower.
+Campfire: Lighthouse
+
+Type: Collision missing
+Severity: Low
+Reproducibility: Always

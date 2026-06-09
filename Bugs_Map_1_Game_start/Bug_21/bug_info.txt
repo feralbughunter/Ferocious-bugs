@@ -1,0 +1,10 @@
+Bug #21
+==================================================
+
+Description:
+Invisible wall in front of this box, it can not be approached.
+Campfire: Shipwreck in the caves next to the door to the next area
+
+Type: Invisible wall
+Severity: High
+Reproducibility: Always

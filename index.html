@@ -3,44 +3,2667 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferocious Bugs</title>
+    <title>Bug Report</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
             color: #333;
+            background: #f5f5f5;
+            padding: 20px;
         }
-        a {
-            display: inline-block;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+
+        h3 {
+            color: #2c3e50;
             margin-top: 20px;
-            padding: 12px 24px;
-            background-color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .info-section {
+            background: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .bug-types, .severity-info {
+            margin: 10px 0;
+        }
+
+        .bug-types ul, .severity-info p {
+            margin-left: 20px;
+        }
+
+        .map-section {
+            margin-top: 40px;
+            border-top: 2px solid #bdc3c7;
+            padding-top: 20px;
+        }
+
+        .bug-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .bug-list li {
+            margin: 8px 0;
+            padding: 10px;
+            background: #f8f9fa;
+            border-left: 4px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .bug-list li:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .bug-list a {
+            text-decoration: none;
+            color: #2c3e50;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .severity-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.85em;
+            font-weight: bold;
+            min-width: 70px;
+            text-align: center;
+        }
+
+        .severity-low {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .severity-medium {
+            background: #f39c12;
+            color: white;
+        }
+
+        .severity-high {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .severity-critical {
+            background: #c0392b;
+            color: white;
+        }
+
+        .severity-unknown {
+            background: #95a5a6;
+            color: white;
+        }
+
+        .bug-type {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .bug-detail {
+            margin: 40px 0;
+            padding: 20px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .bug-detail h3 {
+            color: #2980b9;
+            margin-top: 0;
+        }
+
+        .bug-info {
+            margin: 15px 0;
+        }
+
+        .bug-info strong {
+            color: #34495e;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .status-fixed {
+            background: #27ae60;
+            color: white;
+        }
+
+        .status-unfixed {
+            background: #e67e22;
+            color: white;
+        }
+
+        .bug-images {
+            margin-top: 20px;
+        }
+
+        .bug-images img {
+            max-width: 100%;
+            height: auto;
+            margin: 10px 10px 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .bug-images img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 15px;
+            background: #3498db;
             color: white;
             text-decoration: none;
-            border-radius: 4px;
-            transition: background-color 0.3s;
+            border-radius: 3px;
+            transition: background 0.2s;
         }
-        a:hover {
-            background-color: #0056b3;
+
+        .back-to-top:hover {
+            background: #2980b9;
+        }
+
+        .version-tag {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            margin-left: 10px;
+        }
+
+        .bug-count {
+            display: inline-block;
+            background: #95a5a6;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 0.9em;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ferocious Bugs</h1>
-        <p>Welcome to the Ferocious Bugs collection.</p>
-        <a href="Bugs_Map_1/Ferociousbugsmap1.html">View Bugs Map 1</a>
+        <h1>Bug Report</h1>
+
+        <div class="info-section">
+            <h2>General Information</h2>
+            <p><strong>Total Bugs Found:</strong> 94</p>
+
+            <div class="bug-types">
+                <h3>Bug Types</h3>
+                <ul>
+                    <li>Item placement - Item incorrectly placed in the world.</li>
+                    <li>Collision missing - Incorrect collision between an object an the player.</li>
+                    <li>Level escape - A way to escape behind the playable map.</li>
+                    <li>Broken model - World object with broken physics, joints, sound...</li>
+                    <li>Interaction issue - A problem with using an object.</li>
+                    <li>Player confusion - A problem that mystifies the player.</li>
+                    <li>Invisible wall - An invisible wall blocking the player.</li>
+                    <li>Game breaking - Major issue leading making it impossible to continue the game or accessing an important objective.</li>
+                    <li>Broken logic - Events happening out of order or not at all.</li>
+
+                </ul>
+            </div>
+
+            <div class="severity-info">
+                <h3>Severity</h3>
+                <p>Summarizes how much the bug breaks the game, breaks immersion or how visible it is.</p>
+            </div>
+        </div>
+
+        <div class="map-section">
+            <h2>Map 1: Game start<span class="version-tag">Version: 1.08.162.3935</span><span class="bug-count">49 bugs</span></h2>
+
+            <ul class="bug-list">
+                <li>
+                    <a href="#bug-Game start-1">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 1 Bug #1 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-2">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 1 Bug #2 - <span class="bug-type">Collision missing</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-3">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #3 - <span class="bug-type">Level escape</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-4">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #4 - <span class="bug-type">Broken model</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-5">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #5 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-6">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #6 - <span class="bug-type">Broken model</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-7">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #7 - <span class="bug-type">Broken model</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-8">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #8 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-9">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #9 - <span class="bug-type">Interaction issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-10">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #10 - <span class="bug-type">Collision missing</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-11">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 1 Bug #11 - <span class="bug-type">Collision missing</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-12">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 1 Bug #12 - <span class="bug-type">Collision missing, Interaction issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-13">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #13 - <span class="bug-type">Item placement, Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-14">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #14 - <span class="bug-type">Interaction issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-15">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #15 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-16">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #16 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-17">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 1 Bug #17 - <span class="bug-type">Collision missing</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-18">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #18 - <span class="bug-type">Broken model, Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-19">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #19 - <span class="bug-type">Player confusion, Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-20">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #20 - <span class="bug-type">Collision missing</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-21">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #21 - <span class="bug-type">Invisible wall</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-22">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #22 - <span class="bug-type">Invisible wall</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-23">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #23 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-24">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #24 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-25">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #25 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-26">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #26 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-27">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #27 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-28">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #28 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-29">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #29 - <span class="bug-type">Invisible wall</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-30">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #30 - <span class="bug-type">Invisible wall</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-31">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #31 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-32">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #32 - <span class="bug-type">Interaction issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-33">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #33 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-34">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #34 - <span class="bug-type">Player confusion, Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-35">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #35 - <span class="bug-type">Collision missing, Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-36">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #36 - <span class="bug-type">Interaction issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-37">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #37 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-38">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #38 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-39">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #39 - <span class="bug-type">Collision missing, Player confusion, Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-40">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 1 Bug #40 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-41">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #41 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-42">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #42 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-43">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #43 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-44">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #44 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-45">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #45 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-46">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 1 Bug #46 - <span class="bug-type">Level escape</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-47">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #47 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-48">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #48 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Game start-49">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 1 Bug #49 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="map-section">
+            <h2>Map 2: Crevasse<span class="version-tag">Version: 1.08.162.3935</span><span class="bug-count">45 bugs</span></h2>
+
+            <ul class="bug-list">
+                <li>
+                    <a href="#bug-Crevasse-1">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 2 Bug #1 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-2">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #2 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-3">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 2 Bug #3 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-4">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #4 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-5">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #5 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-6">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #6 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-7">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #7 - <span class="bug-type">Item placement, Broken logic, Interaction issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-8">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #8 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-9">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #9 - <span class="bug-type">Player confusion, Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-10">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #10 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-11">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 2 Bug #11 - <span class="bug-type">Broken model</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-12">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #12 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-13">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 2 Bug #13 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-14">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 2 Bug #14 - <span class="bug-type">Collision issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-15">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #15 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-16">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #16 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-17">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 2 Bug #17 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-18">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #18 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-19">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #19 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-20">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 2 Bug #20 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-21">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #21 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-22">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #22 - <span class="bug-type">Item placement, Broken logic,</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-23">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #23 - <span class="bug-type">Item placement, Broken model</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-24">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 2 Bug #24 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-25">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #25 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-26">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #26 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-27">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 2 Bug #27 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-30">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #30 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-31">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 2 Bug #31 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-32">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #32 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-33">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #33 - <span class="bug-type">Level escape, Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-34">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 2 Bug #34 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-35">
+                        <span class="severity-badge severity-low">Low</span>
+                        <span>Map 2 Bug #35 - <span class="bug-type">Collision missing</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-36">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #36 - <span class="bug-type">Game breaking, Invisible wall</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-37">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #37 - <span class="bug-type">Collision missing</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-38">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #38 - <span class="bug-type">Item placement</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-39">
+                        <span class="severity-badge severity-medium">Medium</span>
+                        <span>Map 2 Bug #39 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-40">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #40 - <span class="bug-type">Broken model</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-41">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #41 - <span class="bug-type">Player confusion</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-42">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #42 - <span class="bug-type">Item placement, Broken logic, Interaction issue</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-43">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #43 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-44">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #44 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-45">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #45 - <span class="bug-type">Game breaking</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-46">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #46 - <span class="bug-type">Item placement, Broken model, Invisible wall</span></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#bug-Crevasse-47">
+                        <span class="severity-badge severity-high">High</span>
+                        <span>Map 2 Bug #47 - <span class="bug-type">Broken logic</span></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <h2>Bug Details</h2>
+
+        <div class="bug-detail" id="bug-Game start-1">
+            <h3>Map 1 Bug #1 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Floating objects in the cave area with the first mechanical door on the bridge. When I came back here later, these objects were gone. They showed up only when passing through here after starting the game from the beginning.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> On first passthrough</p>
+                <p><strong>Campfire:</strong> Burning Variant</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_1/image19.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_1/image19.jpg" alt="Bug #1 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_1/image30.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_1/image30.jpg" alt="Bug #1 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_1/image41.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_1/image41.jpg" alt="Bug #1 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_1/image97.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_1/image97.jpg" alt="Bug #1 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-2">
+            <h3>Map 1 Bug #2 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Non-solid rock in front of the first temple and first soldier fight.</p>
+                <p><strong>Type:</strong> Collision missing</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> First Manifesto Camp</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_2/image101.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_2/image101.jpg" alt="Bug #2 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_2/image58.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_2/image58.jpg" alt="Bug #2 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_2/image68.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_2/image68.jpg" alt="Bug #2 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-3">
+            <h3>Map 1 Bug #3 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Level escape leading to an area with the underside of the map visible on top of the first mechanical door cave. I found it by exploring the level and coming across a cave that you can crouch into.</p>
+                <p><strong>Type:</strong> Level escape</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> First Manifesto Camp</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_3/image43.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_3/image43.jpg" alt="Bug #3 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_3/image61.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_3/image61.jpg" alt="Bug #3 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_3/image90.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_3/image90.jpg" alt="Bug #3 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_3/image95.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_3/image95.jpg" alt="Bug #3 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-4">
+            <h3>Map 1 Bug #4 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Broken rope is not long enough. You can climb down, see the end of the rope above you and climb on thin air.</p>
+                <p><strong>Type:</strong> Broken model</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Sea cave temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_4/image5.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_4/image5.jpg" alt="Bug #4 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_4/image9.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_4/image9.jpg" alt="Bug #4 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-5">
+            <h3>Map 1 Bug #5 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Paper clips through the box when opened at the beached ship.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Sea Cave</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_5/image25.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_5/image25.jpg" alt="Bug #5 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_5/image81.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_5/image81.jpg" alt="Bug #5 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-6">
+            <h3>Map 1 Bug #6 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Hand clips through spear.</p>
+                <p><strong>Type:</strong> Broken model</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Sometimes</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_6/image53.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_6/image53.jpg" alt="Bug #6 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-7">
+            <h3>Map 1 Bug #7 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Shells clipping through shotgun. Happens only sometimes, sometimes the game starts without this.</p>
+                <p><strong>Type:</strong> Broken model</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Sometimes</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_7/image52.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_7/image52.jpg" alt="Bug #7 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-8">
+            <h3>Map 1 Bug #8 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Object inside terrain.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Manifesto Outpost A Cliff</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_8/image78.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_8/image78.jpg" alt="Bug #8 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_8/image84.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_8/image84.jpg" alt="Bug #8 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-9">
+            <h3>Map 1 Bug #9 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Radio placed in the cave outpost near the beached dead shark has an interaction dot but can not be interacted with.</p>
+                <p><strong>Type:</strong> Interaction issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Manifesto Outpost A Beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_9/image27.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_9/image27.jpg" alt="Bug #9 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_9/image89.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_9/image89.jpg" alt="Bug #9 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-10">
+            <h3>Map 1 Bug #10 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Parts of the dead shark are not solid.</p>
+                <p><strong>Type:</strong> Collision missing</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Manifesto Outpost A Beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_10/image31.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_10/image31.jpg" alt="Bug #10 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_10/image64.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_10/image64.jpg" alt="Bug #10 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-11">
+            <h3>Map 1 Bug #11 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Rocks with no collision. At the area of the first raptor encounter.</p>
+                <p><strong>Type:</strong> Collision missing</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_11/image67.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_11/image67.jpg" alt="Bug #11 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_11/image91.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_11/image91.jpg" alt="Bug #11 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-12">
+            <h3>Map 1 Bug #12 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Non solid rock. Plus the stick in front of the nearby bridge can not be picked up (only from further distance).</p>
+                <p><strong>Type:</strong> Collision missing, Interaction issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Plateau</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_12/image40.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_12/image40.jpg" alt="Bug #12 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_12/image74.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_12/image74.jpg" alt="Bug #12 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-13">
+            <h3>Map 1 Bug #13 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Ammo falls through the box, if the box is destroyed the gun stays floating, no sound when the box is destroyed, no debris either.</p>
+                <p><strong>Type:</strong> Item placement, Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Plateau</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_13/image32.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_13/image32.jpg" alt="Bug #13 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_13/image79.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_13/image79.jpg" alt="Bug #13 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_13/image85.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_13/image85.jpg" alt="Bug #13 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-14">
+            <h3>Map 1 Bug #14 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Some object visible through rocks but not intractable.</p>
+                <p><strong>Type:</strong> Interaction issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Burning variant in the corridor to the first soldier encounter</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_14/image12.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_14/image12.jpg" alt="Bug #14 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_14/image72.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_14/image72.jpg" alt="Bug #14 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-15">
+            <h3>Map 1 Bug #15 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Crafting ammo pouches should tell which weapons it is for as an example for easier decision making. I do not know what ammo smg uses, heavy or rifle? If an item can only be crafted once, it should disappear or be disabled in the list once it can not be made anymore. Primary holster has this problem and some other items too.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-16">
+            <h3>Map 1 Bug #16 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Ceiling light in an awkward position. Large outpost basement.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Lighthouse</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_16/image33.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_16/image33.jpg" alt="Bug #16 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_16/image38.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_16/image38.jpg" alt="Bug #16 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_16/image69.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_16/image69.jpg" alt="Bug #16 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-17">
+            <h3>Map 1 Bug #17 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The door is not solid on the first outside floor of the tower.</p>
+                <p><strong>Type:</strong> Collision missing</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Lighthouse</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_17/image18.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_17/image18.jpg" alt="Bug #17 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_17/image37.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_17/image37.jpg" alt="Bug #17 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_17/image83.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_17/image83.jpg" alt="Bug #17 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-18">
+            <h3>Map 1 Bug #18 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Breaking a box with melee plays a sound, nothing happens and a second or third hit breaks it.</p>
+                <p><strong>Type:</strong> Broken model, Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always You can peek inside toilets. 😀</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_18/image73.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_18/image73.jpg" alt="Bug #18 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_18/image93.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_18/image93.jpg" alt="Bug #18 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-19">
+            <h3>Map 1 Bug #19 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The elevator down to the crab nest makes no sound and no stop sound. Or it is too quiet. If you stand on the edge of the elevator, the metal bars are not solid, they go through you.</p>
+                <p><strong>Type:</strong> Player confusion, Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Lighthouse</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_19/image26.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_19/image26.jpg" alt="Bug #19 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_19/image55.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_19/image55.jpg" alt="Bug #19 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-20">
+            <h3>Map 1 Bug #20 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The dead crab boss is not solid.</p>
+                <p><strong>Type:</strong> Collision missing</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_20/image22.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_20/image22.jpg" alt="Bug #20 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_20/image35.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_20/image35.jpg" alt="Bug #20 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-21">
+            <h3>Map 1 Bug #21 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Invisible wall in front of this box, it can not be approached.</p>
+                <p><strong>Type:</strong> Invisible wall</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Shipwreck in the caves next to the door to the next area</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_21/image46.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_21/image46.jpg" alt="Bug #21 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_21/image99.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_21/image99.jpg" alt="Bug #21 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-22">
+            <h3>Map 1 Bug #22 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> This forklift has an invisible wall on top of the box which blocks bullets.</p>
+                <p><strong>Type:</strong> Invisible wall</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Shipwreck beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_22/image1.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_22/image1.jpg" alt="Bug #22 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_22/image51.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_22/image51.jpg" alt="Bug #22 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-23">
+            <h3>Map 1 Bug #23 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Read prompt with nothing to read, paper is invisible. Right behind the campfire. This paper caused a problem with missing progression. The mission here is to find the boat, the map marker is at the boat, but to actually update the quest, you need to read this paper. I thought I needed to find the boat. When you come close to the boat a voice line will play but the map marker will not update. I reloaded a safe here and did not re-read the paper. You can finish the map but get stuck on the cable cart not moving. This quest should either update when you find the boat or say something else to make the player look for the paper which should not be invisible. From this point on all screenshots will show incorrect mark for the boat until I return here after clearing the whole level.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Shipwreck beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_23/image28.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_23/image28.jpg" alt="Bug #23 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_23/image92.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_23/image92.jpg" alt="Bug #23 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-24">
+            <h3>Map 1 Bug #24 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Read prompt with nothing to read, paper is invisible. Blue container on the beach.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Shipwreck beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_24/image16.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_24/image16.jpg" alt="Bug #24 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_24/image62.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_24/image62.jpg" alt="Bug #24 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-25">
+            <h3>Map 1 Bug #25 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The ship wreck itself can be reached and obviously should not be accessible. But it is interesting and players will try that.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Shipwreck beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_25/image70.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_25/image70.jpg" alt="Bug #25 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_25/image88.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_25/image88.jpg" alt="Bug #25 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-26">
+            <h3>Map 1 Bug #26 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Nothing in the game teaches you you can smash rocks, it is not glowing, has no marker. But the hole looks like you could jump through it. This was not intuitive at all. Hitting the rocks makes no sound and gives you no indication you are doing something possible.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Temple North</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_26/image20.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_26/image20.jpg" alt="Bug #26 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_26/image44.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_26/image44.jpg" alt="Bug #26 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-27">
+            <h3>Map 1 Bug #27 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Picking up a collectible shows 1x at the bottom of the screen with no text label of what you picked up.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_27/image6.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_27/image6.jpg" alt="Bug #27 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-28">
+            <h3>Map 1 Bug #28 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> You can skin an animal even though your inventory is full wasting resources. It could say inventory is full and prevent that.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-29">
+            <h3>Map 1 Bug #29 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> North island temple can be accessed without the key by jumping through a non solid rock. The rocks up here look walkable, I thought I could just go this way and I should not be able to.</p>
+                <p><strong>Type:</strong> Invisible wall</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_29/image4.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_29/image4.jpg" alt="Bug #29 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_29/image50.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_29/image50.jpg" alt="Bug #29 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_29/image76.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_29/image76.jpg" alt="Bug #29 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-30">
+            <h3>Map 1 Bug #30 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> There is an invisible wall here preventing the player from going through. Collapsed temple accessible after getting the first car. And there is no rope here climbing down.</p>
+                <p><strong>Type:</strong> Invisible wall</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Shipwreck Cove Dock</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_30/image2.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_30/image2.jpg" alt="Bug #30 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_30/image54.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_30/image54.jpg" alt="Bug #30 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_30/image71.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_30/image71.jpg" alt="Bug #30 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-31">
+            <h3>Map 1 Bug #31 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Read button away from the paper. Bridge outpost. A grenade exploded here, I am not sure if that can move it.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Bridge South</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_31/image57.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_31/image57.jpg" alt="Bug #31 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_31/image82.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_31/image82.jpg" alt="Bug #31 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-32">
+            <h3>Map 1 Bug #32 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Multiple Hold ladder prompts out of place. Right in front of the bridge on the first barricade.</p>
+                <p><strong>Type:</strong> Interaction issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Bridge South</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_32/image10.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_32/image10.jpg" alt="Bug #32 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_32/image15.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_32/image15.jpg" alt="Bug #32 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_32/image34.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_32/image34.jpg" alt="Bug #32 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-33">
+            <h3>Map 1 Bug #33 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Stick inside rock. Down on the ledge accessible by the ladder on the side.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Bridge South</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_33/image45.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_33/image45.jpg" alt="Bug #33 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_33/image80.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_33/image80.jpg" alt="Bug #33 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-34">
+            <h3>Map 1 Bug #34 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The bridge generator on the roof is not solid if you stand too close. Activating it makes no sound either.</p>
+                <p><strong>Type:</strong> Player confusion, Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Bridge South</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_34/image24.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_34/image24.jpg" alt="Bug #34 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_34/image86.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_34/image86.jpg" alt="Bug #34 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-35">
+            <h3>Map 1 Bug #35 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> These blocks on the bridge are not exactly solid. The dead bodies here will repeatedly become lootable when later saves are loaded and the player returns here. You can farm cloth this way.</p>
+                <p><strong>Type:</strong> Collision missing, Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Bridge West</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_35/image65.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_35/image65.jpg" alt="Bug #35 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_35/image87.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_35/image87.jpg" alt="Bug #35 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-36">
+            <h3>Map 1 Bug #36 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Interaction dots for unknown items on top of the tower on the other side of the bridge.</p>
+                <p><strong>Type:</strong> Interaction issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Bridge West</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_36/image3.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_36/image3.jpg" alt="Bug #36 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_36/image60.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_36/image60.jpg" alt="Bug #36 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-37">
+            <h3>Map 1 Bug #37 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> This door when approached has a dot but can not be opened unless you jam yourself almost through it on a specific angle and jump. Leading to Temple Summit.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Temple South</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_37/image29.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_37/image29.jpg" alt="Bug #37 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_37/image36.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_37/image36.jpg" alt="Bug #37 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_37/image66.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_37/image66.jpg" alt="Bug #37 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-38">
+            <h3>Map 1 Bug #38 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Broken terrain. Hole through the level. I was going to the outpost with the boats below, this felt like a viable route and nothing stopped me.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Temple South</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_38/image59.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_38/image59.jpg" alt="Bug #38 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_38/image7.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_38/image7.jpg" alt="Bug #38 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-39">
+            <h3>Map 1 Bug #39 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The back of these boats have no collision. These boats have some sort of a marker on them which is not explained in the map legend. These markers appeared with no explanation when you come closer. I do not know what to do here. They are probably for a side quest, so they should appear only when the side quest is active. You can not blow the boats up, or damage them.</p>
+                <p><strong>Type:</strong> Collision missing, Player confusion, Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Manifesto Dock Beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_39/image100.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_39/image100.jpg" alt="Bug #39 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_39/image21.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_39/image21.jpg" alt="Bug #39 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-40">
+            <h3>Map 1 Bug #40 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Floating objects on the road to the final base.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Bridge West</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_40/image13.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_40/image13.jpg" alt="Bug #40 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_40/image56.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_40/image56.jpg" alt="Bug #40 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-41">
+            <h3>Map 1 Bug #41 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The final cable cart base of the map inside the cell, the ceiling light is very low. This issue is present in multiple locations and throws too much blinding light on the table.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_41/image17.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_41/image17.jpg" alt="Bug #41 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_41/image39.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_41/image39.jpg" alt="Bug #41 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-42">
+            <h3>Map 1 Bug #42 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Plesiosaurs stuck in the ground.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Manifesto Dock Beach</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_42/image47.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_42/image47.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_42/image98.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_42/image98.jpg" alt="Bug #42 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-43">
+            <h3>Map 1 Bug #43 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Oddly placed ladder. Using this ladder and falling off the top of it makes you unable to swim sometimes. You can walk on the sea floor and not drown.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_43/image14.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_43/image14.jpg" alt="Bug #43 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_43/image75.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_43/image75.jpg" alt="Bug #43 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-44">
+            <h3>Map 1 Bug #44 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> A block of water with empty space at the other end in the basement of the final base of the first map.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_44/image63.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_44/image63.jpg" alt="Bug #44 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_44/image77.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_44/image77.jpg" alt="Bug #44 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-45">
+            <h3>Map 1 Bug #45 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> Floating object in the distance behind the final base.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_45/image48.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_45/image48.jpg" alt="Bug #45 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_45/image8.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_45/image8.jpg" alt="Bug #45 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-46">
+            <h3>Map 1 Bug #46 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> A hole in the level. You can swim here from the final base and you can escape the map from here.</p>
+                <p><strong>Type:</strong> Level escape</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_46/image11.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_46/image11.jpg" alt="Bug #46 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_46/image23.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_46/image23.jpg" alt="Bug #46 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_46/image49.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_46/image49.jpg" alt="Bug #46 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_46/image96.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_46/image96.jpg" alt="Bug #46 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-47">
+            <h3>Map 1 Bug #47 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> It is impossible to take the cable car to the next level. This was caused by the Find the boat bug with the invisible paper explained earlier. The button is blinking, there is no interaction point and the ending voice lines at the table radio station inside the base never played. The problem was caused by the important paper inside the room in the Find the boat quest being invisible. You need to read this paper to progress the quest. Finding the boat itself is not enough even though a voice line will play there. I thought it was enough and therefore thought that the quest was stuck. Returning to this paper (still invisible), after clearing the rest of the level allows you to finish the map.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_1_Game_start/Bug_47/image42.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_47/image42.jpg" alt="Bug #47 screenshot"></a>
+                <a href="Bugs_Map_1_Game_start/Bug_47/image94.jpg" target="_blank"><img src="Bugs_Map_1_Game_start/Bug_47/image94.jpg" alt="Bug #47 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-48">
+            <h3>Map 1 Bug #48 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> The map ends without confirmation once you use the cable cart. In my opinion since you may have undiscovered secrets, you should have a choice to not end the level yet.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Game start-49">
+            <h3>Map 1 Bug #49 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 1 - Game start</p>
+                <p><strong>Description:</strong> I found several statues, cleared all the question marks and my Secrets page in the journal is empty.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-1">
+            <h3>Map 2 Bug #1 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Level immediately repeats that the game can only be saved at camp fires. The player must undoubtedly know that already after the first map. It is redundant. The same thing happens a little later with crouching and flashlight and navigation and silent kills.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> On first passthrough</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-2">
+            <h3>Map 2 Bug #2 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> In the first secret the gold is too deep in the altar. This issue is present in many locations.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Platforming</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_2/image26.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_2/image26.jpg" alt="Bug #2 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_2/image59.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_2/image59.jpg" alt="Bug #2 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_2/image82.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_2/image82.jpg" alt="Bug #2 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-3">
+            <h3>Map 2 Bug #3 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> At the first door of this map you can see the bars poking out the other end of the frame.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Canyons</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_3/image35.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_3/image35.jpg" alt="Bug #3 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_3/image91.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_3/image91.jpg" alt="Bug #3 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-4">
+            <h3>Map 2 Bug #4 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Max health potion has a None string instead of description in the diary.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_4/image69.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_4/image69.jpg" alt="Bug #4 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-5">
+            <h3>Map 2 Bug #5 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Gold too deep in stone.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Canyons</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_5/image22.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_5/image22.jpg" alt="Bug #5 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_5/image6.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_5/image6.jpg" alt="Bug #5 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_5/image86.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_5/image86.jpg" alt="Bug #5 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-6">
+            <h3>Map 2 Bug #6 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> This tent is in a very odd shape and has no collisions.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Dino skull</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_6/image7.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_6/image7.jpg" alt="Bug #6 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_6/image92.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_6/image92.jpg" alt="Bug #6 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-7">
+            <h3>Map 2 Bug #7 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> There is something stuck in the ceiling in the shed with the key and shop. The bodies here become repeatedly lootable when you quit the game and load the save again. You can farm resources this way. The body inside the key room is blinking, has a dot and can not be accessed to be looted.</p>
+                <p><strong>Type:</strong> Item placement, Broken logic, Interaction issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Manifesto checkpoint</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_7/image75.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_7/image75.jpg" alt="Bug #7 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_7/image78.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_7/image78.jpg" alt="Bug #7 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-8">
+            <h3>Map 2 Bug #8 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Ancient key is floating in mid air.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Manifesto checkpoint</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_8/image27.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_8/image27.jpg" alt="Bug #8 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_8/image51.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_8/image51.jpg" alt="Bug #8 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-9">
+            <h3>Map 2 Bug #9 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The rope symbol is not explained in the map legend.</p>
+                <p><strong>Type:</strong> Player confusion, Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_9/image44.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_9/image44.jpg" alt="Bug #9 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-10">
+            <h3>Map 2 Bug #10 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Dryosaurs sometimes make a very loud running sound not appropriate for their size which sounds like someone dragging a rock on the floor. It sounds odd.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Sometimes</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-11">
+            <h3>Map 2 Bug #11 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Something is wrong with their heads. Very disturbing. In front of the temple entrance. 😀 After returning later they were fine. Probably respawned.</p>
+                <p><strong>Type:</strong> Broken model</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Sometimes</p>
+                <p><strong>Campfire:</strong> Dino skull</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_11/image18.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_11/image18.jpg" alt="Bug #11 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_11/image33.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_11/image33.jpg" alt="Bug #11 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_11/image40.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_11/image40.jpg" alt="Bug #11 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_11/image65.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_11/image65.jpg" alt="Bug #11 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-12">
+            <h3>Map 2 Bug #12 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The temple upper portion with the rope attachment is somewhat off the ground.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Valley Temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_12/image21.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_12/image21.jpg" alt="Bug #12 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_12/image60.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_12/image60.jpg" alt="Bug #12 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-13">
+            <h3>Map 2 Bug #13 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The pistol icon on the map is not the same as the shop icon in the map legend.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_13/image72.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_13/image72.jpg" alt="Bug #13 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-14">
+            <h3>Map 2 Bug #14 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> This tree with eucalyptus has no collisions.</p>
+                <p><strong>Type:</strong> Collision issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Cliff temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_14/image28.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_14/image28.jpg" alt="Bug #14 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_14/image55.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_14/image55.jpg" alt="Bug #14 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_14/image66.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_14/image66.jpg" alt="Bug #14 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-15">
+            <h3>Map 2 Bug #15 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> You can loot boxes with full inventory and get nothing. It probably should prevent you from wasting resources this way.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-16">
+            <h3>Map 2 Bug #16 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Climbing wines reaching in through the ceiling.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Cliff temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_16/image16.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_16/image16.jpg" alt="Bug #16 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_16/image81.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_16/image81.jpg" alt="Bug #16 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-17">
+            <h3>Map 2 Bug #17 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> This bag changes color when you come closer.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Cliff temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_17/image13.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_17/image13.jpg" alt="Bug #17 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_17/image42.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_17/image42.jpg" alt="Bug #17 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_17/image84.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_17/image84.jpg" alt="Bug #17 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-18">
+            <h3>Map 2 Bug #18 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The leaves growing on the sliding door stay in place when the door is opened.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> River valley main entrance</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_18/image11.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_18/image11.jpg" alt="Bug #18 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_18/image61.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_18/image61.jpg" alt="Bug #18 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-19">
+            <h3>Map 2 Bug #19 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> In waterfall temple the statue and rope are floating.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> River valley</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_19/image10.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_19/image10.jpg" alt="Bug #19 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_19/image39.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_19/image39.jpg" alt="Bug #19 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-20">
+            <h3>Map 2 Bug #20 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> This tree is floating and not touching the ground.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> River valley</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_20/image30.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_20/image30.jpg" alt="Bug #20 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_20/image71.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_20/image71.jpg" alt="Bug #20 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-21">
+            <h3>Map 2 Bug #21 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Is this dinosaur supposed to be making any sound? He looks like he is, but he is silent.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_21/image3.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_21/image3.jpg" alt="Bug #21 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_21/image43.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_21/image43.jpg" alt="Bug #21 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-22">
+            <h3>Map 2 Bug #22 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Couple problems in this room prior to getting the DCD. The dryosaurs running around completely drown the audio with loud footsteps. The door sliders are visible on the other side of the frame. The black machine in the corner is not reflecting light. Voicelines here played fine.</p>
+                <p><strong>Type:</strong> Item placement, Broken logic,</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Franka’s exit</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_22/image1.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_22/image1.jpg" alt="Bug #22 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_22/image38.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_22/image38.jpg" alt="Bug #22 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_22/image4.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_22/image4.jpg" alt="Bug #22 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-23">
+            <h3>Map 2 Bug #23 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The DCD is embedded in the stone. And has an untextured display during animation.</p>
+                <p><strong>Type:</strong> Item placement, Broken model</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Franka’s exit</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_23/image25.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_23/image25.jpg" alt="Bug #23 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_23/image76.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_23/image76.jpg" alt="Bug #23 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-24">
+            <h3>Map 2 Bug #24 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The dryosaur hint is floating.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Franka’s exit</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_24/image17.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_24/image17.jpg" alt="Bug #24 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_24/image23.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_24/image23.jpg" alt="Bug #24 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-25">
+            <h3>Map 2 Bug #25 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Broken voice lines after walking through the door above. The player says “this.” And the woman replies “I tapped into their radio. Looks like they are bringing in some heavily armed reinforcements reinforcements for you.” Repeats the reinforcements twice.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-26">
+            <h3>Map 2 Bug #26 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Going down here after getting the DCD but climbing down using the rope will play the blue flower voice line even though I picked the flower up earlier using the temple key. The rope icon on the map will not disappear when a rope is attached.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Once</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_26/image5.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_26/image5.jpg" alt="Bug #26 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_26/image50.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_26/image50.jpg" alt="Bug #26 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_26/image89.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_26/image89.jpg" alt="Bug #26 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-27">
+            <h3>Map 2 Bug #27 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Dryosaur hint is floating and the gold is too deep in the stone you can not pick it up.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Dino skull</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_27/image77.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_27/image77.jpg" alt="Bug #27 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_27/image83.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_27/image83.jpg" alt="Bug #27 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_27/image93.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_27/image93.jpg" alt="Bug #27 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-30">
+            <h3>Map 2 Bug #30 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Campfires I made sometimes disappear when loaded.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_30/image62.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_30/image62.jpg" alt="Bug #30 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_30/image90.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_30/image90.jpg" alt="Bug #30 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-31">
+            <h3>Map 2 Bug #31 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> There are two hints here and the dryosaur ends up using the right hole instead of the left one anyway.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Cliff Temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_31/image12.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_31/image12.jpg" alt="Bug #31 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_31/image70.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_31/image70.jpg" alt="Bug #31 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-32">
+            <h3>Map 2 Bug #32 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The names are oddly cut.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_32/image37.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_32/image37.jpg" alt="Bug #32 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_32/image67.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_32/image67.jpg" alt="Bug #32 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-33">
+            <h3>Map 2 Bug #33 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Positioning a raptor in front of the lever door and petting him moves you to the other side of the door. The dryo hint is floating.</p>
+                <p><strong>Type:</strong> Level escape, Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Cliff Temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_33/image41.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_33/image41.jpg" alt="Bug #33 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_33/image47.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_33/image47.jpg" alt="Bug #33 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_33/image53.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_33/image53.jpg" alt="Bug #33 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_33/image73.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_33/image73.jpg" alt="Bug #33 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-34">
+            <h3>Map 2 Bug #34 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> These hints probably could disappear once used.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_34/image85.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_34/image85.jpg" alt="Bug #34 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-35">
+            <h3>Map 2 Bug #35 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> This arch you can jump on has no collision.</p>
+                <p><strong>Type:</strong> Collision missing</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-low">Low</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Trex temple</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_35/image15.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_35/image15.jpg" alt="Bug #35 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_35/image79.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_35/image79.jpg" alt="Bug #35 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_35/image80.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_35/image80.jpg" alt="Bug #35 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-36">
+            <h3>Map 2 Bug #36 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> You can walk here from the titanoceratops arena, there is an invisible wall here even though you could clearly pass through.</p>
+                <p><strong>Type:</strong> Game breaking, Invisible wall</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> River valley</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_36/image29.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_36/image29.jpg" alt="Bug #36 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_36/image45.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_36/image45.jpg" alt="Bug #36 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_36/image63.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_36/image63.jpg" alt="Bug #36 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-37">
+            <h3>Map 2 Bug #37 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Dead titanoceratops has no collisions.</p>
+                <p><strong>Type:</strong> Collision missing</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> River valley</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_37/image56.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_37/image56.jpg" alt="Bug #37 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_37/image57.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_37/image57.jpg" alt="Bug #37 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-38">
+            <h3>Map 2 Bug #38 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Gold is too deep in the stone.</p>
+                <p><strong>Type:</strong> Item placement</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Titan</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_38/image32.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_38/image32.jpg" alt="Bug #38 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_38/image64.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_38/image64.jpg" alt="Bug #38 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-39">
+            <h3>Map 2 Bug #39 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The player does not switch to swimming in this cove. You just run underwater.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-medium">Medium</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Titan</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_39/image49.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_39/image49.jpg" alt="Bug #39 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_39/image68.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_39/image68.jpg" alt="Bug #39 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-40">
+            <h3>Map 2 Bug #40 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> You can look into your arm when riding the titanoceratops.</p>
+                <p><strong>Type:</strong> Broken model</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_40/image48.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_40/image48.jpg" alt="Bug #40 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-41">
+            <h3>Map 2 Bug #41 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Empty readable paper in the radio tower locked room.</p>
+                <p><strong>Type:</strong> Player confusion</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Lowlands gate</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_41/image20.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_41/image20.jpg" alt="Bug #41 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_41/image88.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_41/image88.jpg" alt="Bug #41 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-42">
+            <h3>Map 2 Bug #42 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Couple problems with the final radio tower quest area. Titanoceratops has wrong collisions. The “Ahh I wish this was just a dream” voiceline repeats infinitely. Multiple hold the ladder points. Upon pressing the radio button, the interaction dot moves up with the gate and floats in front of you. The entire area had 2 soldiers defending it. If you save at the campfire next to the gate with the gate open and load the save, the gate will be closed and the button will need to be pressed again. After loading the game, the titanoceratops spawned once I left the area but not near me where I saved. Follow command does not work on the titanoceratops.</p>
+                <p><strong>Type:</strong> Item placement, Broken logic, Interaction issue</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always No titanoceratops after loading. Only spawned after going here.</p>
+                <p><strong>Campfire:</strong> Lowlands gate</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image2.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image2.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image20.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image20.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image24.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image24.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image31.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image31.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image46.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image46.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image58.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image58.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image74.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image74.jpg" alt="Bug #42 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_42/image87.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_42/image87.jpg" alt="Bug #42 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-43">
+            <h3>Map 2 Bug #43 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> Returning here later will repeat the voiceline about needing a key.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> River valley</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_43/image19.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_43/image19.jpg" alt="Bug #43 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_43/image54.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_43/image54.jpg" alt="Bug #43 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-44">
+            <h3>Map 2 Bug #44 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> I can not figure out how to get to this secret. It seems like you should take the ledge on the left and walk to the opening which you can do, but there is an invisible wall there and you can not jump into the cave. The other entrance from the Trex temple is blocked.</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> River valley</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_44/image34.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_44/image34.jpg" alt="Bug #44 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_44/image36.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_44/image36.jpg" alt="Bug #44 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-45">
+            <h3>Map 2 Bug #45 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> I can not figure out how to get the secret at the bottom of the map either</p>
+                <p><strong>Type:</strong> Game breaking</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always .</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_45/image14.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_45/image14.jpg" alt="Bug #45 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-46">
+            <h3>Map 2 Bug #46 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The final gate floats on the left and has no mechanism that would lift it. Also makes no sound. The titanoceratops should fit through it but can not. If you are not supposed to take this awesome animal with you, the exit should probably be smaller.</p>
+                <p><strong>Type:</strong> Item placement, Broken model, Invisible wall</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> Always</p>
+                <p><strong>Campfire:</strong> Lowlands gate</p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_46/image8.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_46/image8.jpg" alt="Bug #46 screenshot"></a>
+                <a href="Bugs_Map_2_Crevasse/Bug_46/image9.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_46/image9.jpg" alt="Bug #46 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
+        <div class="bug-detail" id="bug-Crevasse-47">
+            <h3>Map 2 Bug #47 <span class="status-badge status-unfixed">Unfixed</span></h3>
+
+            <div class="bug-info">
+                <p><strong>Map:</strong> 2 - Crevasse</p>
+                <p><strong>Description:</strong> The second map should end sooner, otherwise you can see the end of the level.</p>
+                <p><strong>Type:</strong> Broken logic</p>
+                <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
+                <p><strong>Reproducibility:</strong> </p>
+            </div>
+
+            <div class="bug-images">
+                <h4>Screenshots</h4>
+                <a href="Bugs_Map_2_Crevasse/Bug_47/image52.jpg" target="_blank"><img src="Bugs_Map_2_Crevasse/Bug_47/image52.jpg" alt="Bug #47 screenshot"></a>
+            </div>
+            <a href="#" class="back-to-top">↑ Back to Top</a>
+        </div>
+
     </div>
 </body>
 </html>

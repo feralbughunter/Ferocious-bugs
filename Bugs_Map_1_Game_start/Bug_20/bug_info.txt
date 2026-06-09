@@ -1,0 +1,9 @@
+Bug #20
+==================================================
+
+Description:
+The dead crab boss is not solid.
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always

@@ -1,0 +1,10 @@
+Bug #13
+==================================================
+
+Description:
+Ammo falls through the box, if the box is destroyed the gun stays floating, no sound when the box is destroyed, no debris either.
+Campfire: Plateau
+
+Type: Item placement, Broken logic
+Severity: High
+Reproducibility: Always

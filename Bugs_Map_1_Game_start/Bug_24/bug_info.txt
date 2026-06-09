@@ -1,0 +1,10 @@
+Bug #24
+==================================================
+
+Description:
+Read prompt with nothing to read, paper is invisible. Blue container on the beach.
+Campfire: Shipwreck beach
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

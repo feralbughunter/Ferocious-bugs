@@ -1,0 +1,10 @@
+Bug #10
+==================================================
+
+Description:
+Parts of the dead shark are not solid.
+Campfire: Manifesto Outpost A Beach
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always

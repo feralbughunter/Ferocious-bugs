@@ -1,0 +1,9 @@
+Bug #32
+==================================================
+
+Description:
+The names are oddly cut.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always

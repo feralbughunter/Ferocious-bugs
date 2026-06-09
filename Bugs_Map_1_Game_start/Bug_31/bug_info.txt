@@ -1,0 +1,10 @@
+Bug #31
+==================================================
+
+Description:
+Read button away from the paper. Bridge outpost. A grenade exploded here, I am not sure if that can move it.
+Campfire: Bridge South
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

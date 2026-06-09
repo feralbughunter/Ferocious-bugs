@@ -1,0 +1,10 @@
+Bug #5
+==================================================
+
+Description:
+Paper clips through the box when opened at the beached ship.
+Campfire: Sea Cave
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

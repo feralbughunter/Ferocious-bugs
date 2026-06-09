@@ -1,0 +1,10 @@
+Bug #36
+==================================================
+
+Description:
+Interaction dots for unknown items on top of the tower on the other side of the bridge.
+Campfire: Bridge West
+
+Type: Interaction issue
+Severity: High
+Reproducibility: Always

@@ -1,0 +1,10 @@
+Bug #8
+==================================================
+
+Description:
+Ancient key is floating in mid air.
+Campfire: Manifesto checkpoint
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

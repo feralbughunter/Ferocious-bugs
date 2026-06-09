@@ -1,0 +1,10 @@
+Bug #5
+==================================================
+
+Description:
+Gold too deep in stone.
+Campfire: Canyons
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

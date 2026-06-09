@@ -1,0 +1,9 @@
+Bug #15
+==================================================
+
+Description:
+Crafting ammo pouches should tell which weapons it is for as an example for easier decision making. I do not know what ammo smg uses, heavy or rifle? If an item can only be crafted once, it should disappear or be disabled in the list once it can not be made anymore. Primary holster has this problem and some other items too.
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always

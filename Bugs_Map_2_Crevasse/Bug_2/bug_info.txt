@@ -1,0 +1,10 @@
+Bug #2
+==================================================
+
+Description:
+In the first secret the gold is too deep in the altar. This issue is present in many locations.
+Campfire: Platforming
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

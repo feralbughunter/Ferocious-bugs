@@ -1,0 +1,10 @@
+Bug #26
+==================================================
+
+Description:
+Nothing in the game teaches you you can smash rocks, it is not glowing, has no marker. But the hole looks like you could jump through it. This was not intuitive at all. Hitting the rocks makes no sound and gives you no indication you are doing something possible.
+Campfire: Temple North
+
+Type: Game breaking
+Severity: High
+Reproducibility: Always

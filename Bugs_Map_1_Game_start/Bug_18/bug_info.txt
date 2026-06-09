@@ -1,0 +1,9 @@
+Bug #18
+==================================================
+
+Description:
+Breaking a box with melee plays a sound, nothing happens and a second or third hit breaks it.
+
+Type: Broken model, Broken logic
+Severity: High
+Reproducibility: Always You can peek inside toilets. 😀

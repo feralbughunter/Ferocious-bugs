@@ -1,0 +1,9 @@
+Bug #44
+==================================================
+
+Description:
+A block of water with empty space at the other end in the basement of the final base of the first map.
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always

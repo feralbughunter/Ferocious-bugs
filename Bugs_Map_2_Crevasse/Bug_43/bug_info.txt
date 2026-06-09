@@ -1,0 +1,10 @@
+Bug #43
+==================================================
+
+Description:
+Returning here later will repeat the voiceline about needing a key.
+Campfire: River valley
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always

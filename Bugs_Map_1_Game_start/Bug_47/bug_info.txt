@@ -1,0 +1,9 @@
+Bug #47
+==================================================
+
+Description:
+It is impossible to take the cable car to the next level. This was caused by the Find the boat bug with the invisible paper explained earlier. The button is blinking, there is no interaction point and the ending voice lines at the table radio station inside the base never played. The problem was caused by the important paper inside the room in the Find the boat quest being invisible. You need to read this paper to progress the quest. Finding the boat itself is not enough even though a voice line will play there. I thought it was enough and therefore thought that the quest was stuck. Returning to this paper (still invisible), after clearing the rest of the level allows you to finish the map.
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always

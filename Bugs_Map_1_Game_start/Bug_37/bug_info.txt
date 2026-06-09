@@ -1,0 +1,10 @@
+Bug #37
+==================================================
+
+Description:
+This door when approached has a dot but can not be opened unless you jam yourself almost through it on a specific angle and jump. Leading to Temple Summit.
+Campfire: Temple South
+
+Type: Game breaking
+Severity: High
+Reproducibility: Always

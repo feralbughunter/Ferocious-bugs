@@ -1,0 +1,9 @@
+Bug #6
+==================================================
+
+Description:
+Hand clips through spear.
+
+Type: Broken model
+Severity: High
+Reproducibility: Sometimes

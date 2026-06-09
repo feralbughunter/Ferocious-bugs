@@ -1,0 +1,9 @@
+Bug #27
+==================================================
+
+Description:
+Picking up a collectible shows 1x at the bottom of the screen with no text label of what you picked up.
+
+Type: Player confusion
+Severity: Medium
+Reproducibility: Always

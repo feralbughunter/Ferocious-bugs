@@ -1,0 +1,9 @@
+Bug #49
+==================================================
+
+Description:
+I found several statues, cleared all the question marks and my Secrets page in the journal is empty.
+
+Type: Game breaking
+Severity: High
+Reproducibility: Always

@@ -1,0 +1,10 @@
+Bug #33
+==================================================
+
+Description:
+Stick inside rock. Down on the ledge accessible by the ladder on the side.
+Campfire: Bridge South
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always

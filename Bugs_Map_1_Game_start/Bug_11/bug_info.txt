@@ -1,0 +1,9 @@
+Bug #11
+==================================================
+
+Description:
+Rocks with no collision. At the area of the first raptor encounter.
+
+Type: Collision missing
+Severity: Low
+Reproducibility: Always

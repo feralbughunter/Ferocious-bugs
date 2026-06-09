@@ -1,0 +1,9 @@
+Bug #15
+==================================================
+
+Description:
+You can loot boxes with full inventory and get nothing. It probably should prevent you from wasting resources this way.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always

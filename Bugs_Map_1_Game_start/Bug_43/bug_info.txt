@@ -1,0 +1,9 @@
+Bug #43
+==================================================
+
+Description:
+Oddly placed ladder. Using this ladder and falling off the top of it makes you unable to swim sometimes. You can walk on the sea floor and not drown.
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always

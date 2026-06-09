@@ -1,0 +1,10 @@
+Bug #20
+==================================================
+
+Description:
+This tree is floating and not touching the ground.
+Campfire: River valley
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always

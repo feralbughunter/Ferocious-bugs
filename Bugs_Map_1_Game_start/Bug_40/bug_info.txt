@@ -1,0 +1,10 @@
+Bug #40
+==================================================
+
+Description:
+Floating objects on the road to the final base.
+Campfire: Bridge West
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always

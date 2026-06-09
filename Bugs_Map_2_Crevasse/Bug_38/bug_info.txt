@@ -1,0 +1,10 @@
+Bug #38
+==================================================
+
+Description:
+Gold is too deep in the stone.
+Campfire: Titan
+
+Type: Item placement
+Severity: High
+Reproducibility: Always

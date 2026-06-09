@@ -1,0 +1,10 @@
+Bug #16
+==================================================
+
+Description:
+Ceiling light in an awkward position. Large outpost basement.
+Campfire: Lighthouse
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
