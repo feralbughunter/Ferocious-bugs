@@ -6,4 +6,26 @@ https://store.steampowered.com/app/1645630/FEROCIOUS/
 To regenerate the website use the ./generate_bug_report.py script.  
 
 ## Website
-https://feralbughunter.github.io/Ferocious-bugs/  
+https://feralbughunter.github.io/Ferocious-bugs/ 
+
+## Bug reports
+
+### Bug Types
+* Item placement - Item incorrectly placed in the world.
+* Collision missing - Incorrect collision between an object an the player.
+* Level escape - A way to escape behind the playable map.
+* Broken model - World object with broken physics, joints, sound...
+* Interaction issue - A problem with using an object.
+* Player confusion - A problem that mystifies the player.
+* Invisible wall - An invisible wall blocking the player.
+* Game breaking - Major issue leading making it impossible to continue the game or accessing an important objective.
+* Broken logic - Events happening out of order or not at all.
+
+### Severity
+Summarizes how much the bug breaks the game, breaks immersion or how visible it is.
+
+### Bug Status
+* Unfixed - Bug has not been resolved yet
+* Fixed - Bug has been fixed in a newer version
+* Not a Bug - Reported issue is not considered a bug
+ 
