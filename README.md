@@ -27,7 +27,12 @@ Add the new bug to the appropriate folder.
 * Broken logic - Events happening out of order or not at all.
 
 ### Severity
-Summarizes how much the bug breaks the game, breaks immersion or how visible it is.
+Summarizes how much the bug breaks the game, breaks immersion or how visible it is.  
+
+Options:  
+* High
+* Medium
+* Low
 
 ### Bug Status
 * fixed - Bug has been fixed in a newer version
