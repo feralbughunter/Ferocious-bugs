@@ -1,4 +1,4 @@
-[Cute Daemonosaurus](dino.jpg)
+<img src="dino.jpg" alt="Cute Daemonosaurus" width="500">
 
 # Ferocious-bugs
 Repository of bug reports for Ferocious.  
