@@ -355,6 +355,26 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             font-size: 0.9em;
             margin-left: 10px;
         }}
+
+        .github-link {{
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 15px;
+            background: #24292e;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }}
+
+        .github-link:hover {{
+            background: #0366d6;
+        }}
+
+        .github-link::before {{
+            content: "\\1F517 ";
+            margin-right: 5px;
+        }}
     </style>
 </head>
 <body>
@@ -362,6 +382,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
         <h1>Bug Report</h1>
 
         <div class="info-section">
+            <p><a href="https://github.com/feralbughunter/Ferocious-bugs" target="_blank" class="github-link">GitHub bug repository</a></p>
             <h2>General Information</h2>
             <p><strong>Total Bugs Found:</strong> {total_bugs}</p>
 
