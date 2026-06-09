@@ -1,6 +1,5 @@
-<img src="dino.jpg" alt="Cute Daemonosaurus" width="500">
-
 # Ferocious-bugs
+<img src="dino.jpg" alt="Cute Daemonosaurus" width="500">
 Repository of bug reports for Ferocious.  
 https://store.steampowered.com/app/1645630/FEROCIOUS/  
 
