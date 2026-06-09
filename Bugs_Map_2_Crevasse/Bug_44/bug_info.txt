@@ -2,9 +2,9 @@ Bug #44
 ==================================================
 
 Description:
-I can not figure out how to get to this secret. It seems like you should take the ledge on the left and walk to the opening which you can do, but there is an invisible wall there and you can not jump into the cave. The other entrance from the Trex temple is blocked.
-Campfire: River valley
+The final gate floats on the left and has no mechanism that would lift it. Also makes no sound. The titanoceratops should fit through it but can not. If you are not supposed to take this awesome animal with you, the exit should probably be smaller.
+Campfire: Lowlands gate
 
-Type: Game breaking
+Type: Item placement, Broken model, Invisible wall
 Severity: High
 Reproducibility: Always

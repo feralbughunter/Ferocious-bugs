@@ -2,9 +2,9 @@ Bug #41
 ==================================================
 
 Description:
-Empty readable paper in the radio tower locked room.
-Campfire: Lowlands gate
+Returning here later will repeat the voiceline about needing a key.
+Campfire: River valley
 
-Type: Player confusion
+Type: Broken logic
 Severity: High
 Reproducibility: Always

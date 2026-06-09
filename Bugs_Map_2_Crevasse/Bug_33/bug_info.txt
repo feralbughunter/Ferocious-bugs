@@ -2,9 +2,9 @@ Bug #33
 ==================================================
 
 Description:
-Positioning a raptor in front of the lever door and petting him moves you to the other side of the door. The dryo hint is floating.
-Campfire: Cliff Temple
+This arch you can jump on has no collision.
+Campfire: Trex temple
 
-Type: Level escape, Broken logic
-Severity: High
+Type: Collision missing
+Severity: Low
 Reproducibility: Always

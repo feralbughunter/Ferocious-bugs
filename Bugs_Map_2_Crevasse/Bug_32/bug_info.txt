@@ -2,8 +2,8 @@ Bug #32
 ==================================================
 
 Description:
-The names are oddly cut.
+These hints probably could disappear once used.
 
 Type: Broken logic
-Severity: High
+Severity: Low
 Reproducibility: Always

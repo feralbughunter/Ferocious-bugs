@@ -2,9 +2,9 @@ Bug #31
 ==================================================
 
 Description:
-There are two hints here and the dryosaur ends up using the right hole instead of the left one anyway.
+Positioning a raptor in front of the lever door and petting him moves you to the other side of the door. The dryo hint is floating.
 Campfire: Cliff Temple
 
-Type: Item placement
-Severity: Medium
+Type: Level escape, Broken logic
+Severity: High
 Reproducibility: Always

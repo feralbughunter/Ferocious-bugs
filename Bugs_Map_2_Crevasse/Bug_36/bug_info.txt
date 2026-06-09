@@ -2,9 +2,9 @@ Bug #36
 ==================================================
 
 Description:
-You can walk here from the titanoceratops arena, there is an invisible wall here even though you could clearly pass through.
-Campfire: River valley
+Gold is too deep in the stone.
+Campfire: Titan
 
-Type: Game breaking, Invisible wall
+Type: Item placement
 Severity: High
 Reproducibility: Always

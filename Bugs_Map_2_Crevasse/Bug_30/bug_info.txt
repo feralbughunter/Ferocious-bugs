@@ -2,8 +2,8 @@ Bug #30
 ==================================================
 
 Description:
-Campfires I made sometimes disappear when loaded.
+The names are oddly cut.
 
-Type: Game breaking
+Type: Broken logic
 Severity: High
 Reproducibility: Always

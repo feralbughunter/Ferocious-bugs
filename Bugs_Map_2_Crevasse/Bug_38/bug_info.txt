@@ -2,9 +2,8 @@ Bug #38
 ==================================================
 
 Description:
-Gold is too deep in the stone.
-Campfire: Titan
+You can look into your arm when riding the titanoceratops.
 
-Type: Item placement
+Type: Broken model
 Severity: High
 Reproducibility: Always

@@ -2,8 +2,9 @@ Bug #34
 ==================================================
 
 Description:
-These hints probably could disappear once used.
+You can walk here from the titanoceratops arena, there is an invisible wall here even though you could clearly pass through.
+Campfire: River valley
 
-Type: Broken logic
-Severity: Low
+Type: Game breaking, Invisible wall
+Severity: High
 Reproducibility: Always

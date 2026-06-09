@@ -2,8 +2,8 @@ Bug #45
 ==================================================
 
 Description:
-I can not figure out how to get the secret at the bottom of the map either
+The second map should end sooner, otherwise you can see the end of the level.
 
-Type: Game breaking
+Type: Broken logic
 Severity: High
-Reproducibility: Always .
+Reproducible: Always

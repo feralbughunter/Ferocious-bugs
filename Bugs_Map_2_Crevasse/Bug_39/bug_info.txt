@@ -2,9 +2,9 @@ Bug #39
 ==================================================
 
 Description:
-The player does not switch to swimming in this cove. You just run underwater.
-Campfire: Titan
+Empty readable paper in the radio tower locked room.
+Campfire: Lowlands gate
 
-Type: Broken logic
-Severity: Medium
+Type: Player confusion
+Severity: High
 Reproducibility: Always
