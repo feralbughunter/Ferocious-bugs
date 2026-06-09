@@ -8,3 +8,4 @@ Campfire: Bridge South
 Type: Interaction issue
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

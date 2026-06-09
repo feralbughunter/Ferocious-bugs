@@ -7,3 +7,4 @@ Broken voice lines after walking through the door above. The player says “this
 Type: Game breaking
 Severity: High
 Reproducibility: Always
+Status: unfixed

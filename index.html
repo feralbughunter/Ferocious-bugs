@@ -82,9 +82,32 @@
             transition: all 0.2s;
         }
 
+        .bug-list li.bug-unfixed {
+            background: #ffebee;
+        }
+
+        .bug-list li.bug-fixed {
+            background: #e8f5e9;
+        }
+
+        .bug-list li.bug-notabug {
+            background: #e0e0e0;
+        }
+
         .bug-list li:hover {
-            background: #e9ecef;
             transform: translateX(5px);
+        }
+
+        .bug-list li.bug-unfixed:hover {
+            background: #ffcdd2;
+        }
+
+        .bug-list li.bug-fixed:hover {
+            background: #c8e6c9;
+        }
+
+        .bug-list li.bug-notabug:hover {
+            background: #bdbdbd;
         }
 
         .bug-list a {
@@ -175,6 +198,11 @@
             color: white;
         }
 
+        .status-notabug {
+            background: #95a5a6;
+            color: white;
+        }
+
         .bug-images {
             margin-top: 20px;
         }
@@ -249,6 +277,43 @@
             content: "\1F517 ";
             margin-right: 5px;
         }
+
+        .map-quick-links {
+            margin-top: 15px;
+        }
+
+        .map-quick-links ul {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }
+
+        .map-quick-links li {
+            display: inline-block;
+            margin-right: 15px;
+        }
+
+        .map-quick-links a {
+            display: inline-block;
+            padding: 8px 12px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }
+
+        .map-quick-links a:hover {
+            background: #2980b9;
+        }
+
+        .status-legend {
+            margin-top: 15px;
+        }
+
+        .status-legend ul {
+            margin-left: 20px;
+        }
     </style>
 </head>
 <body>
@@ -280,581 +345,598 @@
                 <h3>Severity</h3>
                 <p>Summarizes how much the bug breaks the game, breaks immersion or how visible it is.</p>
             </div>
+
+            <div class="status-legend">
+                <h3>Bug Status</h3>
+                <ul>
+                    <li><strong>Unfixed</strong> - Bug has not been resolved yet</li>
+                    <li><strong>Fixed</strong> - Bug has been fixed in a newer version</li>
+                    <li><strong>Not a Bug</strong> - Reported issue is not considered a bug</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="map-section">
+            <div class="map-quick-links">
+                <h3>Jump to Bug Lists</h3>
+                <ul>
+                    <li><a href="#map-1">Map 1: Game start</a></li>
+                    <li><a href="#map-2">Map 2: Crevasse</a></li>
+                </ul>
+            </div>
+
+        <div class="map-section" id="map-1">
             <h2>Map 1: Game start<span class="version-tag">Version: 1.08.162.3935</span><span class="bug-count">49 bugs</span></h2>
 
             <ul class="bug-list">
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-1">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 1 Bug #1 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #1 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-2">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 1 Bug #2 - <span class="bug-type">Collision missing</span></span>
+                        <span>Map 1 Bug #2 - <span class="bug-type">Collision missing</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-3">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #3 - <span class="bug-type">Level escape</span></span>
+                        <span>Map 1 Bug #3 - <span class="bug-type">Level escape</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-4">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #4 - <span class="bug-type">Broken model</span></span>
+                        <span>Map 1 Bug #4 - <span class="bug-type">Broken model</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-5">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #5 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #5 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-6">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #6 - <span class="bug-type">Broken model</span></span>
+                        <span>Map 1 Bug #6 - <span class="bug-type">Broken model</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-7">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #7 - <span class="bug-type">Broken model</span></span>
+                        <span>Map 1 Bug #7 - <span class="bug-type">Broken model</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-8">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #8 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #8 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-9">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #9 - <span class="bug-type">Interaction issue</span></span>
+                        <span>Map 1 Bug #9 - <span class="bug-type">Interaction issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-10">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #10 - <span class="bug-type">Collision missing</span></span>
+                        <span>Map 1 Bug #10 - <span class="bug-type">Collision missing</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-11">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 1 Bug #11 - <span class="bug-type">Collision missing</span></span>
+                        <span>Map 1 Bug #11 - <span class="bug-type">Collision missing</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-12">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 1 Bug #12 - <span class="bug-type">Collision missing, Interaction issue</span></span>
+                        <span>Map 1 Bug #12 - <span class="bug-type">Collision missing, Interaction issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-13">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #13 - <span class="bug-type">Item placement, Broken logic</span></span>
+                        <span>Map 1 Bug #13 - <span class="bug-type">Item placement, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-14">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #14 - <span class="bug-type">Interaction issue</span></span>
+                        <span>Map 1 Bug #14 - <span class="bug-type">Interaction issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-15">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #15 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #15 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-16">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #16 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #16 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-17">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 1 Bug #17 - <span class="bug-type">Collision missing</span></span>
+                        <span>Map 1 Bug #17 - <span class="bug-type">Collision missing</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-18">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #18 - <span class="bug-type">Broken model, Broken logic</span></span>
+                        <span>Map 1 Bug #18 - <span class="bug-type">Broken model, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-19">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #19 - <span class="bug-type">Player confusion, Broken logic</span></span>
+                        <span>Map 1 Bug #19 - <span class="bug-type">Player confusion, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-20">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #20 - <span class="bug-type">Collision missing</span></span>
+                        <span>Map 1 Bug #20 - <span class="bug-type">Collision missing</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-21">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #21 - <span class="bug-type">Invisible wall</span></span>
+                        <span>Map 1 Bug #21 - <span class="bug-type">Invisible wall</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-22">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #22 - <span class="bug-type">Invisible wall</span></span>
+                        <span>Map 1 Bug #22 - <span class="bug-type">Invisible wall</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-23">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #23 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 1 Bug #23 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-24">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #24 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #24 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-25">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #25 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #25 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-26">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #26 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 1 Bug #26 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-27">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #27 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #27 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-28">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #28 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #28 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-29">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #29 - <span class="bug-type">Invisible wall</span></span>
+                        <span>Map 1 Bug #29 - <span class="bug-type">Invisible wall</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-30">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #30 - <span class="bug-type">Invisible wall</span></span>
+                        <span>Map 1 Bug #30 - <span class="bug-type">Invisible wall</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-31">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #31 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #31 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-32">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #32 - <span class="bug-type">Interaction issue</span></span>
+                        <span>Map 1 Bug #32 - <span class="bug-type">Interaction issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-33">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #33 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #33 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-34">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #34 - <span class="bug-type">Player confusion, Broken logic</span></span>
+                        <span>Map 1 Bug #34 - <span class="bug-type">Player confusion, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-35">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #35 - <span class="bug-type">Collision missing, Broken logic</span></span>
+                        <span>Map 1 Bug #35 - <span class="bug-type">Collision missing, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-36">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #36 - <span class="bug-type">Interaction issue</span></span>
+                        <span>Map 1 Bug #36 - <span class="bug-type">Interaction issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-37">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #37 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 1 Bug #37 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-38">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #38 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #38 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-39">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #39 - <span class="bug-type">Collision missing, Player confusion, Game breaking</span></span>
+                        <span>Map 1 Bug #39 - <span class="bug-type">Collision missing, Player confusion, Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-40">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 1 Bug #40 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #40 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-41">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #41 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #41 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-42">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #42 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #42 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-43">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #43 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #43 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-44">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #44 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #44 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-45">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #45 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 1 Bug #45 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-46">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 1 Bug #46 - <span class="bug-type">Level escape</span></span>
+                        <span>Map 1 Bug #46 - <span class="bug-type">Level escape</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-47">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #47 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #47 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-48">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #48 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 1 Bug #48 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Game start-49">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 1 Bug #49 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 1 Bug #49 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <div class="map-section">
+        <div class="map-section" id="map-2">
             <h2>Map 2: Crevasse<span class="version-tag">Version: 1.08.162.3935</span><span class="bug-count">45 bugs</span></h2>
 
             <ul class="bug-list">
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-1">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 2 Bug #1 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 2 Bug #1 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-2">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #2 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #2 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-3">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 2 Bug #3 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #3 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-4">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #4 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 2 Bug #4 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-5">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #5 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #5 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-6">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #6 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #6 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-7">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #7 - <span class="bug-type">Item placement, Broken logic, Interaction issue</span></span>
+                        <span>Map 2 Bug #7 - <span class="bug-type">Item placement, Broken logic, Interaction issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-8">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #8 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #8 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-9">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #9 - <span class="bug-type">Player confusion, Broken logic</span></span>
+                        <span>Map 2 Bug #9 - <span class="bug-type">Player confusion, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-10">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #10 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #10 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-11">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 2 Bug #11 - <span class="bug-type">Broken model</span></span>
+                        <span>Map 2 Bug #11 - <span class="bug-type">Broken model</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-12">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #12 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #12 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-13">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 2 Bug #13 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 2 Bug #13 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-14">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 2 Bug #14 - <span class="bug-type">Collision issue</span></span>
+                        <span>Map 2 Bug #14 - <span class="bug-type">Collision issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-15">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #15 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #15 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-16">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #16 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #16 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-17">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 2 Bug #17 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #17 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-18">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #18 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #18 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-19">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #19 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #19 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-20">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 2 Bug #20 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #20 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-21">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #21 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #21 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-22">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #22 - <span class="bug-type">Item placement, Broken logic,</span></span>
+                        <span>Map 2 Bug #22 - <span class="bug-type">Item placement, Broken logic,</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-23">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #23 - <span class="bug-type">Item placement, Broken model</span></span>
+                        <span>Map 2 Bug #23 - <span class="bug-type">Item placement, Broken model</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-24">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 2 Bug #24 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #24 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-25">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #25 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 2 Bug #25 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-26">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #26 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #26 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-27">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 2 Bug #27 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #27 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-28">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #28 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 2 Bug #28 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-29">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 2 Bug #29 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #29 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-30">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #30 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #30 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-31">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #31 - <span class="bug-type">Level escape, Broken logic</span></span>
+                        <span>Map 2 Bug #31 - <span class="bug-type">Level escape, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-32">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 2 Bug #32 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #32 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-33">
                         <span class="severity-badge severity-low">Low</span>
-                        <span>Map 2 Bug #33 - <span class="bug-type">Collision missing</span></span>
+                        <span>Map 2 Bug #33 - <span class="bug-type">Collision missing</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-34">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #34 - <span class="bug-type">Game breaking, Invisible wall</span></span>
+                        <span>Map 2 Bug #34 - <span class="bug-type">Game breaking, Invisible wall</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-35">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #35 - <span class="bug-type">Collision missing</span></span>
+                        <span>Map 2 Bug #35 - <span class="bug-type">Collision missing</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-36">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #36 - <span class="bug-type">Item placement</span></span>
+                        <span>Map 2 Bug #36 - <span class="bug-type">Item placement</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-37">
                         <span class="severity-badge severity-medium">Medium</span>
-                        <span>Map 2 Bug #37 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #37 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-38">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #38 - <span class="bug-type">Broken model</span></span>
+                        <span>Map 2 Bug #38 - <span class="bug-type">Broken model</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-39">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #39 - <span class="bug-type">Player confusion</span></span>
+                        <span>Map 2 Bug #39 - <span class="bug-type">Player confusion</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-40">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #40 - <span class="bug-type">Item placement, Broken logic, Interaction issue</span></span>
+                        <span>Map 2 Bug #40 - <span class="bug-type">Item placement, Broken logic, Interaction issue</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-41">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #41 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #41 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-42">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #42 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 2 Bug #42 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-43">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #43 - <span class="bug-type">Game breaking</span></span>
+                        <span>Map 2 Bug #43 - <span class="bug-type">Game breaking</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-44">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #44 - <span class="bug-type">Item placement, Broken model, Invisible wall</span></span>
+                        <span>Map 2 Bug #44 - <span class="bug-type">Item placement, Broken model, Invisible wall</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
-                <li>
+                <li class="bug-unfixed">
                     <a href="#bug-Crevasse-45">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #45 - <span class="bug-type">Broken logic</span></span>
+                        <span>Map 2 Bug #45 - <span class="bug-type">Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
             </ul>

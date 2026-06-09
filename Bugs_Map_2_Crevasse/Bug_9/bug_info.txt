@@ -7,3 +7,4 @@ The rope symbol is not explained in the map legend.
 Type: Player confusion, Broken logic
 Severity: High
 Reproducibility: Always
+Status: unfixed

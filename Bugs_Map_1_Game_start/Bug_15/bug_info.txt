@@ -7,3 +7,4 @@ Crafting ammo pouches should tell which weapons it is for as an example for easi
 Type: Player confusion
 Severity: High
 Reproducibility: Always
+Status: unfixed

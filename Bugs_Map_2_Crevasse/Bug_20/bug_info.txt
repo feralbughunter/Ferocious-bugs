@@ -8,3 +8,4 @@ Campfire: River valley
 Type: Item placement
 Severity: Low
 Reproducibility: Always
+Status: unfixed

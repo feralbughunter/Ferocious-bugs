@@ -8,3 +8,4 @@ Campfire: Lowlands gate
 Type: Item placement, Broken model, Invisible wall
 Severity: High
 Reproducibility: Always
+Status: unfixed

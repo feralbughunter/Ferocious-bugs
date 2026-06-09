@@ -7,3 +7,4 @@ You can look into your arm when riding the titanoceratops.
 Type: Broken model
 Severity: High
 Reproducibility: Always
+Status: unfixed

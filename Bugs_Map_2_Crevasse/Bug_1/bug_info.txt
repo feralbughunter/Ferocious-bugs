@@ -7,3 +7,4 @@ Level immediately repeats that the game can only be saved at camp fires. The pla
 Type: Player confusion
 Severity: Medium
 Reproducibility: On first passthrough
+Status: unfixed

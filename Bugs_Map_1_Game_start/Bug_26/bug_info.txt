@@ -8,3 +8,4 @@ Campfire: Temple North
 Type: Game breaking
 Severity: High
 Reproducibility: Always
+Status: unfixed

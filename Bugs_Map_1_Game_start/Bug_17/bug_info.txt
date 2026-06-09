@@ -8,3 +8,4 @@ Campfire: Lighthouse
 Type: Collision missing
 Severity: Low
 Reproducibility: Always
+Status: unfixed

@@ -8,3 +8,4 @@ Campfire: Shipwreck beach
 Type: Item placement
 Severity: High
 Reproducibility: Always
+Status: unfixed

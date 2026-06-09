@@ -7,3 +7,4 @@ I can not figure out how to get the secret at the bottom of the map either
 Type: Game breaking
 Severity: High
 Reproducibility: Always .
+Status: unfixed

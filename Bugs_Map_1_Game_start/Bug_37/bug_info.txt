@@ -8,3 +8,4 @@ Campfire: Temple South
 Type: Game breaking
 Severity: High
 Reproducibility: Always
+Status: unfixed

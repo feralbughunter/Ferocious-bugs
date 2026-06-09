@@ -7,3 +7,4 @@ Breaking a box with melee plays a sound, nothing happens and a second or third h
 Type: Broken model, Broken logic
 Severity: High
 Reproducibility: Always You can peek inside toilets. 😀
+Status: unfixed

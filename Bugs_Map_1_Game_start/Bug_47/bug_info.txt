@@ -7,3 +7,4 @@ It is impossible to take the cable car to the next level. This was caused by the
 Type: Player confusion
 Severity: High
 Reproducibility: Always
+Status: unfixed

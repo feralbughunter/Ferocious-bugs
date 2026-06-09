@@ -8,3 +8,4 @@ Campfire: Temple South
 Type: Player confusion
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

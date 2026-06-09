@@ -8,3 +8,4 @@ Campfire: Manifesto Outpost A Cliff
 Type: Item placement
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

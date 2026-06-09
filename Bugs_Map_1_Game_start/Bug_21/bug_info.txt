@@ -8,3 +8,4 @@ Campfire: Shipwreck in the caves next to the door to the next area
 Type: Invisible wall
 Severity: High
 Reproducibility: Always
+Status: unfixed

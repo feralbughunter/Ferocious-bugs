@@ -7,3 +7,4 @@ You can skin an animal even though your inventory is full wasting resources. It 
 Type: Player confusion
 Severity: High
 Reproducibility: Always
+Status: unfixed

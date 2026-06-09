@@ -8,3 +8,4 @@ Campfire: Cliff Temple
 Type: Item placement
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

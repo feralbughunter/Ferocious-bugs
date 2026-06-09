@@ -8,3 +8,4 @@ Campfire: First Manifesto Camp
 Type: Collision missing
 Severity: Low
 Reproducibility: Always
+Status: unfixed

@@ -7,3 +7,4 @@ A block of water with empty space at the other end in the basement of the final 
 Type: Player confusion
 Severity: High
 Reproducibility: Always
+Status: unfixed

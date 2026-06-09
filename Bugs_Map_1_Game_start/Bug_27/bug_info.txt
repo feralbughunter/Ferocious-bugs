@@ -7,3 +7,4 @@ Picking up a collectible shows 1x at the bottom of the screen with no text label
 Type: Player confusion
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

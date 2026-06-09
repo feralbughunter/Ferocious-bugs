@@ -8,3 +8,4 @@ Campfire: Manifesto checkpoint
 Type: Item placement
 Severity: High
 Reproducibility: Always
+Status: unfixed

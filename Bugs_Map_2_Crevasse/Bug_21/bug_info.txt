@@ -7,3 +7,4 @@ Is this dinosaur supposed to be making any sound? He looks like he is, but he is
 Type: Broken logic
 Severity: High
 Reproducibility: Always
+Status: unfixed

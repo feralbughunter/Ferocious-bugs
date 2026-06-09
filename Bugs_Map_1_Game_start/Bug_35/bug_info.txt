@@ -8,3 +8,4 @@ Campfire: Bridge West
 Type: Collision missing, Broken logic
 Severity: High
 Reproducibility: Always
+Status: unfixed

@@ -8,3 +8,4 @@ Campfire: Manifesto Outpost A Beach
 Type: Interaction issue
 Severity: High
 Reproducibility: Always
+Status: unfixed

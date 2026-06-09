@@ -8,3 +8,4 @@ Campfire: River valley
 Type: Game breaking, Invisible wall
 Severity: High
 Reproducibility: Always
+Status: unfixed

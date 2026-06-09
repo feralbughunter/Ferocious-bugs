@@ -7,3 +7,4 @@ Shells clipping through shotgun. Happens only sometimes, sometimes the game star
 Type: Broken model
 Severity: High
 Reproducibility: Sometimes
+Status: unfixed

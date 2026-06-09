@@ -7,3 +7,4 @@ Oddly placed ladder. Using this ladder and falling off the top of it makes you u
 Type: Item placement
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

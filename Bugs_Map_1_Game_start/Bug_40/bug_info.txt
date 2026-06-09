@@ -8,3 +8,4 @@ Campfire: Bridge West
 Type: Item placement
 Severity: Low
 Reproducibility: Always
+Status: unfixed

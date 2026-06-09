@@ -8,3 +8,4 @@ Campfire: Franka’s exit
 Type: Item placement, Broken model
 Severity: High
 Reproducibility: Always
+Status: unfixed

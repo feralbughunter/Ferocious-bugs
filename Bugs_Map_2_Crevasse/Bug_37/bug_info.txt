@@ -8,3 +8,4 @@ Campfire: Titan
 Type: Broken logic
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

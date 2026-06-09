@@ -7,3 +7,4 @@ I found several statues, cleared all the question marks and my Secrets page in t
 Type: Game breaking
 Severity: High
 Reproducibility: Always
+Status: unfixed

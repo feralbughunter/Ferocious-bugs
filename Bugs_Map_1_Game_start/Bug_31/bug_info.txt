@@ -8,3 +8,4 @@ Campfire: Bridge South
 Type: Item placement
 Severity: High
 Reproducibility: Always
+Status: unfixed

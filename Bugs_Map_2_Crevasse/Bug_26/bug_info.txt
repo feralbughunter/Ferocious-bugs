@@ -7,3 +7,4 @@ Going down here after getting the DCD but climbing down using the rope will play
 Type: Broken logic
 Severity: High
 Reproducibility: Once
+Status: unfixed

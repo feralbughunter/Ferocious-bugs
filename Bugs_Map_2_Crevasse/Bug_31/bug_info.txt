@@ -8,3 +8,4 @@ Campfire: Cliff Temple
 Type: Level escape, Broken logic
 Severity: High
 Reproducibility: Always
+Status: unfixed

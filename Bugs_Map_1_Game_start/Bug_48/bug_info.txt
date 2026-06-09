@@ -7,3 +7,4 @@ The map ends without confirmation once you use the cable cart. In my opinion sin
 Type: Player confusion
 Severity: High
 Reproducibility: Always
+Status: unfixed

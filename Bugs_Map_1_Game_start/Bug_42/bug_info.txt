@@ -8,3 +8,4 @@ Campfire: Manifesto Dock Beach
 Type: Item placement
 Severity: High
 Reproducibility: Always
+Status: unfixed

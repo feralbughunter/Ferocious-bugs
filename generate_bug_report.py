@@ -57,7 +57,7 @@ def parse_bug_info(filepath):
         'severity': '',
         'reproducibility': '',
         'campfire': '',
-        'fixed': 'Unfixed'
+        'status': 'unfixed'
     }
 
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -87,9 +87,8 @@ def parse_bug_info(filepath):
             bug['severity'] = line_stripped.split(':', 1)[1].strip()
         elif line_stripped.startswith('Reproducibility:'):
             bug['reproducibility'] = line_stripped.split(':', 1)[1].strip()
-        elif 'fixed' in line_stripped.lower():
-            if 'unfixed' not in line_stripped.lower():
-                bug['fixed'] = 'Fixed'
+        elif line_stripped.startswith('Status:'):
+            bug['status'] = line_stripped.split(':', 1)[1].strip().lower()
 
     return bug
 
@@ -107,6 +106,17 @@ def get_severity_color(severity):
         return 'severity-critical'
     else:
         return 'severity-unknown'
+
+
+def get_status_info(status):
+    """Return status display text and CSS class."""
+    status_lower = status.lower()
+    if status_lower == 'fixed':
+        return 'Fixed', 'status-fixed'
+    elif status_lower == 'notabug':
+        return 'Not a Bug', 'status-notabug'
+    else:
+        return 'Unfixed', 'status-unfixed'
 
 
 def find_images(bug_dir):
@@ -208,9 +218,32 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             transition: all 0.2s;
         }}
 
+        .bug-list li.bug-unfixed {{
+            background: #ffebee;
+        }}
+
+        .bug-list li.bug-fixed {{
+            background: #e8f5e9;
+        }}
+
+        .bug-list li.bug-notabug {{
+            background: #e0e0e0;
+        }}
+
         .bug-list li:hover {{
-            background: #e9ecef;
             transform: translateX(5px);
+        }}
+
+        .bug-list li.bug-unfixed:hover {{
+            background: #ffcdd2;
+        }}
+
+        .bug-list li.bug-fixed:hover {{
+            background: #c8e6c9;
+        }}
+
+        .bug-list li.bug-notabug:hover {{
+            background: #bdbdbd;
         }}
 
         .bug-list a {{
@@ -301,6 +334,11 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             color: white;
         }}
 
+        .status-notabug {{
+            background: #95a5a6;
+            color: white;
+        }}
+
         .bug-images {{
             margin-top: 20px;
         }}
@@ -375,6 +413,43 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             content: "\\1F517 ";
             margin-right: 5px;
         }}
+
+        .map-quick-links {{
+            margin-top: 15px;
+        }}
+
+        .map-quick-links ul {{
+            list-style: none;
+            margin-left: 0;
+            padding-left: 0;
+        }}
+
+        .map-quick-links li {{
+            display: inline-block;
+            margin-right: 15px;
+        }}
+
+        .map-quick-links a {{
+            display: inline-block;
+            padding: 8px 12px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            transition: background 0.2s;
+        }}
+
+        .map-quick-links a:hover {{
+            background: #2980b9;
+        }}
+
+        .status-legend {{
+            margin-top: 15px;
+        }}
+
+        .status-legend ul {{
+            margin-left: 20px;
+        }}
     </style>
 </head>
 <body>
@@ -397,6 +472,15 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
                 <h3>Severity</h3>
                 <p>{severity_desc}</p>
             </div>
+
+            <div class="status-legend">
+                <h3>Bug Status</h3>
+                <ul>
+                    <li><strong>Unfixed</strong> - Bug has not been resolved yet</li>
+                    <li><strong>Fixed</strong> - Bug has been fixed in a newer version</li>
+                    <li><strong>Not a Bug</strong> - Reported issue is not considered a bug</li>
+                </ul>
+            </div>
         </div>
 """.format(
         total_bugs=total_bugs,
@@ -407,6 +491,20 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
     # Sort maps by map number
     sorted_maps = sorted(bugs_by_map.items(), key=lambda x: x[1]['map_number'])
 
+    # Generate map quick links section
+    html += """
+            <div class="map-quick-links">
+                <h3>Jump to Bug Lists</h3>
+                <ul>
+"""
+    for map_name, map_info in sorted_maps:
+        map_number = map_info['map_number']
+        html += f'                    <li><a href="#map-{map_number}">Map {map_number}: {map_name}</a></li>\n'
+
+    html += """                </ul>
+            </div>
+"""
+
     for map_name, map_info in sorted_maps:
         bugs = map_info['bugs']
         version = map_info['version']
@@ -414,7 +512,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
         map_number = map_info['map_number']
 
         html += f"""
-        <div class="map-section">
+        <div class="map-section" id="map-{map_number}">
             <h2>Map {map_number}: {map_name}<span class="version-tag">Version: {version}</span><span class="bug-count">{bug_count} bugs</span></h2>
 
             <ul class="bug-list">
@@ -422,10 +520,15 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
 
         for bug_id, bug_data in sorted(bugs.items(), key=lambda x: int(x[0])):
             severity_class = get_severity_color(bug_data['severity'])
-            html += f"""                <li>
+            status_text, status_class = get_status_info(bug_data['status'])
+
+            # Get list item background class based on status
+            list_bg_class = f"bug-{bug_data['status']}"
+
+            html += f"""                <li class="{list_bg_class}">
                     <a href="#bug-{map_name}-{bug_id}">
                         <span class="severity-badge {severity_class}">{bug_data['severity']}</span>
-                        <span>Map {map_number} Bug #{bug_id} - <span class="bug-type">{bug_data['type']}</span></span>
+                        <span>Map {map_number} Bug #{bug_id} - <span class="bug-type">{bug_data['type']}</span> - <strong>{status_text}</strong></span>
                     </a>
                 </li>
 """
@@ -444,12 +547,12 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
         map_number = map_info['map_number']
 
         for bug_id, bug_data in sorted(bugs.items(), key=lambda x: int(x[0])):
-            status_class = 'status-fixed' if bug_data['fixed'] == 'Fixed' else 'status-unfixed'
+            status_text, status_class = get_status_info(bug_data['status'])
             severity_class = get_severity_color(bug_data['severity'])
 
             html += f"""
         <div class="bug-detail" id="bug-{map_name}-{bug_id}">
-            <h3>Map {map_number} Bug #{bug_id} <span class="status-badge {status_class}">{bug_data['fixed']}</span></h3>
+            <h3>Map {map_number} Bug #{bug_id} <span class="status-badge {status_class}">{status_text}</span></h3>
 
             <div class="bug-info">
                 <p><strong>Map:</strong> {map_number} - {map_name}</p>

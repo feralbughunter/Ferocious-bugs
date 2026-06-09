@@ -7,3 +7,4 @@ Hand clips through spear.
 Type: Broken model
 Severity: High
 Reproducibility: Sometimes
+Status: unfixed

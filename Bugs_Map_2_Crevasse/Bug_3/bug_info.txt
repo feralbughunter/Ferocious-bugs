@@ -8,3 +8,4 @@ Campfire: Canyons
 Type: Item placement
 Severity: Low
 Reproducibility: Always
+Status: unfixed

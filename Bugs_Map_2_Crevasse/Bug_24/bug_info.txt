@@ -8,3 +8,4 @@ Campfire: Franka’s exit
 Type: Item placement
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

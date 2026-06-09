@@ -7,3 +7,4 @@ North island temple can be accessed without the key by jumping through a non sol
 Type: Invisible wall
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

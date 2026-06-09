@@ -8,3 +8,4 @@ Campfire: Cliff temple
 Type: Collision issue
 Severity: Low
 Reproducibility: Always
+Status: unfixed

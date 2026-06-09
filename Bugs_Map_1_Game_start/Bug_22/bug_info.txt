@@ -8,3 +8,4 @@ Campfire: Shipwreck beach
 Type: Invisible wall
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

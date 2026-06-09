@@ -8,3 +8,4 @@ Campfire: Trex temple
 Type: Collision missing
 Severity: Low
 Reproducibility: Always
+Status: unfixed

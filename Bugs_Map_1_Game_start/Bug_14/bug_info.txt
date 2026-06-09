@@ -8,3 +8,4 @@ Campfire: Burning variant in the corridor to the first soldier encounter
 Type: Interaction issue
 Severity: Medium
 Reproducibility: Always
+Status: unfixed

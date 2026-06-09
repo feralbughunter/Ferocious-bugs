@@ -8,3 +8,4 @@ Campfire: Plateau
 Type: Collision missing, Interaction issue
 Severity: Low
 Reproducibility: Always
+Status: unfixed

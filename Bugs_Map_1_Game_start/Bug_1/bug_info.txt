@@ -8,3 +8,4 @@ Campfire: Burning Variant
 Type: Item placement
 Severity: Low
 Reproducibility: On first passthrough
+Status: unfixed

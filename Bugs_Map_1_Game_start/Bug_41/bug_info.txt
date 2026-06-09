@@ -7,3 +7,4 @@ The final cable cart base of the map inside the cell, the ceiling light is very 
 Type: Item placement
 Severity: High
 Reproducibility: Always
+Status: unfixed

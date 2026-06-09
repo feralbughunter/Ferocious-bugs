@@ -8,3 +8,4 @@ Campfire: Cliff temple
 Type: Broken logic
 Severity: Medium
 Reproducibility: Always
+Status: unfixed
