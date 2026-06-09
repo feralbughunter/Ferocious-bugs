@@ -3,7 +3,7 @@ Repository of bug reports for Ferocious.
 https://store.steampowered.com/app/1645630/FEROCIOUS/  
 
 ## Usage
-To regenerate the website use the ./generate_bug_report.py script.  
+To regenerate the website use the `./generate_bug_report.py` script.  
 
 ## Website
 https://feralbughunter.github.io/Ferocious-bugs/ 
@@ -11,7 +11,7 @@ https://feralbughunter.github.io/Ferocious-bugs/
 ## Bug reports
 
 ### Adding a bug
-Copy one existing bug and change values in the bug_info.txt file, add screenshots.
+Copy one existing bug and change values in the `bug_info.txt` file, add screenshots.
 Make sure you are using a new number.  
 Add the new bug to the appropriate folder.  
 
