@@ -1,7 +1,7 @@
 # Ferocious-bugs
-<img src="dino.jpg" alt="Cute Daemonosaurus" width="500">
 Repository of bug reports for Ferocious.  
 https://store.steampowered.com/app/1645630/FEROCIOUS/  
+<img src="dino.jpg" alt="Cute Daemonosaurus" width="500">
 
 ## Usage
 To regenerate the website use the `./generate_bug_report.py` script.  
