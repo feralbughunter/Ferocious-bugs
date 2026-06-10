@@ -2,8 +2,8 @@ Bug #14
 ==================================================
 
 Description:
-Some object visible through rocks but not intractable.
-Campfire: Burning variant in the corridor to the first soldier encounter
+Some object visible through rocks but not intractable in the corridor to the first soldier encounter.
+Campfire: Burning variant
 
 Type: Interaction issue
 Severity: Medium

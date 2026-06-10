@@ -2,8 +2,8 @@ Bug #21
 ==================================================
 
 Description:
-Invisible wall in front of this box, it can not be approached.
-Campfire: Shipwreck in the caves next to the door to the next area
+Invisible wall in front of this box, it can not be approached. In the caves next to the door to the next area.
+Campfire: Shipwreck
 
 Type: Invisible wall
 Severity: High
