@@ -1,6 +1,6 @@
 Bugs found in Ferocious
 Version: 1.08.162.3935
-Count: 47
+Count: 45
 
 Each bug has the nearest campfire listed if possible and a screenshot of the map for easier ways to find it.
 
