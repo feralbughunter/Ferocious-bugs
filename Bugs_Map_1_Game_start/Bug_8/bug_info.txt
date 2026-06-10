@@ -9,3 +9,4 @@ Type: Item placement
 Severity: Medium
 Reproducibility: Always
 Status: unfixed
+Version: 1.08.162.3935

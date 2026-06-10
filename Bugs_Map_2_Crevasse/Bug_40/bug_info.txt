@@ -9,3 +9,4 @@ Type: Item placement, Broken logic, Interaction issue
 Severity: High
 Reproducibility: Always No titanoceratops after loading. Only spawned after going here.
 Status: unfixed
+Version: 1.08.162.3935

@@ -6,5 +6,6 @@ I can not figure out how to get the secret at the bottom of the map either
 
 Type: Game breaking
 Severity: High
-Reproducibility: Always .
+Reproducibility: Always
 Status: unfixed
+Version: 1.08.162.3935

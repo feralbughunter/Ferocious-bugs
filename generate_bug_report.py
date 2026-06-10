@@ -67,7 +67,8 @@ def parse_bug_info(filepath):
         'severity': '',
         'reproducibility': '',
         'campfire': '',
-        'status': 'unfixed'
+        'status': 'unfixed',
+        'version': ''
     }
 
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -99,6 +100,8 @@ def parse_bug_info(filepath):
             bug['reproducibility'] = line_stripped.split(':', 1)[1].strip()
         elif line_stripped.startswith('Status:'):
             bug['status'] = line_stripped.split(':', 1)[1].strip().lower()
+        elif line_stripped.startswith('Version:'):
+            bug['version'] = line_stripped.split(':', 1)[1].strip()
 
     return bug
 
@@ -589,13 +592,12 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
 
     for map_name, map_info in sorted_maps:
         bugs = map_info['bugs']
-        version = map_info['version']
         bug_count = len(bugs)
         map_number = map_info['map_number']
 
         html += f"""
         <div class="map-section" id="map-{map_number}">
-            <h2>Map {map_number}: {map_name}<span class="version-tag">Version: {version}</span><span class="bug-count">{bug_count} bugs</span></h2>
+            <h2>Map {map_number}: {map_name}<span class="bug-count">{bug_count} bugs</span></h2>
 
             <ul class="bug-list">
 """
@@ -625,7 +627,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
             html += f"""                <li class="{list_bg_class}">
                     <a href="#bug-{map_name}-{bug_id}">
                         <span class="severity-badge {severity_class}">{bug_data['severity']}</span>
-                        <span>Map {map_number} Bug #{bug_id} - {bug_type_html} - <strong>{status_text}</strong></span>
+                        <span>Map {map_number} Bug #{bug_id} - {bug_type_html} - <strong>{status_text}</strong> - v{bug_data['version']}</span>
                     </a>
                 </li>
 """
@@ -656,7 +658,8 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
                 <p><strong>Description:</strong> {bug_data['description']}</p>
                 <p><strong>Type:</strong> {bug_data['type']}</p>
                 <p><strong>Severity:</strong> <span class="severity-badge {severity_class}">{bug_data['severity']}</span></p>
-                <p><strong>Reproducibility:</strong> {bug_data['reproducibility']}</p>"""
+                <p><strong>Reproducibility:</strong> {bug_data['reproducibility']}</p>
+                <p><strong>Version:</strong> {bug_data['version']}</p>"""
 
             if bug_data['campfire']:
                 html += f"""

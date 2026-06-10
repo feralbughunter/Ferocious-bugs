@@ -6,5 +6,6 @@ The second map should end sooner, otherwise you can see the end of the level.
 
 Type: Broken logic
 Severity: High
-Reproducible: Always
+Reproducibility: Always
 Status: unfixed
+Version: 1.08.162.3935

@@ -8,3 +8,4 @@ Type: Player confusion
 Severity: Medium
 Reproducibility: On first passthrough
 Status: unfixed
+Version: 1.08.162.3935

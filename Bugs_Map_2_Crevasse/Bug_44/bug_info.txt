@@ -9,3 +9,4 @@ Type: Item placement, Broken model, Invisible wall
 Severity: High
 Reproducibility: Always
 Status: unfixed
+Version: 1.08.162.3935
