@@ -294,6 +294,12 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             font-style: italic;
         }}
 
+        .bug-type-gamebreaking {{
+            color: #c0392b;
+            font-weight: bold;
+            font-style: normal;
+        }}
+
         .bug-detail {{
             margin: 40px 0;
             padding: 20px;
@@ -525,10 +531,25 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             # Get list item background class based on status
             list_bg_class = f"bug-{bug_data['status']}"
 
+            # Format bug type with special styling for 'Game breaking'
+            bug_type_html = bug_data['type']
+            if 'Game breaking' in bug_data['type']:
+                # Split by comma and process each part
+                parts = [part.strip() for part in bug_data['type'].split(',')]
+                formatted_parts = []
+                for part in parts:
+                    if part == 'Game breaking':
+                        formatted_parts.append(f'<span class="bug-type-gamebreaking">{part}</span>')
+                    else:
+                        formatted_parts.append(f'<span class="bug-type">{part}</span>')
+                bug_type_html = ', '.join(formatted_parts)
+            else:
+                bug_type_html = f'<span class="bug-type">{bug_data["type"]}</span>'
+
             html += f"""                <li class="{list_bg_class}">
                     <a href="#bug-{map_name}-{bug_id}">
                         <span class="severity-badge {severity_class}">{bug_data['severity']}</span>
-                        <span>Map {map_number} Bug #{bug_id} - <span class="bug-type">{bug_data['type']}</span> - <strong>{status_text}</strong></span>
+                        <span>Map {map_number} Bug #{bug_id} - {bug_type_html} - <strong>{status_text}</strong></span>
                     </a>
                 </li>
 """
