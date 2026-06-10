@@ -17,6 +17,8 @@ def parse_overall_info(filepath):
         'count': '',
         'bug_types': [],
         'severity_desc': '',
+        'severity_options': '',
+        'bug_status_info': [],
         'extra_info': []
     }
 
@@ -26,7 +28,7 @@ def parse_overall_info(filepath):
     lines = content.strip().split('\n')
 
     in_bug_types = False
-    bug_type_section = []
+    in_bug_status = False
 
     for line in lines:
         line = line.strip()
@@ -37,12 +39,20 @@ def parse_overall_info(filepath):
             info['count'] = line.split(':', 1)[1].strip()
         elif line.startswith('Bug types:'):
             in_bug_types = True
+            in_bug_status = False
         elif line.startswith('Severity:'):
             info['severity_desc'] = line.split(':', 1)[1].strip()
             in_bug_types = False
+        elif line.startswith('Options:') and 'severity_desc' in info and info['severity_desc']:
+            info['severity_options'] = line.split(':', 1)[1].strip()
+        elif line.startswith('Bug Status:'):
+            in_bug_status = True
+            in_bug_types = False
         elif in_bug_types and ' - ' in line:
             info['bug_types'].append(line)
-        elif line and not in_bug_types:
+        elif in_bug_status and ' - ' in line:
+            info['bug_status_info'].append(line)
+        elif line and not in_bug_types and not in_bug_status:
             info['extra_info'].append(line)
 
     return info
@@ -131,7 +141,29 @@ def find_images(bug_dir):
     return images
 
 
-def generate_html(bugs_by_map, overall_info, total_bugs):
+def calculate_bug_statistics(bugs_by_map):
+    """Calculate bug type, status, and severity statistics from all bugs."""
+    type_counts = defaultdict(int)
+    status_counts = defaultdict(int)
+    severity_counts = defaultdict(int)
+
+    for map_info in bugs_by_map.values():
+        for bug_data in map_info['bugs'].values():
+            # Count bug types (handle comma-separated types)
+            bug_types = [t.strip() for t in bug_data['type'].split(',') if t.strip()]
+            for bug_type in bug_types:
+                type_counts[bug_type] += 1
+
+            # Count bug statuses
+            status_counts[bug_data['status']] += 1
+
+            # Count severities
+            severity_counts[bug_data['severity']] += 1
+
+    return dict(type_counts), dict(status_counts), dict(severity_counts)
+
+
+def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_counts, severity_counts):
     """Generate the complete HTML document."""
 
     html = """<!DOCTYPE html>
@@ -195,7 +227,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             margin: 10px 0;
         }}
 
-        .bug-types ul, .severity-info p {{
+        .bug-types ul, .severity-info p, .severity-info ul {{
             margin-left: 20px;
         }}
 
@@ -460,7 +492,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
 </head>
 <body>
     <div class="container">
-        <h1>Bug Report</h1>
+        <h1>Ferocious bug reports</h1>
 
         <div class="info-section">
             <p><a href="https://github.com/feralbughunter/Ferocious-bugs" target="_blank" class="github-link">GitHub bug repository</a></p>
@@ -477,21 +509,65 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             <div class="severity-info">
                 <h3>Severity</h3>
                 <p>{severity_desc}</p>
+                <ul>
+{severity_counts_list}
+                </ul>
             </div>
 
             <div class="status-legend">
                 <h3>Bug Status</h3>
                 <ul>
-                    <li><strong>Unfixed</strong> - Bug has not been resolved yet</li>
-                    <li><strong>Fixed</strong> - Bug has been fixed in a newer version</li>
-                    <li><strong>Not a Bug</strong> - Reported issue is not considered a bug</li>
+{bug_status_list}
                 </ul>
             </div>
         </div>
-""".format(
+"""
+
+    # Extract bug type names from overall_info (format: "Type name - Description")
+    bug_type_names = {}
+    for bt in overall_info['bug_types']:
+        if ' - ' in bt:
+            type_name = bt.split(' - ')[0].strip()
+            bug_type_names[type_name] = bt
+
+    # Generate bug types list with counts at the start
+    bug_types_list = []
+    for bt in overall_info['bug_types']:
+        if ' - ' in bt:
+            type_name = bt.split(' - ')[0].strip()
+            count = type_counts.get(type_name, 0)
+            bug_types_list.append(f'                    <li><strong>({count})</strong> {bt}</li>\n')
+        else:
+            bug_types_list.append(f'                    <li>{bt}</li>\n')
+
+    # Generate severity counts list (as a list, not nested)
+    severity_counts_list = []
+    for severity in sorted(severity_counts.keys()):
+        count = severity_counts[severity]
+        severity_counts_list.append(f'                    <li><strong>{severity}:</strong> {count}</li>\n')
+
+    # Generate bug status list with counts (show all statuses, even with 0 count)
+    status_display_info = []
+    for status_line in overall_info['bug_status_info']:
+        if ' - ' in status_line:
+            status_name = status_line.split(' - ')[0].strip()
+            description = status_line.split(' - ')[1].strip()
+            # Map status names to internal keys
+            status_key_map = {
+                'fixed': 'fixed',
+                'unfixed': 'unfixed',
+                'notabug': 'notabug'
+            }
+            status_key = status_key_map.get(status_name.lower(), status_name.lower())
+            count = status_counts.get(status_key, 0)
+            status_display_info.append(f'                    <li><strong>{status_name.capitalize()}:</strong> {count} - {description}</li>\n')
+
+    html = html.format(
         total_bugs=total_bugs,
-        bug_types_list=''.join([f'                    <li>{bt}</li>\n' for bt in overall_info['bug_types']]),
-        severity_desc=overall_info['severity_desc']
+        bug_types_list=''.join(bug_types_list),
+        severity_desc=overall_info['severity_desc'],
+        severity_counts_list=''.join(severity_counts_list),
+        bug_status_list=''.join(status_display_info)
     )
 
     # Sort maps by map number
@@ -534,8 +610,8 @@ def generate_html(bugs_by_map, overall_info, total_bugs):
             # Format bug type with special styling for 'Game breaking'
             bug_type_html = bug_data['type']
             if 'Game breaking' in bug_data['type']:
-                # Split by comma and process each part
-                parts = [part.strip() for part in bug_data['type'].split(',')]
+                # Split by comma and process each part, filtering out empty strings
+                parts = [part.strip() for part in bug_data['type'].split(',') if part.strip()]
                 formatted_parts = []
                 for part in parts:
                     if part == 'Game breaking':
@@ -619,7 +695,14 @@ def main():
     """Main function to generate the bug report."""
     script_dir = Path(__file__).parent
     bugs_by_map = {}
-    overall_info = None
+
+    # Read overall info from root directory
+    overall_info_path = script_dir / 'overall_info.txt'
+    if not overall_info_path.exists():
+        print("Error: overall_info.txt not found in root directory!")
+        return
+
+    overall_info = parse_overall_info(overall_info_path)
 
     for item in sorted(script_dir.iterdir()):
         if item.is_dir() and item.name.startswith('Bugs_Map_'):
@@ -628,15 +711,6 @@ def main():
                 map_number = match.group(1)
                 map_name_raw = match.group(2)
                 map_name = map_name_raw.replace('_', ' ')
-
-                overall_info_path = item / 'OVERALL_INFO.txt'
-                if overall_info_path.exists():
-                    map_overall_info = parse_overall_info(overall_info_path)
-                    if overall_info is None:
-                        overall_info = map_overall_info
-                else:
-                    print(f"Warning: OVERALL_INFO.txt not found in {item.name}")
-                    continue
 
                 bugs = {}
 
@@ -653,7 +727,7 @@ def main():
 
                 bugs_by_map[map_name] = {
                     'bugs': bugs,
-                    'version': map_overall_info['version'],
+                    'version': overall_info['version'],
                     'map_number': int(map_number)
                 }
 
@@ -661,12 +735,24 @@ def main():
         print("Error: No Bugs_Map_* folders found!")
         return
 
-    if overall_info is None:
-        print("Error: No OVERALL_INFO.txt found!")
-        return
-
+    # Calculate statistics
     total_bugs = sum(len(map_info['bugs']) for map_info in bugs_by_map.values())
-    html_content = generate_html(bugs_by_map, overall_info, total_bugs)
+    type_counts, status_counts, severity_counts = calculate_bug_statistics(bugs_by_map)
+
+    # Update overall_info.txt with new bug count
+    overall_info_path = script_dir / 'overall_info.txt'
+    if overall_info_path.exists():
+        with open(overall_info_path, 'r', encoding='utf-8') as f:
+            content = f.read()
+
+        # Update the Count: line
+        updated_content = re.sub(r'Count:\s*\d+', f'Count: {total_bugs}', content)
+
+        with open(overall_info_path, 'w', encoding='utf-8') as f:
+            f.write(updated_content)
+
+    # Generate HTML
+    html_content = generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_counts, severity_counts)
 
     output_path = script_dir / 'index.html'
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -675,6 +761,7 @@ def main():
     print(f"✓ Bug report generated successfully: {output_path}")
     print(f"  Total maps: {len(bugs_by_map)}")
     print(f"  Total bugs: {total_bugs}")
+    print(f"✓ Updated overall_info.txt with bug count: {total_bugs}")
 
 
 if __name__ == '__main__':

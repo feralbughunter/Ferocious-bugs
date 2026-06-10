@@ -59,7 +59,7 @@
             margin: 10px 0;
         }
 
-        .bug-types ul, .severity-info p {
+        .bug-types ul, .severity-info p, .severity-info ul {
             margin-left: 20px;
         }
 
@@ -324,7 +324,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Bug Report</h1>
+        <h1>Ferocious bug reports</h1>
 
         <div class="info-section">
             <p><a href="https://github.com/feralbughunter/Ferocious-bugs" target="_blank" class="github-link">GitHub bug repository</a></p>
@@ -334,15 +334,15 @@
             <div class="bug-types">
                 <h3>Bug Types</h3>
                 <ul>
-                    <li>Item placement - Item incorrectly placed in the world.</li>
-                    <li>Collision missing - Incorrect collision between an object an the player.</li>
-                    <li>Level escape - A way to escape behind the playable map.</li>
-                    <li>Broken model - World object with broken physics, joints, sound...</li>
-                    <li>Interaction issue - A problem with using an object.</li>
-                    <li>Player confusion - A problem that mystifies the player.</li>
-                    <li>Invisible wall - An invisible wall blocking the player.</li>
-                    <li>Game breaking - Major issue leading making it impossible to continue the game or accessing an important objective.</li>
-                    <li>Broken logic - Events happening out of order or not at all.</li>
+                    <li><strong>(32)</strong> Item placement - Item incorrectly placed in the world.</li>
+                    <li><strong>(10)</strong> Collision missing - Incorrect collision between an object an the player.</li>
+                    <li><strong>(3)</strong> Level escape - A way to escape behind the playable map.</li>
+                    <li><strong>(8)</strong> Broken model - World object with broken physics, joints, sound...</li>
+                    <li><strong>(7)</strong> Interaction issue - A problem with using an object.</li>
+                    <li><strong>(15)</strong> Player confusion - A problem that mystifies the player.</li>
+                    <li><strong>(6)</strong> Invisible wall - An invisible wall blocking the player.</li>
+                    <li><strong>(11)</strong> Game breaking - Major issue leading making it impossible to continue the game or accessing an important objective.</li>
+                    <li><strong>(20)</strong> Broken logic - Events happening out of order or not at all.</li>
 
                 </ul>
             </div>
@@ -350,14 +350,21 @@
             <div class="severity-info">
                 <h3>Severity</h3>
                 <p>Summarizes how much the bug breaks the game, breaks immersion or how visible it is.</p>
+                <ul>
+                    <li><strong>High:</strong> 64</li>
+                    <li><strong>Low:</strong> 12</li>
+                    <li><strong>Medium:</strong> 18</li>
+
+                </ul>
             </div>
 
             <div class="status-legend">
                 <h3>Bug Status</h3>
                 <ul>
-                    <li><strong>Unfixed</strong> - Bug has not been resolved yet</li>
-                    <li><strong>Fixed</strong> - Bug has been fixed in a newer version</li>
-                    <li><strong>Not a Bug</strong> - Reported issue is not considered a bug</li>
+                    <li><strong>Fixed:</strong> 0 - Bug has been fixed in a newer version.</li>
+                    <li><strong>Unfixed:</strong> 94 - Bug has not been resolved yet.</li>
+                    <li><strong>Notabug:</strong> 0 - Reported issue is not considered a bug.</li>
+
                 </ul>
             </div>
         </div>
@@ -804,7 +811,7 @@
                 <li class="bug-unfixed">
                     <a href="#bug-Crevasse-22">
                         <span class="severity-badge severity-high">High</span>
-                        <span>Map 2 Bug #22 - <span class="bug-type">Item placement, Broken logic,</span> - <strong>Unfixed</strong></span>
+                        <span>Map 2 Bug #22 - <span class="bug-type">Item placement, Broken logic</span> - <strong>Unfixed</strong></span>
                     </a>
                 </li>
                 <li class="bug-unfixed">
@@ -2304,7 +2311,7 @@
             <div class="bug-info">
                 <p><strong>Map:</strong> 2 - Crevasse</p>
                 <p><strong>Description:</strong> Couple problems in this room prior to getting the DCD. The dryosaurs running around completely drown the audio with loud footsteps. The door sliders are visible on the other side of the frame. The black machine in the corner is not reflecting light. Voicelines here played fine.</p>
-                <p><strong>Type:</strong> Item placement, Broken logic,</p>
+                <p><strong>Type:</strong> Item placement, Broken logic</p>
                 <p><strong>Severity:</strong> <span class="severity-badge severity-high">High</span></p>
                 <p><strong>Reproducibility:</strong> Always</p>
                 <p><strong>Campfire:</strong> Franka’s exit</p>
