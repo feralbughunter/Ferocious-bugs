@@ -1,0 +1,11 @@
+Bug #23
+==================================================
+
+Description:
+The DCD is embedded in the stone. And has an untextured display during animation.
+Campfire: Franka’s exit
+
+Type: Item placement, Broken model
+Severity: High
+Reproducibility: Always
+Status: unfixed

@@ -1,0 +1,11 @@
+Bug #42
+==================================================
+
+Description:
+I can not figure out how to get to this secret. It seems like you should take the ledge on the left and walk to the opening which you can do, but there is an invisible wall there and you can not jump into the cave. The other entrance from the Trex temple is blocked.
+Campfire: River valley
+
+Type: Game breaking
+Severity: High
+Reproducibility: Always
+Status: unfixed

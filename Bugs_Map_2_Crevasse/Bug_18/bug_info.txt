@@ -1,0 +1,11 @@
+Bug #18
+==================================================
+
+Description:
+The leaves growing on the sliding door stay in place when the door is opened.
+Campfire: River valley main entrance
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
+Status: unfixed

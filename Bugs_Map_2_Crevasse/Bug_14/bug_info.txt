@@ -1,0 +1,11 @@
+Bug #14
+==================================================
+
+Description:
+This tree with eucalyptus has no collisions.
+Campfire: Cliff temple
+
+Type: Collision issue
+Severity: Low
+Reproducibility: Always
+Status: unfixed

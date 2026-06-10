@@ -1,0 +1,10 @@
+Bug #32
+==================================================
+
+Description:
+These hints probably could disappear once used.
+
+Type: Broken logic
+Severity: Low
+Reproducibility: Always
+Status: unfixed

@@ -1,0 +1,11 @@
+Bug #35
+==================================================
+
+Description:
+Dead titanoceratops has no collisions.
+Campfire: River valley
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always
+Status: unfixed

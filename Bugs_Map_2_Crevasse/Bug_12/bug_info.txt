@@ -1,0 +1,11 @@
+Bug #12
+==================================================
+
+Description:
+The temple upper portion with the rope attachment is somewhat off the ground.
+Campfire: Valley Temple
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
+Status: unfixed

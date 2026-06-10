@@ -1,0 +1,11 @@
+Bug #7
+==================================================
+
+Description:
+There is something stuck in the ceiling in the shed with the key and shop. The bodies here become repeatedly lootable when you quit the game and load the save again. You can farm resources this way. The body inside the key room is blinking, has a dot and can not be accessed to be looted.
+Campfire: Manifesto checkpoint
+
+Type: Item placement, Broken logic, Interaction issue
+Severity: High
+Reproducibility: Always
+Status: unfixed

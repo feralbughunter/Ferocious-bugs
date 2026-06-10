@@ -1,0 +1,11 @@
+Bug #24
+==================================================
+
+Description:
+The dryosaur hint is floating.
+Campfire: Franka’s exit
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always
+Status: unfixed

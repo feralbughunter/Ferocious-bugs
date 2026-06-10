@@ -1,0 +1,11 @@
+Bug #27
+==================================================
+
+Description:
+Dryosaur hint is floating and the gold is too deep in the stone you can not pick it up.
+Campfire: Dino skull
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always
+Status: unfixed

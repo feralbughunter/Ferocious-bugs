@@ -1,0 +1,10 @@
+Bug #28
+==================================================
+
+Description:
+Campfires I made sometimes disappear when loaded.
+
+Type: Game breaking
+Severity: High
+Reproducibility: Always
+Status: unfixed

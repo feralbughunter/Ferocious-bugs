@@ -1,0 +1,10 @@
+Bug #45
+==================================================
+
+Description:
+The second map should end sooner, otherwise you can see the end of the level.
+
+Type: Broken logic
+Severity: High
+Reproducible: Always
+Status: unfixed

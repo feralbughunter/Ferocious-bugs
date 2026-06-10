@@ -1,0 +1,11 @@
+Bug #3
+==================================================
+
+Description:
+At the first door of this map you can see the bars poking out the other end of the frame.
+Campfire: Canyons
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always
+Status: unfixed

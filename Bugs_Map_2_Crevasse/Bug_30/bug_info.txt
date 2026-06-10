@@ -1,0 +1,10 @@
+Bug #30
+==================================================
+
+Description:
+The names are oddly cut.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always
+Status: unfixed

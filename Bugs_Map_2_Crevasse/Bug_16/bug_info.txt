@@ -1,0 +1,11 @@
+Bug #16
+==================================================
+
+Description:
+Climbing wines reaching in through the ceiling.
+Campfire: Cliff temple
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
+Status: unfixed

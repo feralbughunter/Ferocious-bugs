@@ -1,0 +1,10 @@
+Bug #1
+==================================================
+
+Description:
+Level immediately repeats that the game can only be saved at camp fires. The player must undoubtedly know that already after the first map. It is redundant. The same thing happens a little later with crouching and flashlight and navigation and silent kills.
+
+Type: Player confusion
+Severity: Medium
+Reproducibility: On first passthrough
+Status: unfixed
