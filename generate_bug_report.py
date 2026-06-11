@@ -8,6 +8,7 @@ import os
 import re
 from pathlib import Path
 from collections import defaultdict
+from PIL import Image
 
 
 def parse_overall_info(filepath):
@@ -134,7 +135,7 @@ def get_status_info(status):
 
 def find_images(bug_dir):
     """Find all image files in a bug directory."""
-    image_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp'}
+    image_extensions = {'.jpg', '.jpeg', '.png'}
     images = []
 
     for file in sorted(os.listdir(bug_dir)):
@@ -676,7 +677,8 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
 """
                 for img in bug_data['images']:
                     img_path = f"{bug_data['path']}/{img}"
-                    html += f'                <a href="{img_path}" target="_blank"><img src="{img_path}" alt="Bug #{bug_id} screenshot"></a>\n'
+                    thumb = optimize_img(Path(img_path))
+                    html += f'                <a href="{img_path}" target="_blank"><img src="{thumb}" alt="Bug #{bug_id} screenshot"></a>\n'
 
                 html += """            </div>
 """
@@ -692,6 +694,46 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
 """
 
     return html
+
+# todo here
+def optimize_img(path: Path) -> Path:
+    """
+    Generate thumbnail and optimize it.
+    :param path: Path to the original image.
+    :return: Path to the thumbnail.
+    """
+    global t_id
+    if not Path(Path.cwd() / "thumbnails").exists():
+        Path.mkdir(Path.cwd() / "thumbnails")
+
+    full_img_path = Path.cwd() / path
+    thumb_dir_path = (Path.cwd() / "thumbnails" / path.parent / f"thumb_{full_img_path.name}").parent
+    thumb_img_path = (Path.cwd() / "thumbnails" / path.parent / f"thumb_{full_img_path.name}")
+    thumb_html_path = Path("thumbnails" / path.parent / f"thumb_{full_img_path.name}")
+
+    if not thumb_dir_path.exists():
+        Path.mkdir(thumb_dir_path, parents=True)
+
+    if not thumb_img_path.exists():
+        optimize_image(full_img_path, thumb_img_path)
+
+    return thumb_html_path
+
+
+def optimize_image(src_img_path: Path, dst_img_path: Path) -> None:
+    """
+    Optimize and overwrite jpg and png images.
+    :param img_path: Full path to the image on disk.
+    :return: None
+    """
+    img = Image.open(src_img_path)
+
+    resized = img.resize((1999, 837))
+    resized.save(dst_img_path)
+
+    img = Image.open(dst_img_path)
+    img.save(dst_img_path, optimize=True, quality=60)
+    print(f"✓ Optimized image: {dst_img_path}")
 
 
 def main():
