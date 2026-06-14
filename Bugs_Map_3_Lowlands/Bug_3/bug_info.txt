@@ -1,0 +1,13 @@
+Bug #3
+==================================================
+
+Description:
+Picked up Key paddle. Probably should say item. It shows in the diary as a key with no image. You can pick up multiple paddles which you do not need.
+
+Campfire: Central hub
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.162.3935

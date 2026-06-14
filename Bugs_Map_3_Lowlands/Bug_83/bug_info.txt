@@ -1,0 +1,13 @@
+Bug #83
+==================================================
+
+Description:
+Shooting these makes them explode with no damage to the object afterwards. The damaged skin will appear for 10 seconds and then return to normal.
+
+Campfire: Main dock
+
+Type: Broken logic, Player confusion
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

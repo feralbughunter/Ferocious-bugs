@@ -1,0 +1,13 @@
+Bug #78
+==================================================
+
+Description:
+I never found the spear room key - secret at the bottom. The secret in the middle on the small island is not obtainable because the button is not working.
+
+Campfire: Campsite
+
+Type: Broken logic, Player confusion, Game breaking
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

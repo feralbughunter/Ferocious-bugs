@@ -1,0 +1,13 @@
+Bug #72
+==================================================
+
+Description:
+Partial level escape leading to an area with broken geometry. Right behind the Kayak gate.
+
+Campfire: Sunken temple south exit
+
+Type: Level escape
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

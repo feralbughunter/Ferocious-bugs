@@ -1,0 +1,13 @@
+Bug #73
+==================================================
+
+Description:
+You can walk up this wall with barely any issues, which probably not the intended way of accessing this secret. There are no dryosaurs here, so I do not know what the intended way is. It seems to me that you are supposed to use a dryosaur here.
+
+Campfire: Sunken temple south exit
+
+Type: Player confusion, Invisible wall
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

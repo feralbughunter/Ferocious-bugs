@@ -1,0 +1,13 @@
+Bug #75
+==================================================
+
+Description:
+Floating object after destroying the wooden box below them.
+
+Campfire: Campsite
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

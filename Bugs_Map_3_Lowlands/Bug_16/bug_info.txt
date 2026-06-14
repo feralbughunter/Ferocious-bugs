@@ -1,0 +1,13 @@
+Bug #16
+==================================================
+
+Description:
+The ladder on that cylinder has broken collisions and may look like it is usable while it is not.
+
+Campfire: Tunnel
+
+Type: Collision issue
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

@@ -1,0 +1,11 @@
+Bug #61
+==================================================
+
+Description:
+If you open the map and then pull out the DCD, pressing escape will switch between them and never bring u the menu. You have to switch to a weapon to get the escape menu.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #90
+==================================================
+
+Description:
+Interaction dot on an extinguisher with nothing to do.
+
+Campfire: Main camp
+
+Type: Interaction issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

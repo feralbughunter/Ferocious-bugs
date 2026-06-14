@@ -1,0 +1,13 @@
+Bug #69
+==================================================
+
+Description:
+Wrong shadows or texture on these items in the temple.
+
+Campfire: Sunken temple south
+
+Type: Broken model
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

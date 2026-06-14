@@ -1,0 +1,13 @@
+Bug #60
+==================================================
+
+Description:
+Parasaur temple key in an awkward position.
+
+Campfire: Tunnel
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

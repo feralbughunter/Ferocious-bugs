@@ -1,0 +1,13 @@
+Bug #32
+==================================================
+
+Description:
+Trex nest bones have no collision.
+
+Campfire: Jurassic fence
+
+Type: Collision issue. 
+Severity: Medium
+Reproducibility: Always. 
+Status: unfixed
+Version: 1.08.162.3935

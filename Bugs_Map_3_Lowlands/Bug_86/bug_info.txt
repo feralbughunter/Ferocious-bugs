@@ -1,0 +1,13 @@
+Bug #86
+==================================================
+
+Description:
+Floating rocks on the road to the final trex camp.
+
+Campfire: Main camp
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,14 @@
+Bug #76
+==================================================
+
+Description:
+After the Kayak mission (can be seen on earlier screenshots) I am asked to discover the Trex nest next, but I have already done that mission hours ago, you can see that the remaining mission up top is much further in the story. Standing in the nest now, the mission will not progress. The Trex mission never disappeared from there until the end of the level. If the player can do these out of order by exploring, the game should be ready for that.
+First you are asked to go to the Tunnel and on that route you will find several opportunities to get a kayak before the Kayak mission.
+
+Campfire: Campsite
+
+Type: Broken logic, Game breaking
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

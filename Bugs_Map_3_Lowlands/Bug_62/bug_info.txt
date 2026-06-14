@@ -1,0 +1,13 @@
+Bug #62
+==================================================
+
+Description:
+Raptors in this area and frozen in place. They will attack you if you come to them but you can not scan them and befriend them, they will not move. They have no collisions. This does not change before or after returning the egg.
+
+Campfire: Sunken temple north
+
+Type: Broken logic, Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

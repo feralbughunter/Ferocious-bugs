@@ -1,0 +1,13 @@
+Bug #41
+==================================================
+
+Description:
+Objects in this place have no collision.
+
+Campfire: Drills camp
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

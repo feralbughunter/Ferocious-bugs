@@ -1,0 +1,11 @@
+Bug #29
+==================================================
+
+Description:
+If you open the map inside the boat, close the map and then exit the boat, the map will open again on it's own. You then have to press M twice to close it.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

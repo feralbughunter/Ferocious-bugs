@@ -1,0 +1,13 @@
+Bug #88
+==================================================
+
+Description:
+Both papers are too deep in the table and invisible.
+
+Campfire: Main camp
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #71
+==================================================
+
+Description:
+After clearing almost the whole map and using a boat probably 50 times, I get here to the Kayak objective and get a line about finding a boat. This should probably be placed closer at the first boat the player can get. The campfire here has a wrong name without spaces.
+
+Campfire: Sunken temple south exit
+
+Type: Broken logic, Player confusion
+Severity: High
+Reproducibility: First passthrough 
+Status: unfixed
+Version: 1.08.400.4173

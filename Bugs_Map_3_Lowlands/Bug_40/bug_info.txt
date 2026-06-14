@@ -1,0 +1,13 @@
+Bug #40
+==================================================
+
+Description:
+If you stand close to this dinosaur the ground will have water on it. Standing a little further makes the water disappear. The dinosaurs here have no collisions with the player.
+
+Campfire: Scorched earth
+
+Type: Broken model, Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

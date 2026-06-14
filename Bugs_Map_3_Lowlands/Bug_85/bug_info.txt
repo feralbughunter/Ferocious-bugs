@@ -1,0 +1,13 @@
+Bug #85
+==================================================
+
+Description:
+Partial level escape through here. 
+
+Campfire: Main dock
+
+Type: Level escape
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

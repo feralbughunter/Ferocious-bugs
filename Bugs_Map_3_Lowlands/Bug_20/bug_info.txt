@@ -1,0 +1,13 @@
+Bug #20
+==================================================
+
+Description:
+In this place you need a key. But you do not, because you can reach through the window. And then jump over the railing on the right and reach in through the other window to grab all the items.
+
+Campfire: Tunnel
+
+Type: Item placement, Interaction issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

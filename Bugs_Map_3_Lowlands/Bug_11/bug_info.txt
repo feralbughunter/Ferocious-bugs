@@ -1,0 +1,13 @@
+Bug #11
+==================================================
+
+Description:
+Another instance of this bag changing color based on distance.
+
+Campfire: Central camp
+
+Type: Broken logic
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

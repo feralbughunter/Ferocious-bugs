@@ -1,0 +1,13 @@
+Bug #30
+==================================================
+
+Description:
+This tent has no collisions.
+
+Campfire: Campsite
+
+Type: Collision issue
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

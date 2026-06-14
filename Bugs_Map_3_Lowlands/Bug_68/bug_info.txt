@@ -1,0 +1,13 @@
+Bug #68
+==================================================
+
+Description:
+You can not return the second stolen egg but the interaction dot is still here.
+
+Campfire: Treetop hunetr
+
+Type: Interaction issue, Broken logic, Player confusion
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

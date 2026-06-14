@@ -1,0 +1,11 @@
+Bug #28
+==================================================
+
+Description:
+The kayak icon is not explained in the legend. And I personally can not recognize that as a boat.
+
+Type: Player confusion
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

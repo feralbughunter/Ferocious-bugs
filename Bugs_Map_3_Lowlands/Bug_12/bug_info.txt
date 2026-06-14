@@ -1,0 +1,13 @@
+Bug #12
+==================================================
+
+Description:
+Paper placed too deep into wall.
+
+Campfire: Central camp
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

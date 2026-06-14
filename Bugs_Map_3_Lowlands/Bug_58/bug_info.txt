@@ -1,0 +1,13 @@
+Bug #58
+==================================================
+
+Description:
+No collisions on this stump.
+
+Campfire: Tunnel
+
+Type: Collision issue
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

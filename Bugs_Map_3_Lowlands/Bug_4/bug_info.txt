@@ -1,0 +1,13 @@
+Bug #4
+==================================================
+
+Description:
+Sauropods clipping through each other.
+
+Campfire: Central hub
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

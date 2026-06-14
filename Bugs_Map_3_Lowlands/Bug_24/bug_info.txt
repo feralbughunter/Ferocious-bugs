@@ -1,0 +1,13 @@
+Bug #24
+==================================================
+
+Description:
+You can get onto that rock, then jump on the roof of this building and run up the crane tower. Quite a view from up here!
+
+Campfire: Tunnel collapse
+
+Type: Invisible wall, Collision missing
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

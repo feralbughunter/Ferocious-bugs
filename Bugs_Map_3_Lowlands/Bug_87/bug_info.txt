@@ -1,0 +1,13 @@
+Bug #87
+==================================================
+
+Description:
+The enclosure is too small for him.
+
+Campfire: Main camp
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

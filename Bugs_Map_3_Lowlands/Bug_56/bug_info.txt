@@ -1,0 +1,13 @@
+Bug #56
+==================================================
+
+Description:
+Box not sitting properly on the lower box. Present multiple times in this area.
+
+Campfire: Drills dock rear
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

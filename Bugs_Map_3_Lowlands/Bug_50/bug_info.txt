@@ -1,0 +1,13 @@
+Bug #50
+==================================================
+
+Description:
+No collisions on this ladder at the back of the refinery going up to the computer room. Present for all of these ladder in this area. Possibly all these ladder models have no collisions.
+
+Campfire:  Drills dock rear
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

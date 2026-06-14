@@ -1,0 +1,13 @@
+Bug #48
+==================================================
+
+Description:
+No collision on this ladder.
+
+Campfire: Drills dock
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

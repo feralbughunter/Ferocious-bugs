@@ -1,0 +1,13 @@
+Bug #44
+==================================================
+
+Description:
+Multiple hold ladder points.
+
+Campfire: Drills dock
+
+Type: Interaction issue
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

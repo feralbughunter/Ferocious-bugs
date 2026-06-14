@@ -1,0 +1,13 @@
+Bug #21
+==================================================
+
+Description:
+No collision on any of these doors in this area. Including this closed door which leads to an empty room.
+
+Campfire: Tunnel
+
+Type: Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

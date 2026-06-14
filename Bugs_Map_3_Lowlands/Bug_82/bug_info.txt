@@ -1,0 +1,15 @@
+Bug #82
+==================================================
+
+Description:
+Shooting the 50.cal the ammunition does not move. The gun stops shooting at one point with no indication why or any sound. You can then remount it and continue shooting.
+There should probably be some clue for the player to understand what is happening.
+This gun is awkwardly placed and pushes you into the sandbags.
+
+Campfire: 
+
+Type: Broken logic, Item placement, Player confusion
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

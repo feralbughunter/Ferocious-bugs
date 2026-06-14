@@ -1,0 +1,13 @@
+Bug #22
+==================================================
+
+Description:
+Gold too deep in the stone.
+
+Campfire: Tunnel collapse
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.162.3935

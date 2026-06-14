@@ -1,0 +1,13 @@
+Bug #74
+==================================================
+
+Description:
+Floating object inside the temple right behind the door.
+
+Campfire: Campsite
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

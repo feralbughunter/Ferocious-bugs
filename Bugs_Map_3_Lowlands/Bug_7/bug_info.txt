@@ -1,0 +1,13 @@
+Bug #7
+==================================================
+
+Description:
+This pillar is not exactly solid.
+
+Campfire: Central hub
+
+Type: Collision issue
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

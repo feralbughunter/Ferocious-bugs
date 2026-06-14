@@ -1,0 +1,13 @@
+Bug #38
+==================================================
+
+Description:
+Many objects in this area have no collision.
+
+Campfire: Scorched earth.
+
+Type: Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

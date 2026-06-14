@@ -1,0 +1,13 @@
+Bug #79
+==================================================
+
+Description:
+Items fell through shelving inside the building right behind the campfire. No collision on the ladder here either. Opening the game makes no sound and the interaction dot is not centered.
+
+Campfire: Main dock gate
+
+Type: Item placement, Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

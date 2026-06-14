@@ -1,0 +1,13 @@
+Bug #77
+==================================================
+
+Description:
+The broken statue on the stair has no collisions.
+
+Campfire: Jurassic fence
+
+Type: Collision issue
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

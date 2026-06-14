@@ -1,0 +1,13 @@
+Bug #43
+==================================================
+
+Description:
+All of these stumps have no collision.
+
+Campfire: Drills camp
+
+Type: Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

@@ -1,0 +1,14 @@
+Bug #67
+==================================================
+
+Description:
+The stolen egg here is floating, has no interaction dot but can be picked up.
+This skull is blinking but can not be picked up or anything.
+
+Campfire: Treetop hunter
+
+Type: Interaction issue, Player confusion
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

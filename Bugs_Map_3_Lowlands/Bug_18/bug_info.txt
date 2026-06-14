@@ -1,0 +1,13 @@
+Bug #18
+==================================================
+
+Description:
+This tent has no collisions and odd shape.
+
+Campfire: Central camp entrance S
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

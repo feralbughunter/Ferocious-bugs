@@ -1,0 +1,13 @@
+Bug #92
+==================================================
+
+Description:
+Sniper in the container in the air above the trex complex is misaligned.
+
+Campfire: Main camp
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

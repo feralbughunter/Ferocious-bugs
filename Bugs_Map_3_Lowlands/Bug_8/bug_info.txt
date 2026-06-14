@@ -1,0 +1,11 @@
+Bug #8
+==================================================
+
+Description:
+When using a ladder, you can see through your shoulder.
+
+Type: Broken model
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

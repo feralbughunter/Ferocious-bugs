@@ -1,0 +1,13 @@
+Bug #1
+==================================================
+
+Description:
+There is a tile of misplaced terrain, you can stand on it. Right after the map start and jumping down the waterfall in the corridor on the left on the right side.
+
+Campfire: Waterfall entrance
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

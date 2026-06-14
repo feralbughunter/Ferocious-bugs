@@ -1,0 +1,13 @@
+Bug #25
+==================================================
+
+Description:
+I am supposed to get a kayak, but I am in one, I just ignored the first one and took one elsewhere.
+
+Campfire: Central hub Tunnel
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

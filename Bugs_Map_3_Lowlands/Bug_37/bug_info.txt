@@ -1,0 +1,13 @@
+Bug #37
+==================================================
+
+Description:
+No collisions on this stump.
+
+Campfire: Scorched earth
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

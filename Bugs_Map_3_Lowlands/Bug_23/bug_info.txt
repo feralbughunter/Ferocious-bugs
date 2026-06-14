@@ -1,0 +1,11 @@
+Bug #23
+==================================================
+
+Description:
+Senses potion has None description. Same for Spear and Primary holster and Max health potion.
+
+Type: Player confusion 
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

@@ -1,0 +1,13 @@
+Bug #51
+==================================================
+
+Description:
+This rock at the back of the refinery does not go deep enough, you can swim under it.
+
+Campfire: Drills dock rear
+
+Type: Broken model
+Severity: Low
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

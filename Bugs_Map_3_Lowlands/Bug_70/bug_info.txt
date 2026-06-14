@@ -1,0 +1,13 @@
+Bug #70
+==================================================
+
+Description:
+Floating branch in the temple behind the room with the paddle to the left.
+
+Campfire: Sunken temple south
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

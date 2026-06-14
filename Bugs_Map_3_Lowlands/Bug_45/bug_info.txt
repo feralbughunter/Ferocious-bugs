@@ -1,0 +1,13 @@
+Bug #45
+==================================================
+
+Description:
+All trees with this design in this area an possibly elsewhere have no collision with the player.
+
+Campfire: Drills dock
+
+Type: Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

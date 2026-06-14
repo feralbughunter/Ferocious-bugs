@@ -1,0 +1,13 @@
+Bug #2
+==================================================
+
+Description:
+The lighter tree stump is missing collisions. Same with the stumps across the bridge to the right.
+
+Campfire: Central hub
+
+Type: Collision missing
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

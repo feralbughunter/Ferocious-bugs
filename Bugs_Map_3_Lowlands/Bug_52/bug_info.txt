@@ -1,0 +1,13 @@
+Bug #52
+==================================================
+
+Description:
+At the back of the refinery, this container if off the ground.
+
+Campfire:  Drills dock rear
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

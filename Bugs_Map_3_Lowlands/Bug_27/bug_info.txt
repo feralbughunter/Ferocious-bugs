@@ -1,0 +1,11 @@
+Bug #27
+==================================================
+
+Description:
+You can get the boat clip through various objects.
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

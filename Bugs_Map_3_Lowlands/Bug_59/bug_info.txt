@@ -1,0 +1,13 @@
+Bug #59
+==================================================
+
+Description:
+Several issues with this wall. I am standing in a stone with broken collision. The wall in front of me is not drawn all the way to the edge and you can see through the stairs.
+
+Campfire: Tunnel
+
+Type: Collision issue, Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

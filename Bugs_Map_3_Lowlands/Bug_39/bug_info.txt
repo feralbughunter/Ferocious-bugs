@@ -1,0 +1,13 @@
+Bug #39
+==================================================
+
+Description:
+Standing in any fire in this area does not damage the player.
+
+Campfire: Scorched earth
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.162.3935

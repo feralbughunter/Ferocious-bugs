@@ -1,0 +1,13 @@
+Bug #64
+==================================================
+
+Description:
+Floating objects in front of the daemonosaur nest temple door.
+
+Campfire: Sunken temple north
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

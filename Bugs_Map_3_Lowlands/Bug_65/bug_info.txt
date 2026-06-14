@@ -1,0 +1,13 @@
+Bug #65
+==================================================
+
+Description:
+Floating objects.
+
+Campfire: Sunken temple before the gate after the nest.
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173
