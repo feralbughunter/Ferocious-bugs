@@ -2,7 +2,7 @@ Bug #78
 ==================================================
 
 Description:
-I never found the spear room key - secret at the bottom. The secret in the middle on the small island is not obtainable because the button is not working.
+The secret in the middle on the small island is not obtainable because the button is not working. The spear trap key is accessible by Parasaur and with the Parasaur bug you have to be lucky to accidentally end up there.
 
 Campfire: Campsite
 

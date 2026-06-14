@@ -1,0 +1,13 @@
+Bug #94
+==================================================
+
+Description:
+Object inside a wall. Follow the wall on the right side of the river.
+
+Campfire: Campsite
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173
