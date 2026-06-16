@@ -1,0 +1,13 @@
+Bug #57
+==================================================
+
+Description:
+Items fell through shelves. Up after the tower and the scorpions in the small soldier encampment.
+
+Campfire: Stepped temple rear 
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

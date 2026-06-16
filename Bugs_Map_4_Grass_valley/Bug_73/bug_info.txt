@@ -1,0 +1,13 @@
+Bug #73
+==================================================
+
+Description:
+Floating tree. The checkpoint name is a duplicate with a (1).
+
+Campfire: Road checkpoint 3 (1)
+
+Type: Item placement, Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

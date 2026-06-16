@@ -1,0 +1,13 @@
+Bug #92
+==================================================
+
+Description:
+No collision on these doors anywhere in the map.
+
+Campfire: Cliff base north entrance
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

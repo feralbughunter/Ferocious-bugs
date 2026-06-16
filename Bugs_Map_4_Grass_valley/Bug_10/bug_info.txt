@@ -1,0 +1,11 @@
+Bug #10
+==================================================
+
+Description:
+Wheel axels are misaligned.
+
+Type: Broken model
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

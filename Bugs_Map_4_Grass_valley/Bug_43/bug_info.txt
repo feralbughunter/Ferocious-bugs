@@ -1,0 +1,13 @@
+Bug #43
+==================================================
+
+Description:
+Mushroom inside wall. Downstairs from the temple in one of the buildings.
+
+Campfire: Stepped temple
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

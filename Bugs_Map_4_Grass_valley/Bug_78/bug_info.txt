@@ -1,0 +1,13 @@
+Bug #78
+==================================================
+
+Description:
+Floating mushrooms at the bottom under the bridge.
+
+Campfire: Bridge temple
+
+Type: Item placement
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

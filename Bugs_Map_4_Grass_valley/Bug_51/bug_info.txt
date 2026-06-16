@@ -1,0 +1,13 @@
+Bug #51
+==================================================
+
+Description:
+The wall here is off the ground in the beginning of the last room of the temple coming from the campfire.
+
+Campfire: Stepped temple inside
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

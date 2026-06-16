@@ -1,0 +1,13 @@
+Bug #95
+==================================================
+
+Description:
+Broken light model. Right behind the campfire.
+
+Campfire: Road checkpoint 1
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

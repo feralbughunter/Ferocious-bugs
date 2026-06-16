@@ -1,0 +1,13 @@
+Bug #31
+==================================================
+
+Description:
+Interaction dot on the first radio tower computer is misaligned. Yellow paint is switche off but still shows here.
+
+Campfire: Mech testing
+
+Type: Interaction issue, Broken logic
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

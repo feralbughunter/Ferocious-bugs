@@ -1,0 +1,13 @@
+Bug #56
+==================================================
+
+Description:
+Floating grass.
+
+Campfire: Stepped temple rear
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

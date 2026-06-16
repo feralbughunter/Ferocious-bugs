@@ -1,0 +1,13 @@
+Bug #79
+==================================================
+
+Description:
+Pushing the bridge temple button makes no sound and the bridge moving makes no sound. These statues as buttons were never introduced, you do not know you should be looking for them. The state of the bridge is not saved, saving and loading makes the bridge retract.
+
+Campfire: Bridge temple
+
+Type: Interaction issue, Broken logic, Player confusion
+Severity: High
+Reproducibility: Always  
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #2
+==================================================
+
+Description:
+If you decide to go off road right off the cliff at the map start, you will just float there for about a 100 meters and then fall and die.
+
+Campfire: Grass valley start
+
+Type: Invisible wall, Broken logic
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

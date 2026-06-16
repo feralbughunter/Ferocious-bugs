@@ -1,0 +1,13 @@
+Bug #38
+==================================================
+
+Description:
+No collision on this stump right next to the car.
+
+Campfire: Valley entrance
+
+Type: Collision issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

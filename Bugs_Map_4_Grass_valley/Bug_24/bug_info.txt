@@ -1,0 +1,13 @@
+Bug #24
+==================================================
+
+Description:
+Daemonosaur will not got and can not be pushed past this invisible wall.
+
+Campfire: Ransacked temple
+
+Type: Invisible wall
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,11 @@
+Bug #39
+==================================================
+
+Description:
+When you use a bandage while having the bag open, you will get stuck and jump will be way too high.
+
+Type: Game breaking, Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

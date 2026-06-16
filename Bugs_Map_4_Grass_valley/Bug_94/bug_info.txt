@@ -1,0 +1,13 @@
+Bug #94
+==================================================
+
+Description:
+Incorrectly placed floating fern.
+
+Campfire: Road checkpoint 1
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

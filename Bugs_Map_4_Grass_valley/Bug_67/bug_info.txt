@@ -1,0 +1,13 @@
+Bug #67
+==================================================
+
+Description:
+If you clear the outpost and then load a save here the side mission will restart and can not be finished. The shop door will re-lock and can not be opened again. The camp fire name is missing spaces. On another later reload further away the mission was completed and disappeared from the map, but coming back closer to the outpost restarts it with no enemies.
+
+Campfire: Road checkpoint 1
+
+Type: Broken logic, Game breaking
+Severity: High
+Reproducibility: Sometimes
+Status: unfixed
+Version: 1.08.400.4173

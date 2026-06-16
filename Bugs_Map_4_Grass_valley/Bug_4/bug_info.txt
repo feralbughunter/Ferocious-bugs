@@ -1,0 +1,11 @@
+Bug #4
+==================================================
+
+Description:
+There should be a hold E prompt for placing the dinosaur in the car. It is confusing.
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #98
+==================================================
+
+Description:
+The general mech boss fight is exceptionally easy. He walks around on fire so maybe he is already damaged for some reason. He took maybe 10 bullets from the 50. cal and died by despawning. In the final boss fight arena, some items fall through shelves too.
+
+Campfire: General's camp
+
+Type: Item placement, Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

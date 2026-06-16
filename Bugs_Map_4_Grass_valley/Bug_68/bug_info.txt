@@ -1,0 +1,13 @@
+Bug #68
+==================================================
+
+Description:
+Going for the secret waterfall key will drop you into a half swimming state where you are kind of swimming while standing on the ground and can not go up and can not drawn. The key is a broken leftover.
+
+Campfire: Road checkpoint 1
+
+Type: Game breaking, Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

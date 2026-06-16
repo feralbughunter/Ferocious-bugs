@@ -1,0 +1,13 @@
+Bug #27
+==================================================
+
+Description:
+Items fell through the object.
+
+Campfire: Abandoned camp
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

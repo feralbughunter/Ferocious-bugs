@@ -6,6 +6,7 @@ Scans Bugs_Map_* folders and generates a comprehensive HTML report.
 
 import os
 import re
+import sys
 from pathlib import Path
 from collections import defaultdict
 from PIL import Image
@@ -797,7 +798,11 @@ def main():
             f.write(updated_content)
 
     # Generate HTML
-    html_content = generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_counts, severity_counts)
+    try:
+        html_content = generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_counts, severity_counts)
+    except ValueError as e:
+        print(f"Format error: {e}")
+        return
 
     output_path = script_dir / 'index.html'
     with open(output_path, 'w', encoding='utf-8') as f:

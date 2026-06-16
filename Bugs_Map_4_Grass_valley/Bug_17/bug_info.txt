@@ -1,0 +1,13 @@
+Bug #17
+==================================================
+
+Description:
+These shelves disappear when you step further or closer in the trex medical supplies building. 
+
+Campfire: Field hospital
+
+Type: Item placement, Broken model
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

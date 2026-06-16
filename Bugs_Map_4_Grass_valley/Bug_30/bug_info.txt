@@ -1,0 +1,13 @@
+Bug #30
+==================================================
+
+Description:
+No collision on the ladder below the buggy and on the beams around the pit.
+
+Campfire: Mech testing
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

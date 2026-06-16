@@ -1,0 +1,13 @@
+Bug #83
+==================================================
+
+Description:
+Oddly placed block of mist on the river.
+
+Campfire: Road checkopoint 1
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

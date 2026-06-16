@@ -1,5 +1,5 @@
 Bugs found in Ferocious
-Count: 188
+Count: 286
 
 Each bug has the nearest campfire listed if possible and a screenshot of the map for easier ways to find it.
 

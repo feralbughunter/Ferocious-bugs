@@ -1,0 +1,13 @@
+Bug #21
+==================================================
+
+Description:
+Pilon is not touching the ground.
+
+Campfire: Abandoned camp
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #34
+==================================================
+
+Description:
+Floating stick.
+
+Campfire: Field hospital gates
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

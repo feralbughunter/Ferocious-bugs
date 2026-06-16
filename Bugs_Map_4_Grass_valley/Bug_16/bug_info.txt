@@ -1,0 +1,13 @@
+Bug #16
+==================================================
+
+Description:
+Items fell through shelves in the trex medical supplies building. Opening the note in the room next to the bloody pit makes it unreadable because of the light.
+
+Campfire: Field hospital
+
+Type: Item placement, Broken model
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

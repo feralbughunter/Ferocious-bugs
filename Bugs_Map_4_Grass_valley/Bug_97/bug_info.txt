@@ -1,0 +1,11 @@
+Bug #97
+==================================================
+
+Description:
+The brother is not present in this cutscene at the end of the map after blowing up the door with the mech. He will appear once control is returned to the player.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Unknown 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #36
+==================================================
+
+Description:
+Items falling through shelves and on the left the bag that changes color based on distance.
+
+Campfire: Abandoned construction
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

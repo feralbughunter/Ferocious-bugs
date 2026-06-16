@@ -1,0 +1,13 @@
+Bug #61
+==================================================
+
+Description:
+The alarm box is not sitting on the ground.
+
+Campfire: Central outpost
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

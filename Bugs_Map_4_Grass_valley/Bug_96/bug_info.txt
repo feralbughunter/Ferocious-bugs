@@ -1,0 +1,13 @@
+Bug #96
+==================================================
+
+Description:
+This tower is not touching the ground.
+
+Campfire: Road checkpoint 1
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

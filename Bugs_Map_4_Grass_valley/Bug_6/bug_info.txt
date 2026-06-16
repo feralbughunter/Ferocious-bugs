@@ -1,0 +1,11 @@
+Bug #6
+==================================================
+
+Description:
+You can not open the map in the car. But if you enter the car with the map in your hand and then exit the car, the map will open again and you will have to close it twice. Similar to the same bug on the kayak.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

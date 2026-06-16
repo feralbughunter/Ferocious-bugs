@@ -1,0 +1,13 @@
+Bug #23
+==================================================
+
+Description:
+Buttons in this temple do not blink and do not have an interaction dot, but you can reach in through the door and grab some of the items anyway.
+
+Campfire: Ransacked temple
+
+Type: Broken logic, Game breaking, Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

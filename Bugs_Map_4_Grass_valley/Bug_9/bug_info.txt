@@ -1,0 +1,13 @@
+Bug #9
+==================================================
+
+Description:
+The reflectivity of this item is very high plus an object clipping through the wall on the left.
+
+Campfire: Valley gates exit
+
+Type: Item placement, Broken model
+Severity: Medium
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

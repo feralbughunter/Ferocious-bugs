@@ -1,0 +1,13 @@
+Bug #22
+==================================================
+
+Description:
+The direction of the river flow makes no sense here.
+
+Campfire: Abandoned camp
+
+Type: Broken logic
+Severity: Medium
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

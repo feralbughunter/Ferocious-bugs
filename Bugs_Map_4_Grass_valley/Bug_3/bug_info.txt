@@ -1,0 +1,11 @@
+Bug #3
+==================================================
+
+Description:
+If you try to grab the trex baby from the driver side of the car, it will ram the player through the car and catapult it randomly.
+
+Type: Interaction issue
+Severity: Medium
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

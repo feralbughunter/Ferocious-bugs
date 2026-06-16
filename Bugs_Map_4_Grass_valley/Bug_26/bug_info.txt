@@ -1,0 +1,13 @@
+Bug #26
+==================================================
+
+Description:
+Nearby titanosaurs have no collisions.
+
+Campfire: Abandoned camp
+
+Type: Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

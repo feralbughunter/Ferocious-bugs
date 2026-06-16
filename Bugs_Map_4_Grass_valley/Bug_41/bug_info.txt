@@ -1,0 +1,13 @@
+Bug #41
+==================================================
+
+Description:
+This button does not open the door.
+
+Campfire: Stepped temple inside
+
+Type: Game breaking, Player confusion
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

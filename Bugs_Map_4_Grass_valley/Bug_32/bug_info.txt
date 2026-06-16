@@ -1,0 +1,13 @@
+Bug #32
+==================================================
+
+Description:
+Titanoceratops randomly despawned and left his name behind
+
+Campfire: Mech testing
+
+Type: Broken logic
+Severity: High
+Reproducibility: Unknown 
+Status: unfixed
+Version: 1.08.400.4173

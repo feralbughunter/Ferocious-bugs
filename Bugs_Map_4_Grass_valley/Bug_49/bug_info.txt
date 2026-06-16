@@ -1,0 +1,11 @@
+Bug #49
+==================================================
+
+Description:
+Picking up this weapon will show as Flashlight in the lower right corner.
+
+Type: Broken logic
+Severity: High
+Reproducibility: First pickup 
+Status: unfixed
+Version: 1.08.400.4173

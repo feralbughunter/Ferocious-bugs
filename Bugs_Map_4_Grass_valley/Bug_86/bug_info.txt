@@ -1,0 +1,13 @@
+Bug #86
+==================================================
+
+Description:
+Incorrectly placed climbing wine under the waterfall inside a rock. This checkpoint is a duplicate with incorrect name.
+
+Campfire: Road checkpoint 1 (1)
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #77
+==================================================
+
+Description:
+You can get up on these mountains.
+
+Campfire: North valley entrance
+
+Type: Level escape
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

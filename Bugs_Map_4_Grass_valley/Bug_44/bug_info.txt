@@ -1,0 +1,13 @@
+Bug #44
+==================================================
+
+Description:
+Another odd tent with no collisions and odd attachment. Bodies in this area will become repeatedly lootable upon returning here later.
+
+Campfire: Temple campsite
+
+Type: Item placement, Collision issue
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

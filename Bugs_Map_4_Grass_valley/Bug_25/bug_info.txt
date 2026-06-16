@@ -1,0 +1,13 @@
+Bug #25
+==================================================
+
+Description:
+The texture of the stairs is misaligned and not reaching all the way to the rocks. Stairs leading to the front exit.
+
+Campfire: Ransacked temple
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

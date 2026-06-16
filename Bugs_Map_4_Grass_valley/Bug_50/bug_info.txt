@@ -1,0 +1,13 @@
+Bug #50
+==================================================
+
+Description:
+On the left mug stuck in box. Inside the temple after the front fight. On the right items fell through box. Bodies in front of the temple are also repeatedly lootable upon returning later.
+
+Campfire: Stepped temple inside
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #81
+==================================================
+
+Description:
+Level escape by jumping on the rocks there at the entrance to the bridge temple.
+
+Campfire: Bridge temple
+
+Type: Level escape
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

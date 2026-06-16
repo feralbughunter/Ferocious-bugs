@@ -1,0 +1,13 @@
+Bug #72
+==================================================
+
+Description:
+Improperly placed patch of grass to the right of the campfire about 20 steps.
+
+Campfire: Road checkpoint 3 (1)
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

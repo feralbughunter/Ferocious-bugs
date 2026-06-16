@@ -1,0 +1,13 @@
+Bug #52
+==================================================
+
+Description:
+The dryosaur can not go in there, there seems to be an invisible wall. I also can not aim for the statue and send him for it.
+
+Campfire: Stepped temple mid level
+
+Type: Invisible wall, Broken logic, Game breaking
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

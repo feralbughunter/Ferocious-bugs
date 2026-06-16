@@ -1,0 +1,13 @@
+Bug #35
+==================================================
+
+Description:
+Some of the pylons here are not standing on the ground.
+
+Campfire: Valley entrance
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

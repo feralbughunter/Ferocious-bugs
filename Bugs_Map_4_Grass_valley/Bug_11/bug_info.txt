@@ -1,0 +1,13 @@
+Bug #11
+==================================================
+
+Description:
+Another instance of the bag changing color based on distance.
+
+Campfire: Valley gates exit
+
+Type: Broken model
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

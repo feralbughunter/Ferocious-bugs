@@ -1,0 +1,13 @@
+Bug #47
+==================================================
+
+Description:
+Floating vegetation right in front of the temple on the right. Floating vegetation on the dryosaur button in the left. The campfire name here is missing a space. 
+
+Campfire: Stepped temple inside
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

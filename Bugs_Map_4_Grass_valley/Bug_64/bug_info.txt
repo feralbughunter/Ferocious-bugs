@@ -1,0 +1,11 @@
+Bug #64
+==================================================
+
+Description:
+Body armor can be crafted even if you have full wasting resources.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173
