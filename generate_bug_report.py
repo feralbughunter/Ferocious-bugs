@@ -21,7 +21,10 @@ def parse_overall_info(filepath):
         'severity_desc': '',
         'severity_options': '',
         'bug_status_info': [],
-        'extra_info': []
+        'extra_info': [],
+        'valid_bug_types': set(),
+        'valid_severities': set(),
+        'valid_statuses': set()
     }
 
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -47,13 +50,22 @@ def parse_overall_info(filepath):
             in_bug_types = False
         elif line.startswith('Options:') and 'severity_desc' in info and info['severity_desc']:
             info['severity_options'] = line.split(':', 1)[1].strip()
+            # Extract valid severities from Options line
+            for severity in info['severity_options'].split(','):
+                info['valid_severities'].add(severity.strip())
         elif line.startswith('Bug Status:'):
             in_bug_status = True
             in_bug_types = False
         elif in_bug_types and ' - ' in line:
             info['bug_types'].append(line)
+            # Extract bug type name (before the " - ")
+            type_name = line.split(' - ')[0].strip()
+            info['valid_bug_types'].add(type_name)
         elif in_bug_status and ' - ' in line:
             info['bug_status_info'].append(line)
+            # Extract status name (before the " - ")
+            status_name = line.split(' - ')[0].strip().lower()
+            info['valid_statuses'].add(status_name)
         elif line and not in_bug_types and not in_bug_status:
             info['extra_info'].append(line)
 
@@ -144,6 +156,44 @@ def find_images(bug_dir):
             images.append(file)
 
     return images
+
+
+def validate_bug_values(bugs_by_map, overall_info):
+    """Validate that all bug values match the allowed values from overall_info.txt."""
+    errors = []
+
+    valid_bug_types = overall_info['valid_bug_types']
+    valid_severities = overall_info['valid_severities']
+    valid_statuses = overall_info['valid_statuses']
+
+    for map_name, map_info in bugs_by_map.items():
+        for bug_id, bug_data in map_info['bugs'].items():
+            bug_path = bug_data['path']
+
+            # Validate bug types (handle comma-separated types)
+            bug_types = [t.strip() for t in bug_data['type'].split(',') if t.strip()]
+            for bug_type in bug_types:
+                if bug_type not in valid_bug_types:
+                    errors.append(
+                        f"Invalid Bug type '{bug_type}' in {bug_path}/bug_info.txt\n"
+                        f"  Valid types: {', '.join(sorted(valid_bug_types))}"
+                    )
+
+            # Validate severity
+            if bug_data['severity'] and bug_data['severity'] not in valid_severities:
+                errors.append(
+                    f"Invalid Severity '{bug_data['severity']}' in {bug_path}/bug_info.txt\n"
+                    f"  Valid severities: {', '.join(sorted(valid_severities))}"
+                )
+
+            # Validate status
+            if bug_data['status'] and bug_data['status'] not in valid_statuses:
+                errors.append(
+                    f"Invalid Bug Status '{bug_data['status']}' in {bug_path}/bug_info.txt\n"
+                    f"  Valid statuses: {', '.join(sorted(valid_statuses))}"
+                )
+
+    return errors
 
 
 def calculate_bug_statistics(bugs_by_map):
@@ -780,6 +830,16 @@ def main():
     if not bugs_by_map:
         print("Error: No Bugs_Map_* folders found!")
         return
+
+    # Validate bug values against overall_info.txt
+    validation_errors = validate_bug_values(bugs_by_map, overall_info)
+    if validation_errors:
+        print("ERROR: Found invalid values in bug_info.txt files:")
+        print()
+        for error in validation_errors:
+            print(error)
+            print()
+        sys.exit(1)
 
     # Calculate statistics
     total_bugs = sum(len(map_info['bugs']) for map_info in bugs_by_map.values())

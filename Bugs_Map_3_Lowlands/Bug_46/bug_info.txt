@@ -6,7 +6,7 @@ Pressing this button lowers the water gate but there is no sound.
 
 Campfire: Drills dock
 
-Type: Broken logic, player confusion
+Type: Broken logic, Player confusion
 Severity: High
 Reproducibility: Always
 Status: unfixed
