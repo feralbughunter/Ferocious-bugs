@@ -6,7 +6,7 @@ If you stand close to this dinosaur the ground will have water on it. Standing a
 
 Campfire: Scorched earth
 
-Type: Broken model, Collision issue
+Type: Broken model, Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

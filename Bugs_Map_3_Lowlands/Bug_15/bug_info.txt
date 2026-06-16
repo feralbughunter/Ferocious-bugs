@@ -6,7 +6,7 @@ Mounting a parasaur in this level will move the player at high speed in a random
 
 Campfire: Central camp entrance W
 
-Type: Game breaking, Collision issue
+Type: Game breaking, Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

@@ -6,7 +6,7 @@ No collision on this stump right next to the car.
 
 Campfire: Valley entrance
 
-Type: Collision issue
+Type: Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

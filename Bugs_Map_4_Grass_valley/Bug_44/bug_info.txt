@@ -6,7 +6,7 @@ Another odd tent with no collisions and odd attachment. Bodies in this area will
 
 Campfire: Temple campsite
 
-Type: Item placement, Collision issue
+Type: Item placement, Collision missing
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

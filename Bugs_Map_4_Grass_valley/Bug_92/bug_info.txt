@@ -6,7 +6,7 @@ No collision on these doors anywhere in the map.
 
 Campfire: Cliff base north entrance
 
-Type: Collision issue
+Type: Collision missing
 Severity: Medium
 Reproducibility: Always
 Status: unfixed

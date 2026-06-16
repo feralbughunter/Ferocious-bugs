@@ -6,7 +6,7 @@ Double ladder tower with no collision on the blinking ladders.
 
 Campfire: Central outpost
 
-Type: Collision issue, Broken model
+Type: Collision missing, Broken model
 Severity: High
 Reproducibility: Always 
 Status: unfixed

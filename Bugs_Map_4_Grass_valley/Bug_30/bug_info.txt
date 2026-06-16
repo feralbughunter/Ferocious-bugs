@@ -6,7 +6,7 @@ No collision on the ladder below the buggy and on the beams around the pit.
 
 Campfire: Mech testing
 
-Type: Collision issue
+Type: Collision missing
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

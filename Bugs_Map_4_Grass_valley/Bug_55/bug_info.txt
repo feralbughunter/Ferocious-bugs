@@ -6,7 +6,7 @@ No collisions on these ladder and there are already wooden ladders here. Right a
 
 Campfire: Road checkpoint 2
 
-Type: Collision issue, Broken model
+Type: Collision missing, Broken model
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

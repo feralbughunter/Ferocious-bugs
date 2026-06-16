@@ -5,7 +5,7 @@ Description:
 This tree with eucalyptus has no collisions.
 Campfire: Cliff temple
 
-Type: Collision issue
+Type: Collision missing
 Severity: Low
 Reproducibility: Always
 Status: unfixed

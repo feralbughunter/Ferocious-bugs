@@ -6,7 +6,7 @@ Many objects in this area have no collision.
 
 Campfire: Scorched earth.
 
-Type: Collision issue
+Type: Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

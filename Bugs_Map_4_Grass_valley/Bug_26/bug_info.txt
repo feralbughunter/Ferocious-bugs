@@ -6,7 +6,7 @@ Nearby titanosaurs have no collisions.
 
 Campfire: Abandoned camp
 
-Type: Collision issue
+Type: Collision missing
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

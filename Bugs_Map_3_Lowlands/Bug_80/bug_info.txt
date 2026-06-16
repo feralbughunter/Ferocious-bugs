@@ -6,7 +6,7 @@ No collisions on this ladder.
 
 Campfire: Main dock gate
 
-Type: Collision issue
+Type: Collision missing
 Severity: Low
 Reproducibility: Always 
 Status: unfixed

@@ -6,7 +6,7 @@ This spool has no collisions.
 
 Campfire: Valley gates exit
 
-Type: Collision issue
+Type: Collision missing
 Severity: Low
 Reproducibility: Always 
 Status: unfixed

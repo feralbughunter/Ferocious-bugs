@@ -6,7 +6,7 @@ Items fell through shelving inside the building right behind the campfire. No co
 
 Campfire: Main dock gate
 
-Type: Item placement, Collision issue
+Type: Item placement, Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

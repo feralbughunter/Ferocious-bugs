@@ -6,7 +6,7 @@ No collisions on this ladder at the back of the refinery going up to the compute
 
 Campfire:  Drills dock rear
 
-Type: Collision issue
+Type: Collision missing
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

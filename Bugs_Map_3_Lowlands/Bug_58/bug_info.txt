@@ -6,7 +6,7 @@ No collisions on this stump.
 
 Campfire: Tunnel
 
-Type: Collision issue
+Type: Collision missing
 Severity: Low
 Reproducibility: Always 
 Status: unfixed

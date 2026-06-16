@@ -6,7 +6,7 @@ No collision on this ladder.
 
 Campfire: Cliff base north entrance
 
-Type: Collision issue
+Type: Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

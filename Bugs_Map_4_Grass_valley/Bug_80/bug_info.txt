@@ -6,7 +6,7 @@ No collisions on these bones.
 
 Campfire: Cliff base south entrance
 
-Type: Collision issue
+Type: Collision missing
 Severity: Low
 Reproducibility: Always 
 Status: unfixed

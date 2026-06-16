@@ -6,7 +6,7 @@ All trees with this design in this area an possibly elsewhere have no collision 
 
 Campfire: Drills dock
 
-Type: Collision issue
+Type: Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

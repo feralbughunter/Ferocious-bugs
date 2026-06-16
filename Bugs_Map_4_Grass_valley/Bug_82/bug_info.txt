@@ -6,7 +6,7 @@ No collisions on these bones in the cave leading to the camp near the bridge tem
 
 Campfire: Road checkpoint 1
 
-Type: Collision issue
+Type: Collision missing
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

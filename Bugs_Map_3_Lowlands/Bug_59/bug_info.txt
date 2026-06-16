@@ -6,7 +6,7 @@ Several issues with this wall. I am standing in a stone with broken collision. T
 
 Campfire: Tunnel
 
-Type: Collision issue, Item placement
+Type: Collision missing, Item placement
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

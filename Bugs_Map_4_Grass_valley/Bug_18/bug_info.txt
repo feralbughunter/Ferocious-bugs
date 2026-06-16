@@ -6,7 +6,7 @@ After returning the trex baby they leave to the right into a cave. Some bones in
 
 Campfire: Field hospital gates
 
-Type: Collision issue
+Type: Collision missing
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

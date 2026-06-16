@@ -6,7 +6,7 @@ This skeleton has no collisions.
 
 Campfire: Campsite
 
-Type: Collision issue
+Type: Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

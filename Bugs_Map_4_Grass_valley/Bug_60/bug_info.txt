@@ -6,7 +6,7 @@ A bunch of these oddly shaped tents with no collision in the secret last stand c
 
 Campfire: Dead end
 
-Type: Collision issue, Broken model
+Type: Collision missing, Broken model
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

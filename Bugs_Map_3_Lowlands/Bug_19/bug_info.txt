@@ -4,7 +4,7 @@ Bug #19
 Description:
 If you touch a dinosaur on this map, you will shove him or her at high speed in some direction. It may have something to do with the parasaur moving uncontrollably since you are touching him. Touching one on previous maps also moved them, but not as much. On a previous save from January the parasaurs work as intended and you can not shove them.
 
-Type: Collision issue, Game breaking
+Type: Collision missing, Game breaking
 Severity: High
 Reproducibility: Always
 Status: unfixed

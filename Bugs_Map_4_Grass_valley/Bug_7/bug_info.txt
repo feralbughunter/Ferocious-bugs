@@ -6,7 +6,7 @@ No collision on these stumps. There is another one across. I believe it is the s
 
 Campfire: Valley gates entrance
 
-Type: Collision issue
+Type: Collision missing
 Severity: Medium
 Reproducibility: Always
 Status: unfixed

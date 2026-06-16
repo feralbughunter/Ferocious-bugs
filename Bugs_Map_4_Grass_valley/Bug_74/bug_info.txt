@@ -6,7 +6,7 @@ Collision missing on this ladder model. Probably everywhere in the entire game.
 
 Campfire: North valley entrance
 
-Type: Collision issue
+Type: Collision missing
 Severity: High
 Reproducibility: Always 
 Status: unfixed

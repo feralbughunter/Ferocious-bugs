@@ -6,7 +6,7 @@ No collision on these bones. In this place you will hear the voice line about ra
 
 Campfire: Road checkpoint 3
 
-Type: Collision issue, Broken logic
+Type: Collision missing, Broken logic
 Severity: Medium
 Reproducibility: Always 
 Status: unfixed

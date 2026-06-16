@@ -6,7 +6,7 @@ No collision on these pieces of wood.
 
 Campfire: Jurassic fence
 
-Type: Collision issue
+Type: Collision missing
 Severity: Low
 Reproducibility: Always 
 Status: unfixed
