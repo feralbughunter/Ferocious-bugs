@@ -676,7 +676,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
             else:
                 bug_type_html = f'<span class="bug-type">{bug_data["type"]}</span>'
 
-            html += f"""                <li class="{list_bg_class}">
+            html += f"""                <li class="{list_bg_class}" id="list-{map_name}-{bug_id}">
                     <a href="#bug-{map_name}-{bug_id}">
                         <span class="severity-badge {severity_class}">{bug_data['severity']}</span>
                         <span>Map {map_number} Bug #{bug_id} - {bug_type_html} - <strong>{status_text}</strong> - v{bug_data['version']}</span>
@@ -734,7 +734,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
                 html += """            </div>
 """
 
-            html += """            <a href="#" class="back-to-top">↑ Back to Top</a>
+            html += f"""            <a href="#list-{map_name}-{bug_id}" class="back-to-top">↑ Back to Top</a>
         </div>
 """
 
