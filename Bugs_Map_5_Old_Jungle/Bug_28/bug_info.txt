@@ -2,7 +2,7 @@ Bug #28
 ==================================================
 
 Description:
-This lighter tree has no collisions. I am standing on a rope icon which I think should have been the way to get to the secret shrine, but the rope is not there and I do not see any way of getting up here. I wall humped the mountain.
+This lighter tree has no collisions. I am standing on a rope icon which I think should have been the way to get to the secret shrine. (it is not, you can get here at the end with a flame thrower), but the rope is not there and I do not see any way of getting up here. I wall humped the mountain. The confusion here was cause by me not knowing that the rope attachment point is above me. If the map showed whether items are on your level, above or below you, it would be clearer. Managing the rope resource is quite frustrating. You usually have enough but when you do not, you do not know where to go to get some. I would just abandon the goal if it is optional or glitch my way to it.
 
 Campfire: Hydro exit
 

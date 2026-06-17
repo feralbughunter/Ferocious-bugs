@@ -2,7 +2,7 @@ Bug #26
 ==================================================
 
 Description:
-The rope here is not long enough, you will climb on thin air. I have no idea how you are supposed to get up here legally without glitching the wall of the mountain.
+The rope here is not long enough, you will climb on thin air.
 
 Campfire: Hydro exit
 
