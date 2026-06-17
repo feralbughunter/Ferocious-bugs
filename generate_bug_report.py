@@ -226,7 +226,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ferocious bug Reports</title>
+    <title>Ferocious bug reports</title>
     <style>
         * {{
             margin: 0;
