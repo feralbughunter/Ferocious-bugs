@@ -10,9 +10,10 @@ To regenerate the website use the `./generate_bug_report.py` script.
 https://feralbughunter.github.io/Ferocious-bugs/ 
 
 ## Bug reports
+TXT and yaml format available.
 
 ### Adding a bug
-Copy one existing bug and change values in the `bug_info.txt` file, add screenshots.
+Copy one existing bug and change values in the `bug_info.txt` and `bug_info.yaml` file, add screenshots.
 Make sure you are using a new number.  
 Add the new bug to the appropriate folder.  
 
