@@ -543,6 +543,178 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
         .status-legend ul {{
             margin-left: 20px;
         }}
+
+        .filter-section {{
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 2px solid #2196f3;
+        }}
+
+        .filter-section h3 {{
+            color: #1976d2;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }}
+
+        .filter-group {{
+            margin-bottom: 15px;
+        }}
+
+        .filter-group h4 {{
+            color: #424242;
+            margin-bottom: 8px;
+            font-size: 1em;
+        }}
+
+        .filter-buttons {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }}
+
+        .filter-btn {{
+            padding: 8px 16px;
+            border: 2px solid #90caf9;
+            background: white;
+            color: #1976d2;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.2s;
+            user-select: none;
+        }}
+
+        .filter-btn:hover {{
+            background: #e3f2fd;
+            transform: translateY(-1px);
+        }}
+
+        .filter-btn.active {{
+            background: #2196f3;
+            color: white;
+            border-color: #1976d2;
+        }}
+
+        .filter-btn.active:hover {{
+            background: #1976d2;
+        }}
+
+        .bug-list li.filtered-hidden {{
+            display: none;
+        }}
+
+        .clear-filters-btn {{
+            padding: 10px 20px;
+            border: 2px solid #d32f2f;
+            background: #f44336;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: all 0.2s;
+            margin-top: 10px;
+        }}
+
+        .clear-filters-btn:hover {{
+            background: #d32f2f;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }}
+
+        .clear-filters-btn:active {{
+            transform: translateY(0);
+        }}
+
+        .filter-mode-container {{
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 5px;
+            border: 2px solid #90caf9;
+        }}
+
+        .filter-mode-label {{
+            font-weight: bold;
+            color: #1976d2;
+            margin-right: 15px;
+            font-size: 1em;
+        }}
+
+        .switch-container {{
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }}
+
+        .switch {{
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }}
+
+        .switch input {{
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }}
+
+        .slider {{
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #2196f3;
+            transition: 0.4s;
+            border-radius: 34px;
+        }}
+
+        .slider:before {{
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: 0.4s;
+            border-radius: 50%;
+        }}
+
+        input:checked + .slider {{
+            background-color: #ff9800;
+        }}
+
+        input:checked + .slider:before {{
+            transform: translateX(26px);
+        }}
+
+        .mode-text {{
+            font-weight: bold;
+            font-size: 1em;
+            min-width: 40px;
+        }}
+
+        .mode-text.and-mode {{
+            color: #2196f3;
+        }}
+
+        .mode-text.or-mode {{
+            color: #ff9800;
+        }}
+
+        .filter-mode-description {{
+            margin-top: 8px;
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }}
     </style>
 </head>
 <body>
@@ -640,6 +812,69 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
 
     html += """                </ul>
             </div>
+
+            <div class="filter-section">
+                <h3>Filter Bugs</h3>
+
+                <div class="filter-group">
+                    <h4>Bug Type:</h4>
+                    <div class="filter-buttons" id="filter-type">
+"""
+
+    # Add bug type filter buttons
+    for bt in overall_info['bug_types']:
+        if ' - ' in bt:
+            type_name = bt.split(' - ')[0].strip()
+            html += f'                        <button class="filter-btn" data-filter-type="type" data-value="{type_name}">{type_name}</button>\n'
+
+    html += """                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Severity:</h4>
+                    <div class="filter-buttons" id="filter-severity">
+"""
+
+    # Add severity filter buttons
+    for severity in sorted(severity_counts.keys()):
+        html += f'                        <button class="filter-btn" data-filter-type="severity" data-value="{severity}">{severity}</button>\n'
+
+    html += """                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h4>Status:</h4>
+                    <div class="filter-buttons" id="filter-status">
+"""
+
+    # Add status filter buttons
+    status_options = [
+        ('unfixed', 'Unfixed'),
+        ('fixed', 'Fixed'),
+        ('notabug', 'Not a Bug')
+    ]
+    for status_key, status_label in status_options:
+        html += f'                        <button class="filter-btn" data-filter-type="status" data-value="{status_key}">{status_label}</button>\n'
+
+    html += """                    </div>
+                </div>
+
+                <div class="filter-mode-container">
+                    <span class="filter-mode-label">Filter Logic:</span>
+                    <div class="switch-container">
+                        <span class="mode-text or-mode" id="mode-text">OR</span>
+                        <label class="switch">
+                            <input type="checkbox" id="filter-mode-toggle" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                    <div class="filter-mode-description" id="mode-description">
+                        OR mode: Bugs match if they satisfy ANY selected filter
+                    </div>
+                </div>
+
+                <button class="clear-filters-btn" id="clear-filters">Clear All Filters</button>
+            </div>
 """
 
     for map_name, map_info in sorted_maps:
@@ -649,9 +884,9 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
 
         html += f"""
         <div class="map-section" id="map-{map_number}">
-            <h2>Map {map_number}: {map_name}<span class="bug-count">{bug_count} bugs</span></h2>
+            <h2>Map {map_number}: {map_name}<span class="bug-count" data-map-id="map-{map_number}" data-total-count="{bug_count}"><span class="visible-count">{bug_count}</span> / {bug_count} bugs</span></h2>
 
-            <ul class="bug-list">
+            <ul class="bug-list" data-map-id="map-{map_number}">
 """
 
         for bug_id, bug_data in sorted(bugs.items(), key=lambda x: int(x[0])):
@@ -676,7 +911,10 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
             else:
                 bug_type_html = f'<span class="bug-type">{bug_data["type"]}</span>'
 
-            html += f"""                <li class="{list_bg_class}" id="list-{map_name}-{bug_id}">
+            # Create data attributes for filtering (handle comma-separated types)
+            bug_types_for_filter = ','.join([t.strip() for t in bug_data['type'].split(',') if t.strip()])
+
+            html += f"""                <li class="{list_bg_class}" id="list-{map_name}-{bug_id}" data-bug-types="{bug_types_for_filter}" data-severity="{bug_data['severity']}" data-status="{bug_data['status']}">
                     <a href="#bug-{map_name}-{bug_id}">
                         <span class="severity-badge {severity_class}">{bug_data['severity']}</span>
                         <span>Map {map_number} Bug #{bug_id} - {bug_type_html} - <strong>{status_text}</strong> - v{bug_data['version']}</span>
@@ -734,12 +972,195 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
                 html += """            </div>
 """
 
-            html += f"""            <a href="#list-{map_name}-{bug_id}" class="back-to-top">↑ Back to Top</a>
+            html += f"""            <a href="#list-{map_name}-{bug_id}" class="back-to-top">↑ Back to list</a>
         </div>
 """
 
     html += """
     </div>
+
+    <script>
+        // Filter functionality
+        const filterState = {
+            type: new Set(),
+            severity: new Set(),
+            status: new Set()
+        };
+
+        let filterMode = 'OR'; // 'AND' or 'OR'
+
+        // Get all filter buttons
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const bugListItems = document.querySelectorAll('.bug-list li');
+        const clearFiltersBtn = document.getElementById('clear-filters');
+        const filterModeToggle = document.getElementById('filter-mode-toggle');
+        const modeText = document.getElementById('mode-text');
+        const modeDescription = document.getElementById('mode-description');
+
+        // Add click event listeners to all filter buttons
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filterType = button.getAttribute('data-filter-type');
+                const value = button.getAttribute('data-value');
+
+                // Toggle button active state
+                button.classList.toggle('active');
+
+                // Update filter state
+                if (button.classList.contains('active')) {
+                    filterState[filterType].add(value);
+                } else {
+                    filterState[filterType].delete(value);
+                }
+
+                // Apply filters
+                applyFilters();
+            });
+        });
+
+        // Clear all filters button
+        clearFiltersBtn.addEventListener('click', () => {
+            // Clear all filter states
+            filterState.type.clear();
+            filterState.severity.clear();
+            filterState.status.clear();
+
+            // Remove active class from all filter buttons
+            filterButtons.forEach(button => {
+                button.classList.remove('active');
+            });
+
+            // Apply filters (will show all bugs since no filters are active)
+            applyFilters();
+        });
+
+        // Filter mode toggle (AND/OR)
+        filterModeToggle.addEventListener('change', () => {
+            if (filterModeToggle.checked) {
+                filterMode = 'OR';
+                modeText.textContent = 'OR';
+                modeText.classList.remove('and-mode');
+                modeText.classList.add('or-mode');
+                modeDescription.textContent = 'OR mode: Bugs match if they satisfy ANY selected filter';
+            } else {
+                filterMode = 'AND';
+                modeText.textContent = 'AND';
+                modeText.classList.remove('or-mode');
+                modeText.classList.add('and-mode');
+                modeDescription.textContent = 'AND mode: Bugs must match ALL selected filters in each category';
+            }
+
+            // Re-apply filters with new mode
+            applyFilters();
+        });
+
+        function applyFilters() {
+            console.log('applyFilters called, mode:', filterMode, 'filters:', filterState);
+
+            // If no filters are active, show all bugs
+            const hasActiveFilters = filterState.type.size > 0 ||
+                                    filterState.severity.size > 0 ||
+                                    filterState.status.size > 0;
+
+            bugListItems.forEach(item => {
+                if (!hasActiveFilters) {
+                    // Show all bugs if no filters are active
+                    item.classList.remove('filtered-hidden');
+                    return;
+                }
+
+                // Get bug attributes
+                const bugTypes = item.getAttribute('data-bug-types').split(',').map(t => t.trim());
+                const bugSeverity = item.getAttribute('data-severity');
+                const bugStatus = item.getAttribute('data-status');
+
+                let shouldShow = false;
+
+                if (filterMode === 'AND') {
+                    // AND mode: Bug must match ALL selected filters
+                    // Collect all selected filters into one array
+                    const allSelectedFilters = [
+                        ...Array.from(filterState.type),
+                        ...Array.from(filterState.severity),
+                        ...Array.from(filterState.status)
+                    ];
+
+                    // Collect all bug attributes into one array
+                    const allBugAttributes = [
+                        ...bugTypes,
+                        bugSeverity,
+                        bugStatus
+                    ];
+
+                    // Check if bug has ALL selected filters
+                    shouldShow = allSelectedFilters.every(filter =>
+                        allBugAttributes.includes(filter)
+                    );
+
+                } else {
+                    // OR mode: Bug matches if it satisfies ANY selected filter
+                    let matches = false;
+
+                    // Check type filter (bug can have multiple types)
+                    for (let bugType of bugTypes) {
+                        if (filterState.type.has(bugType)) {
+                            matches = true;
+                            break;
+                        }
+                    }
+
+                    // Check severity filter
+                    if (filterState.severity.has(bugSeverity)) {
+                        matches = true;
+                    }
+
+                    // Check status filter
+                    if (filterState.status.has(bugStatus)) {
+                        matches = true;
+                    }
+
+                    shouldShow = matches;
+                }
+
+                if (shouldShow) {
+                    item.classList.remove('filtered-hidden');
+                } else {
+                    item.classList.add('filtered-hidden');
+                }
+            });
+
+            // Update bug counts for each map
+            updateBugCounts();
+        }
+
+        function updateBugCounts() {
+            // Get all bug lists
+            const bugLists = document.querySelectorAll('.bug-list');
+
+            bugLists.forEach(list => {
+                const mapId = list.getAttribute('data-map-id');
+                const items = list.querySelectorAll('li');
+
+                // Count visible bugs
+                let visibleCount = 0;
+                items.forEach(item => {
+                    if (!item.classList.contains('filtered-hidden')) {
+                        visibleCount++;
+                    }
+                });
+
+                // Update the corresponding bug count badge
+                const badge = document.querySelector(`.bug-count[data-map-id="${mapId}"]`);
+                if (badge) {
+                    const totalCount = badge.getAttribute('data-total-count');
+                    const visibleSpan = badge.querySelector('.visible-count');
+                    if (visibleSpan) {
+                        visibleSpan.textContent = visibleCount;
+                    }
+                }
+            });
+        }
+    </script>
 </body>
 </html>
 """
