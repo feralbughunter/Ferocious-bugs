@@ -77,9 +77,6 @@ def convert_bug_to_yaml(txt_file_path):
 
         # Create the YAML file path (same directory, different extension)
         yaml_file_path = txt_file_path.parent / 'bug_info.yaml'
-        if yaml_file_path.exists:
-            print(f"File: {yaml_file_path} already exists")
-            return 
 
         # Write to YAML file
         with open(yaml_file_path, 'w', encoding='utf-8') as f:

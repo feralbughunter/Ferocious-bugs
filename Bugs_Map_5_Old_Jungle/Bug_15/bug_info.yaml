@@ -1,9 +1,10 @@
 bug_number: 15
 campfire: Stepped camp
 description: Pressing this button makes no sound and the gate just disappears, no
-  gradual lowering.
+  gradual lowering. The tree behind me has no collisions.
 type:
 - Broken logic
+- Collision missing
 severity: High
 reproducibility: Always
 status: unfixed
