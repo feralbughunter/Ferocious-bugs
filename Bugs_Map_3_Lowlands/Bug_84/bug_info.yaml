@@ -1,0 +1,11 @@
+bug_number: 84
+campfire: Main dock secret
+description: Items fell through box, items floating when another box is destroyed.
+  The skull is blinking but has no interaction.
+type:
+- Item placement
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

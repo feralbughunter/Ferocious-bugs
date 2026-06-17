@@ -1,0 +1,14 @@
+bug_number: 44
+campfire: Lowlands gate
+description: The final gate floats on the left and has no mechanism that would lift
+  it. Also makes no sound. The titanoceratops should fit through it but can not. If
+  you are not supposed to take this awesome animal with you, the exit should probably
+  be smaller.
+type:
+- Item placement
+- Broken model
+- Invisible wall
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

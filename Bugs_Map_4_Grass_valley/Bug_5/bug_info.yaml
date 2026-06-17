@@ -1,0 +1,10 @@
+bug_number: 5
+campfire: Grass valley start
+description: If you hit a sauropod with the car on the beach, you can effortlessly
+  shove them anywhere.
+type:
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

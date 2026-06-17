@@ -1,0 +1,9 @@
+bug_number: 5
+campfire: Sunken temple south
+description: Floating eucalyptus bark. Right behind the campfire.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

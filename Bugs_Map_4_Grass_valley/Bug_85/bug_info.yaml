@@ -1,0 +1,10 @@
+bug_number: 85
+campfire: Cliff base north entrance
+description: The waterfall looks quite odd from the underside.
+type:
+- Item placement
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 94
+campfire: Campsite
+description: Object inside a wall. Follow the wall on the right side of the river.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 76
+campfire: North valley entrance
+description: The secret here does not trigger, the question mark remains on the map.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

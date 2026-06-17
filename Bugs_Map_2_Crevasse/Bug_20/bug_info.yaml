@@ -1,0 +1,9 @@
+bug_number: 20
+campfire: River valley
+description: This tree is floating and not touching the ground.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

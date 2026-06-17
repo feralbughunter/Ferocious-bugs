@@ -1,0 +1,9 @@
+bug_number: 40
+campfire: Stepped temple inside
+description: You can take this mushroom through the door.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

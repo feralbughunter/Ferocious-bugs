@@ -1,0 +1,10 @@
+bug_number: 36
+campfire: Abandoned construction
+description: Items falling through shelves and on the left the bag that changes color
+  based on distance.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

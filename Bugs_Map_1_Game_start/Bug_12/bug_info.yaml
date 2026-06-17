@@ -1,0 +1,11 @@
+bug_number: 12
+campfire: Plateau
+description: Non solid rock. Plus the stick in front of the nearby bridge can not
+  be picked up (only from further distance).
+type:
+- Collision missing
+- Interaction issue
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

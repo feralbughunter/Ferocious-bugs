@@ -1,0 +1,12 @@
+bug_number: 73
+campfire: Sunken temple south exit
+description: You can walk up this wall with barely any issues, which probably not
+  the intended way of accessing this secret. You can get a dryosaur here from the
+  front of the temple, but the button has no dryosaur hint glowing next to it.
+type:
+- Player confusion
+- Invisible wall
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

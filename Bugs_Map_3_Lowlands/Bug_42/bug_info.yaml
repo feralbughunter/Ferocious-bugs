@@ -1,0 +1,9 @@
+bug_number: 42
+campfire: Drills camp
+description: Eucalyptus barks on these trees have dots but can not be interacted with.
+type:
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

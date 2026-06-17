@@ -1,0 +1,9 @@
+bug_number: 31
+campfire: Campsite
+description: Trex nest voicelines start playing too early before you reach the cages.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

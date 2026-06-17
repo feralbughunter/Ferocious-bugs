@@ -1,0 +1,10 @@
+bug_number: 33
+campfire: Mech testing
+description: The button or the crane or the block here make no sound when dropped
+  and just teleport to the ground.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

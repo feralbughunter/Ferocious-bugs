@@ -1,0 +1,10 @@
+bug_number: 18
+campfire: Field hospital gates
+description: After returning the trex baby they leave to the right into a cave. Some
+  bones in this cave have no collisions.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

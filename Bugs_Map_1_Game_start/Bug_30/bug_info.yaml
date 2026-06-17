@@ -1,0 +1,11 @@
+bug_number: 30
+campfire: Shipwreck Cove Dock
+description: There is an invisible wall here preventing the player from going through.
+  Collapsed temple accessible after getting the first car. And there is no rope here
+  climbing down.
+type:
+- Invisible wall
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

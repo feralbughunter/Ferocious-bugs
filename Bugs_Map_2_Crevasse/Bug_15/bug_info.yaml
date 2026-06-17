@@ -1,0 +1,9 @@
+bug_number: 15
+description: You can loot boxes with full inventory and get nothing. It probably should
+  prevent you from wasting resources this way.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

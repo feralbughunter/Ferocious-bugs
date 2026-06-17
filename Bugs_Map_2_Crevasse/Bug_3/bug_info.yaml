@@ -1,0 +1,10 @@
+bug_number: 3
+campfire: Canyons
+description: At the first door of this map you can see the bars poking out the other
+  end of the frame.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

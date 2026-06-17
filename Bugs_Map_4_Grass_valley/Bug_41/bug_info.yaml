@@ -1,0 +1,10 @@
+bug_number: 41
+campfire: Stepped temple inside
+description: This button does not open the door.
+type:
+- Game breaking
+- Player confusion
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

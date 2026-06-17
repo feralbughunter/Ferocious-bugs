@@ -1,0 +1,9 @@
+bug_number: 55
+campfire: Parasaur plains approach
+description: This key is floating and somewhat does not fit into the theme.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 16
+campfire: Lighthouse
+description: Ceiling light in an awkward position. Large outpost basement.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

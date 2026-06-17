@@ -1,0 +1,9 @@
+bug_number: 35
+campfire: Central hub tunnel
+description: Gold too deep in stone.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

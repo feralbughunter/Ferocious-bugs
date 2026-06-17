@@ -1,0 +1,9 @@
+bug_number: 38
+campfire: Scorched earth.
+description: Many objects in this area have no collision.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

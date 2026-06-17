@@ -1,0 +1,9 @@
+bug_number: 4
+campfire: Central hub
+description: Sauropods clipping through each other.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

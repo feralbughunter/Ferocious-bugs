@@ -1,0 +1,9 @@
+bug_number: 38
+campfire: Valley entrance
+description: No collision on this stump right next to the car.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 55
+campfire: Drills dock rear.
+description: Unreachable items in the ground.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 78
+campfire: Bridge temple
+description: Floating mushrooms at the bottom under the bridge.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

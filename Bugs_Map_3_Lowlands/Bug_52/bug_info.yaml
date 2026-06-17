@@ -1,0 +1,9 @@
+bug_number: 52
+campfire: Drills dock rear
+description: At the back of the refinery, this container if off the ground.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

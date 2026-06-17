@@ -1,0 +1,9 @@
+bug_number: 57
+description: When you pick up a grenade and you have full reserves, it jumps. No other
+  ammo type does that.
+type:
+- Broken logic
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

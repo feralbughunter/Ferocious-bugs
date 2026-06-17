@@ -1,0 +1,9 @@
+bug_number: 11
+campfire: Central camp
+description: Another instance of this bag changing color based on distance.
+type:
+- Broken logic
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

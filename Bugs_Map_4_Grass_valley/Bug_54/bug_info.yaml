@@ -1,0 +1,11 @@
+bug_number: 54
+campfire: Temple radio tower.
+description: Lights in this map often over expose anything, the same goes for the
+  flashlight. The interaction dot is not on the computer.
+type:
+- Interaction issue
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

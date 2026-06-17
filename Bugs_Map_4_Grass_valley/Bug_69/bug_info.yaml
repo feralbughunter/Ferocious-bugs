@@ -1,0 +1,11 @@
+bug_number: 69
+campfire: Central outpost
+description: You can get on top of this yellow grass from the rock on the right and
+  then you will get stuck mid air.
+type:
+- Game breaking
+- Broken logic
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

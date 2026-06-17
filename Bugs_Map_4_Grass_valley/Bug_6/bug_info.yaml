@@ -1,0 +1,10 @@
+bug_number: 6
+description: You can not open the map in the car. But if you enter the car with the
+  map in your hand and then exit the car, the map will open again and you will have
+  to close it twice. Similar to the same bug on the kayak.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

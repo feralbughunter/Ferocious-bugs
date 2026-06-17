@@ -1,0 +1,11 @@
+bug_number: 1
+campfire: Waterfall entrance
+description: There is a tile of misplaced terrain, you can stand on it. Right after
+  the map start and jumping down the waterfall in the corridor on the left on the
+  right side.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

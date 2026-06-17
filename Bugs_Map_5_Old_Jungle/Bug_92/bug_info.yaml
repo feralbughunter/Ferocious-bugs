@@ -1,0 +1,9 @@
+bug_number: 92
+campfire: Canal temple exit
+description: You sometimes can not walk through this door.
+type:
+- Invisible wall
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,11 @@
+bug_number: 78
+campfire: Lab exterior lab entrance
+description: These pipes have no collisions. If you run into the larger pipe, you
+  will get stuck in it. Downstairs next to the lab entrance.
+type:
+- Game breaking
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

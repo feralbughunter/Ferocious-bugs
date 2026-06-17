@@ -1,0 +1,12 @@
+bug_number: 19
+campfire: Lighthouse
+description: The elevator down to the crab nest makes no sound and no stop sound.
+  Or it is too quiet. If you stand on the edge of the elevator, the metal bars are
+  not solid, they go through you.
+type:
+- Player confusion
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

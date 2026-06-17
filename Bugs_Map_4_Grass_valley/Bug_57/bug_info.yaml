@@ -1,0 +1,10 @@
+bug_number: 57
+campfire: Stepped temple rear
+description: Items fell through shelves. Up after the tower and the scorpions in the
+  small soldier encampment.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

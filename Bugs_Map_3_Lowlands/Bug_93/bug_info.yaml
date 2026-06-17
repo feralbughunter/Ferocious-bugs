@@ -1,0 +1,10 @@
+bug_number: 93
+campfire: Campsite
+description: These spears are not inside anything, they are floating. The grass is
+  on an odd angle.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

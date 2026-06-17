@@ -1,0 +1,9 @@
+bug_number: 17
+campfire: Cliff temple
+description: This bag changes color when you come closer.
+type:
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

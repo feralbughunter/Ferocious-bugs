@@ -1,0 +1,11 @@
+bug_number: 26
+description: Going down here after getting the DCD but climbing down using the rope
+  will play the blue flower voice line even though I picked the flower up earlier
+  using the temple key. The rope icon on the map will not disappear when a rope is
+  attached.
+type:
+- Broken logic
+severity: High
+reproducibility: Once
+status: unfixed
+version: 1.08.162.3935

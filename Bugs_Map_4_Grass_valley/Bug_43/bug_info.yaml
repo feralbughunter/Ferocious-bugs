@@ -1,0 +1,9 @@
+bug_number: 43
+campfire: Stepped temple
+description: Mushroom inside wall. Downstairs from the temple in one of the buildings.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

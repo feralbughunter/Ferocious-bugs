@@ -1,0 +1,9 @@
+bug_number: 6
+campfire: Dino skull
+description: This tent is in a very odd shape and has no collisions.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

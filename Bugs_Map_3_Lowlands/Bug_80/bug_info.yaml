@@ -1,0 +1,9 @@
+bug_number: 80
+campfire: Main dock gate
+description: No collisions on this ladder.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

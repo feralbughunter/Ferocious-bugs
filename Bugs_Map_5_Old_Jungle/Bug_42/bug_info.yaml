@@ -1,0 +1,11 @@
+bug_number: 42
+campfire: Canal temple interior
+description: Rexie can get in here and into this position. She will get stuck there
+  and stop following you.
+type:
+- Collision missing
+- Game breaking
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

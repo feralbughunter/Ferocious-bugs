@@ -1,0 +1,10 @@
+bug_number: 52
+campfire: Parasaur jungle
+description: Floating item if the box is destroyed. The state is not saved, loading
+  a save will respawn the box.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

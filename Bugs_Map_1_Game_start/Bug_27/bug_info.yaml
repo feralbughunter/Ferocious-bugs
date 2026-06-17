@@ -1,0 +1,9 @@
+bug_number: 27
+description: Picking up a collectible shows 1x at the bottom of the screen with no
+  text label of what you picked up.
+type:
+- Player confusion
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

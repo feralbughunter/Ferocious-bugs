@@ -1,0 +1,10 @@
+bug_number: 40
+campfire: Canal temple interior
+description: Items fell through the shelves and the shovel stays up when the button
+  is pressed. In the canal control room.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

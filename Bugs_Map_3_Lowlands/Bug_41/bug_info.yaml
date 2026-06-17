@@ -1,0 +1,9 @@
+bug_number: 41
+campfire: Drills camp
+description: Objects in this place have no collision.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

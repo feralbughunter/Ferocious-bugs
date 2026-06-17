@@ -1,0 +1,10 @@
+bug_number: 61
+description: If you open the map and then pull out the DCD, pressing escape will switch
+  between them and never bring u the menu. You have to switch to a weapon to get the
+  escape menu.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

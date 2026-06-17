@@ -1,0 +1,9 @@
+bug_number: 66
+campfire: Central outpost
+description: Standing in the fire does not damage the player.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

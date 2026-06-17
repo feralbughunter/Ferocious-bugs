@@ -1,0 +1,9 @@
+bug_number: 43
+description: Oddly placed ladder. Using this ladder and falling off the top of it
+  makes you unable to swim sometimes. You can walk on the sea floor and not drown.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

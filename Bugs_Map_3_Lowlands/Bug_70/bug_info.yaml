@@ -1,0 +1,10 @@
+bug_number: 70
+campfire: Sunken temple south
+description: Floating branch in the temple behind the room with the paddle to the
+  left.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

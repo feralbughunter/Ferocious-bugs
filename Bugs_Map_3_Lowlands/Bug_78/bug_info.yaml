@@ -1,0 +1,13 @@
+bug_number: 78
+campfire: Campsite
+description: The secret in the middle on the small island is not obtainable because
+  the button is not working. The spear trap key is accessible by Parasaur and with
+  the Parasaur bug you have to be lucky to accidentally end up there.
+type:
+- Broken logic
+- Player confusion
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,10 @@
+bug_number: 33
+campfire: Bridge South
+description: Stick inside rock. Down on the ledge accessible by the ladder on the
+  side.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

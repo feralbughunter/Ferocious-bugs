@@ -1,0 +1,10 @@
+bug_number: 62
+campfire: Central outpost
+description: Double ladder tower with no collision on the blinking ladders.
+type:
+- Collision missing
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

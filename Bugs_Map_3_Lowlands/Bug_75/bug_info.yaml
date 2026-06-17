@@ -1,0 +1,9 @@
+bug_number: 75
+campfire: Campsite
+description: Floating object after destroying the wooden box below them.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

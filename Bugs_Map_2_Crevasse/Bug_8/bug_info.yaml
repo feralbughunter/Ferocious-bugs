@@ -1,0 +1,9 @@
+bug_number: 8
+campfire: Manifesto checkpoint
+description: Ancient key is floating in mid air.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

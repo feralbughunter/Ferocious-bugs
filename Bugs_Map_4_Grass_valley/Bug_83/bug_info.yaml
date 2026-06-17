@@ -1,0 +1,9 @@
+bug_number: 83
+campfire: Road checkopoint 1
+description: Oddly placed block of mist on the river.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

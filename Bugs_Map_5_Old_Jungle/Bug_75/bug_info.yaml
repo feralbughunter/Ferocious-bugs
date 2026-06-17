@@ -1,0 +1,11 @@
+bug_number: 75
+campfire: Lab exterior lab entrance
+description: All of these cages in the game have a blinking button with no interaction
+  dot that does nothing.
+type:
+- Broken model
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

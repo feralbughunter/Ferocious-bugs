@@ -1,0 +1,9 @@
+bug_number: 53
+campfire: Stepped temple mid level
+description: No collision on this ladder right next to the campfire.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

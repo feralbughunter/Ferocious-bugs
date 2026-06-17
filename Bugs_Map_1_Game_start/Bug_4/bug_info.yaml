@@ -1,0 +1,10 @@
+bug_number: 4
+campfire: Sea cave temple
+description: Broken rope is not long enough. You can climb down, see the end of the
+  rope above you and climb on thin air.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

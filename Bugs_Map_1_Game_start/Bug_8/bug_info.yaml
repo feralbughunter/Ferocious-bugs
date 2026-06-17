@@ -1,0 +1,9 @@
+bug_number: 8
+campfire: Manifesto Outpost A Cliff
+description: Object inside terrain.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

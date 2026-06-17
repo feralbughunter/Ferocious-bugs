@@ -1,0 +1,9 @@
+bug_number: 34
+campfire: Campsite
+description: This skeleton has no collisions.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

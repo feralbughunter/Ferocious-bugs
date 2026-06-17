@@ -1,0 +1,10 @@
+bug_number: 29
+campfire: Mech testing
+description: Couple of items falling through shelves in the building up the hill both
+  on ground and 1st floor.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

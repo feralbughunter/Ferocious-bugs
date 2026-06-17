@@ -1,0 +1,13 @@
+bug_number: 46
+campfire: Temple campsite
+description: This tree does not block you and you can go into the secret from the
+  top and get stuck inside with closed doors. Pressing the button that opens the door
+  has a broken misaligned animation.
+type:
+- Invisible wall
+- Broken logic
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 80
+campfire: Cliff base south entrance
+description: No collisions on these bones.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

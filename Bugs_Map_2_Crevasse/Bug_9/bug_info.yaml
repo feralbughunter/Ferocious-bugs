@@ -1,0 +1,9 @@
+bug_number: 9
+description: The rope symbol is not explained in the map legend.
+type:
+- Player confusion
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

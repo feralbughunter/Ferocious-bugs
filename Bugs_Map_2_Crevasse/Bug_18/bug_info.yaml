@@ -1,0 +1,10 @@
+bug_number: 18
+campfire: River valley main entrance
+description: The leaves growing on the sliding door stay in place when the door is
+  opened.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

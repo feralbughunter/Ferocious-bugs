@@ -1,0 +1,10 @@
+bug_number: 72
+campfire: Lab exterior lab entrance
+description: Another broken paper which will not appear in your hand from this exact
+  position. All papers on wall in this building have this problem.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

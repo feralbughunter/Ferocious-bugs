@@ -1,0 +1,9 @@
+bug_number: 34
+campfire: Field hospital gates
+description: Floating stick.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

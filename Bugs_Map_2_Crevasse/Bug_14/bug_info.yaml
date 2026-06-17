@@ -1,0 +1,9 @@
+bug_number: 14
+campfire: Cliff temple
+description: This tree with eucalyptus has no collisions.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

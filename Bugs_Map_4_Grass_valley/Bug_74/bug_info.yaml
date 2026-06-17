@@ -1,0 +1,10 @@
+bug_number: 74
+campfire: North valley entrance
+description: Collision missing on this ladder model. Probably everywhere in the entire
+  game.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

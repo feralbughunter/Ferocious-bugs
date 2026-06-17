@@ -1,0 +1,9 @@
+bug_number: 22
+campfire: Tunnel collapse
+description: Gold too deep in the stone.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

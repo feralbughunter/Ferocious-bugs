@@ -1,0 +1,11 @@
+bug_number: 6
+campfire: Sunken temple south
+description: You can go here and climb a very steep wall to stand on nothing. Plus
+  there is a floating branch nearby!
+type:
+- Item placement
+- Invisible wall
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

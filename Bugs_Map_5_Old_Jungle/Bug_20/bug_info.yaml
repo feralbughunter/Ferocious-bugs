@@ -1,0 +1,9 @@
+bug_number: 20
+campfire: Unknown, the hydroplant campfire is missing.
+description: Items fell through shelves and some can not be picked up.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

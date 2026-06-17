@@ -1,0 +1,9 @@
+bug_number: 28
+campfire: Mech testing
+description: This red blob has an interaction dot but can not be picked up.
+type:
+- Interaction issue
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

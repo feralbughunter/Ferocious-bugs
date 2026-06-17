@@ -1,0 +1,11 @@
+bug_number: 25
+campfire: Hydro exit
+description: The key will not fall down.
+type:
+- Broken logic
+- Item placement
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

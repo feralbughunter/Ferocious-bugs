@@ -1,0 +1,10 @@
+bug_number: 56
+campfire: Drills dock rear
+description: Box not sitting properly on the lower box. Present multiple times in
+  this area.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

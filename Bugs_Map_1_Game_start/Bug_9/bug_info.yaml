@@ -1,0 +1,10 @@
+bug_number: 9
+campfire: Manifesto Outpost A Beach
+description: Radio placed in the cave outpost near the beached dead shark has an interaction
+  dot but can not be interacted with.
+type:
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

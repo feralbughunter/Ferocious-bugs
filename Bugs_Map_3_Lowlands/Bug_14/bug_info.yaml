@@ -1,0 +1,9 @@
+bug_number: 14
+campfire: Daemonosaur camp
+description: Weird object placed inside a tree. Close to the campfire.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

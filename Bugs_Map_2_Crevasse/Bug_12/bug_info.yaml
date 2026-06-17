@@ -1,0 +1,10 @@
+bug_number: 12
+campfire: Valley Temple
+description: The temple upper portion with the rope attachment is somewhat off the
+  ground.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

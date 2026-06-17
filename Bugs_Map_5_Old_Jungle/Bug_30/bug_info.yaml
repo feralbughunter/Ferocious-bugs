@@ -1,0 +1,11 @@
+bug_number: 30
+description: I do not know how to switch to the second sights on guns or shotgun ammo
+  type. There is no button for it in the settings.
+type:
+- Game breaking
+- Broken logic
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,11 @@
+bug_number: 55
+campfire: Road checkpoint 2
+description: No collisions on these ladder and there are already wooden ladders here.
+  Right above the campfire. The name of this campfire is missing spaces.
+type:
+- Collision missing
+- Broken model
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

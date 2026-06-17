@@ -1,0 +1,10 @@
+bug_number: 29
+campfire: Cliff Temple
+description: There are two hints here and the dryosaur ends up using the right hole
+  instead of the left one anyway.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

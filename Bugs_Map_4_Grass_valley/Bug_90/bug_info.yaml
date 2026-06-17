@@ -1,0 +1,9 @@
+bug_number: 90
+campfire: Cliff base north entrance
+description: Items fell through shelves in the camp going up to the tower.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

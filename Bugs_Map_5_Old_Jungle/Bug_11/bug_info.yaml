@@ -1,0 +1,13 @@
+bug_number: 11
+campfire: Canal temple exit
+description: Couple problems with the trex intro scene. She brings a dead body which
+  is blinking, it would be better if it was not. She drops the body and once the scene
+  is over, the body is missing. The DCD in the cutscene has a different texture. Her
+  tail clips through terrain. I can not pet her!!!
+type:
+- Broken logic
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

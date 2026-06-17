@@ -1,0 +1,9 @@
+bug_number: 49
+campfire: Drills dock rear
+description: Level escape route. Jump over this rock and continue forward.
+type:
+- Level escape
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

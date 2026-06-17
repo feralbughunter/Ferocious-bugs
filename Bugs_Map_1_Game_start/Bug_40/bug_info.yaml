@@ -1,0 +1,9 @@
+bug_number: 40
+campfire: Bridge West
+description: Floating objects on the road to the final base.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

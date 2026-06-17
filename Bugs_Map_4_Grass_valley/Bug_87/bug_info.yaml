@@ -1,0 +1,9 @@
+bug_number: 87
+campfire: Road checkpoint 1 (1)
+description: Secret which is not marked by a ? on the map.
+type:
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

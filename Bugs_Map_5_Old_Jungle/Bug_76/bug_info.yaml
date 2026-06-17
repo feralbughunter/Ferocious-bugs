@@ -1,0 +1,10 @@
+bug_number: 76
+campfire: Lab exterior lab entrance
+description: This box can not be picked up.
+type:
+- Interaction issue
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

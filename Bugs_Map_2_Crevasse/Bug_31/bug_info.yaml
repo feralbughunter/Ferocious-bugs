@@ -1,0 +1,11 @@
+bug_number: 31
+campfire: Cliff Temple
+description: Positioning a raptor in front of the lever door and petting him moves
+  you to the other side of the door. The dryo hint is floating.
+type:
+- Level escape
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

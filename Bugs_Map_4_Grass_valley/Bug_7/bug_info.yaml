@@ -1,0 +1,10 @@
+bug_number: 7
+campfire: Valley gates entrance
+description: No collision on these stumps. There is another one across. I believe
+  it is the same model as in the previous maps.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

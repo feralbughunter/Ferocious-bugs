@@ -1,0 +1,9 @@
+bug_number: 37
+campfire: Valley entrance
+description: No collision on any stumps of this model in this map.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

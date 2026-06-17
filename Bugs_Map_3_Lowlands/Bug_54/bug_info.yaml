@@ -1,0 +1,10 @@
+bug_number: 54
+campfire: Drills dock rear
+description: After blowing up the refinery, the interaction dot does not disappear.
+type:
+- Interaction issue
+- Player confusion
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

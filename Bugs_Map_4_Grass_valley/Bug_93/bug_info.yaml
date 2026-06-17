@@ -1,0 +1,9 @@
+bug_number: 93
+campfire: Road checkpoint 1
+description: Stick inside a rock.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

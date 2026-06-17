@@ -1,0 +1,9 @@
+bug_number: 56
+campfire: Stepped temple rear
+description: Floating grass.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,13 @@
+bug_number: 94
+campfire: Lab exterior camp entrance
+description: End level area. The tree on the left will jump to the back and disappear
+  when you are going through here. The map will not end before you see the dead end
+  of the corridor. Probably should end sooner. I do not have a pet button for the
+  small rex!!!
+type:
+- Broken model
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

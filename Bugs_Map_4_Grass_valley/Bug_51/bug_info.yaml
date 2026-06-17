@@ -1,0 +1,10 @@
+bug_number: 51
+campfire: Stepped temple inside
+description: The wall here is off the ground in the beginning of the last room of
+  the temple coming from the campfire.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

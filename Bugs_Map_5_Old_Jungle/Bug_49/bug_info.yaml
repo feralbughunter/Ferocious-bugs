@@ -1,0 +1,10 @@
+bug_number: 49
+campfire: Lake camp south
+description: It is not possible to get on the arm of this statue.
+type:
+- Invisible wall
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

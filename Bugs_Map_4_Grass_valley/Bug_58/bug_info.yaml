@@ -1,0 +1,9 @@
+bug_number: 58
+campfire: Genesis prototype rear
+description: Items fell through shelves in the high end resort basement.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

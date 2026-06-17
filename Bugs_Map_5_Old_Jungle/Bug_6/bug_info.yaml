@@ -1,0 +1,10 @@
+bug_number: 6
+campfire: Descent
+description: This rope is not long enough, you will climb on thin air.
+type:
+- Game breaking
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

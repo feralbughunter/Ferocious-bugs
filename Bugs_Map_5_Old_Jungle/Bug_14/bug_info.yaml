@@ -1,0 +1,9 @@
+bug_number: 14
+campfire: Fishing camp side entrance
+description: No collisions on this ladder.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

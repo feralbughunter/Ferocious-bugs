@@ -1,0 +1,9 @@
+bug_number: 8
+campfire: Valley gates exit
+description: This spool has no collisions.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

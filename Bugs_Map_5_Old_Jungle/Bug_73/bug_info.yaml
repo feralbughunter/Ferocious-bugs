@@ -1,0 +1,10 @@
+bug_number: 73
+campfire: Lab exterior lab entrance
+description: When you shoot the glass in these windows, only the tile you hit will
+  spawn.
+type:
+- Broken model
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

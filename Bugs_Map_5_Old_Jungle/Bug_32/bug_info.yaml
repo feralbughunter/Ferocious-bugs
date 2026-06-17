@@ -1,0 +1,10 @@
+bug_number: 32
+campfire: Docks approach
+description: This pipe elbow has no collisions. You can get stuck in it completely.
+type:
+- Collision missing
+- Game breaking
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,11 @@
+bug_number: 45
+campfire: Temple campsite
+description: This button that looks like a statue makes no sound and the bridge moving
+  also makes no sound.
+type:
+- Player confusion
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

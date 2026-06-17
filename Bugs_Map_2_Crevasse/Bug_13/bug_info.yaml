@@ -1,0 +1,9 @@
+bug_number: 13
+description: The pistol icon on the map is not the same as the shop icon in the map
+  legend.
+type:
+- Player confusion
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

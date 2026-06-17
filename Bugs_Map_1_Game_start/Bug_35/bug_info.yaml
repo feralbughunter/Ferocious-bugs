@@ -1,0 +1,12 @@
+bug_number: 35
+campfire: Bridge West
+description: These blocks on the bridge are not exactly solid. The dead bodies here
+  will repeatedly become lootable when later saves are loaded and the player returns
+  here. You can farm cloth this way.
+type:
+- Collision missing
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

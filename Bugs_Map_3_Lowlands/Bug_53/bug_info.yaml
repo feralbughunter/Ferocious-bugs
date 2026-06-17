@@ -1,0 +1,9 @@
+bug_number: 53
+campfire: Drills dock rear
+description: Items falling through shelving. This is present in many places.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

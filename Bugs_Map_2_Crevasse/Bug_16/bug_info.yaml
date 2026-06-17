@@ -1,0 +1,9 @@
+bug_number: 16
+campfire: Cliff temple
+description: Climbing wines reaching in through the ceiling.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

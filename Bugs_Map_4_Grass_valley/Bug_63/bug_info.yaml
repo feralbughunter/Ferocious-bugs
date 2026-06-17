@@ -1,0 +1,9 @@
+bug_number: 63
+campfire: Central outpost
+description: Floating paper placed on a box which can be kicked away.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

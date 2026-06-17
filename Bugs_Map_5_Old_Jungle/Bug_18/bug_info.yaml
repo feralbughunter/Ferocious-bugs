@@ -1,0 +1,10 @@
+bug_number: 18
+campfire: Hidden camp
+description: No collisions on this tent and the bone is floating.
+type:
+- Collision missing
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

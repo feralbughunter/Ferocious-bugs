@@ -1,0 +1,12 @@
+bug_number: 62
+campfire: Sunken temple north
+description: Raptors in this area and frozen in place. They will attack you if you
+  come to them but you can not scan them and befriend them, they will not move. They
+  have no collisions. This does not change before or after returning the egg.
+type:
+- Broken logic
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

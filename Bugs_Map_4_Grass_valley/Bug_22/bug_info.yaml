@@ -1,0 +1,9 @@
+bug_number: 22
+campfire: Abandoned camp
+description: The direction of the river flow makes no sense here.
+type:
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

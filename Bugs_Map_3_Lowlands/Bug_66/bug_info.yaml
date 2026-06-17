@@ -1,0 +1,10 @@
+bug_number: 66
+campfire: Treetop hunter
+description: These two soldiers were stuck there, not moving, unkillable. They killed
+  too many dinos and I could not avenge them!
+type:
+- Broken logic
+severity: High
+reproducibility: Unknown
+status: unfixed
+version: 1.08.400.4173

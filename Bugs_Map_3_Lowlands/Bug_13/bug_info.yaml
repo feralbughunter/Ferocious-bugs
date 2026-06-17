@@ -1,0 +1,9 @@
+bug_number: 13
+campfire: Central camp
+description: This ladder has incorrect collisions.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

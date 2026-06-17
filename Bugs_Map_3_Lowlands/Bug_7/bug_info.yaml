@@ -1,0 +1,9 @@
+bug_number: 7
+campfire: Central hub
+description: This pillar is not exactly solid.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

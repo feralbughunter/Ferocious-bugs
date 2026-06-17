@@ -1,0 +1,9 @@
+bug_number: 89
+campfire: Main camp
+description: The ceiling here is too close to walk up the stairs standing up.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

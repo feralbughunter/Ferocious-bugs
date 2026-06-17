@@ -1,0 +1,9 @@
+bug_number: 31
+description: Laser and flashlight are too close together or flashlight can not be
+  selected.
+type:
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

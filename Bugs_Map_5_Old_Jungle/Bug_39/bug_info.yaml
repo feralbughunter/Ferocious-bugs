@@ -1,0 +1,9 @@
+bug_number: 39
+campfire: Canal temple exit
+description: If you return to the rex encounter point later, this will appear again.
+type:
+- Broken logic
+severity: High
+reproducibility: Often
+status: unfixed
+version: 1.08.400.4173

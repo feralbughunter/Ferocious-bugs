@@ -1,0 +1,10 @@
+bug_number: 82
+campfire: Road checkpoint 1
+description: No collisions on these bones in the cave leading to the camp near the
+  bridge temple area.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

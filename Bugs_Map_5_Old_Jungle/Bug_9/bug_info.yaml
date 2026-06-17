@@ -1,0 +1,10 @@
+bug_number: 9
+campfire: Central canal temple exit
+description: The key is stuck in the tree and will not fall down, but the bandage
+  here can be grabbed through the window.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

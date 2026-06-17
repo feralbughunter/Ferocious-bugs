@@ -1,0 +1,11 @@
+bug_number: 25
+description: Broken voice lines after walking through the door above. The player says
+  “this.” And the woman replies “I tapped into their radio. Looks like they are bringing
+  in some heavily armed reinforcements reinforcements for you.” Repeats the reinforcements
+  twice.
+type:
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

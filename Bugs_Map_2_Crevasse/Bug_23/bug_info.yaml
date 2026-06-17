@@ -1,0 +1,11 @@
+bug_number: 23
+campfire: Franka’s exit
+description: The DCD is embedded in the stone. And has an untextured display during
+  animation.
+type:
+- Item placement
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

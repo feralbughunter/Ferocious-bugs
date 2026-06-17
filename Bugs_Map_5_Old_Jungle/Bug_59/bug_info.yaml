@@ -1,0 +1,9 @@
+bug_number: 59
+campfire: Cavern temple left
+description: Floating empty paper.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

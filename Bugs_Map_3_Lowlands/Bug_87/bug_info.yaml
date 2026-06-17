@@ -1,0 +1,9 @@
+bug_number: 87
+campfire: Main camp
+description: The enclosure is too small for him.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

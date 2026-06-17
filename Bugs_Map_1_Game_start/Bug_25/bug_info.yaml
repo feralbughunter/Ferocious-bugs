@@ -1,0 +1,10 @@
+bug_number: 25
+campfire: Shipwreck beach
+description: The ship wreck itself can be reached and obviously should not be accessible.
+  But it is interesting and players will try that.
+type:
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

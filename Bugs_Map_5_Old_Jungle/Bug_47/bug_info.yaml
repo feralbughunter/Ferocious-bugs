@@ -1,0 +1,9 @@
+bug_number: 47
+campfire: Descent
+description: There is an invisible wall around the base of the twin statues.
+type:
+- Invisible wall
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

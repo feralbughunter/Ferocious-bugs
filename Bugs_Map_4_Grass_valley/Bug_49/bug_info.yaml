@@ -1,0 +1,8 @@
+bug_number: 49
+description: Picking up this weapon will show as Flashlight in the lower right corner.
+type:
+- Broken logic
+severity: High
+reproducibility: First pickup
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,10 @@
+bug_number: 85
+campfire: Cavern temple left
+description: Floating and invisible items in the secret temple in the flamethrower
+  mission.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

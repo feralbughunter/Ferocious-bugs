@@ -1,0 +1,9 @@
+bug_number: 92
+campfire: Main camp
+description: Sniper in the container in the air above the trex complex is misaligned.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

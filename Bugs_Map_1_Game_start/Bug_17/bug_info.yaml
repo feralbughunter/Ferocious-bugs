@@ -1,0 +1,9 @@
+bug_number: 17
+campfire: Lighthouse
+description: The door is not solid on the first outside floor of the tower.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

@@ -1,0 +1,9 @@
+bug_number: 48
+campfire: Drills dock
+description: No collision on this ladder.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

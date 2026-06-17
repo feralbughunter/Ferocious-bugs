@@ -1,0 +1,8 @@
+bug_number: 26
+description: Notebook string goes over the page length.
+type:
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

@@ -1,0 +1,9 @@
+bug_number: 5
+campfire: Sea Cave
+description: Paper clips through the box when opened at the beached ship.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

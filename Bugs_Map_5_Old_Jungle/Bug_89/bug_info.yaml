@@ -1,0 +1,9 @@
+bug_number: 89
+campfire: Canyon
+description: The key will not drop.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

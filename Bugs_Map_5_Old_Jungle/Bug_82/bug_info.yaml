@@ -1,0 +1,11 @@
+bug_number: 82
+campfire: Lab exterior lab entrance
+description: Missing button. The door will snap open with no sound or animation.
+type:
+- Item placement
+- Broken logic
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

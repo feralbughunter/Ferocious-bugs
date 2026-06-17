@@ -1,0 +1,9 @@
+bug_number: 77
+campfire: North valley entrance
+description: You can get up on these mountains.
+type:
+- Level escape
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

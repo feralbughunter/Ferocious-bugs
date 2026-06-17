@@ -1,0 +1,9 @@
+bug_number: 21
+description: Is this dinosaur supposed to be making any sound? He looks like he is,
+  but he is silent.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

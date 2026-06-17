@@ -1,0 +1,9 @@
+bug_number: 61
+campfire: Lake outpost approach
+description: Antenna is not standing on the floor.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

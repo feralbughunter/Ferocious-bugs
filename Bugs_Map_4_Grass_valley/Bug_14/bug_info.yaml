@@ -1,0 +1,10 @@
+bug_number: 14
+campfire: Valley gates exit
+description: Turning around with this mounted gun can place you on the fence and aiming
+  at the white cylinder at the back gate will shake the camera repeatedly.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

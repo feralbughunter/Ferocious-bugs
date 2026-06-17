@@ -1,0 +1,10 @@
+bug_number: 24
+campfire: Shipwreck beach
+description: Read prompt with nothing to read, paper is invisible. Blue container
+  on the beach.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

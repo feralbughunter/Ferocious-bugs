@@ -1,0 +1,9 @@
+bug_number: 49
+description: I found several statues, cleared all the question marks and my Secrets
+  page in the journal is empty.
+type:
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

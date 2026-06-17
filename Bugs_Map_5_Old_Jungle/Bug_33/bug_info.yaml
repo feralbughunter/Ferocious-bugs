@@ -1,0 +1,9 @@
+bug_number: 33
+campfire: Docks approach
+description: These pipes have no collisions.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

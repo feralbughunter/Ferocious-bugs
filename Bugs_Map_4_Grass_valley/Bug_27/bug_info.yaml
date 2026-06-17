@@ -1,0 +1,9 @@
+bug_number: 27
+campfire: Abandoned camp
+description: Items fell through the object.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

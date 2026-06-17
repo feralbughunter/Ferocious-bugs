@@ -1,0 +1,9 @@
+bug_number: 58
+campfire: Tunnel
+description: No collisions on this stump.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

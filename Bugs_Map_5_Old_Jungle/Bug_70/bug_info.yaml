@@ -1,0 +1,10 @@
+bug_number: 70
+campfire: Lab exterior lab entrance
+description: None of these cage door in the building have any collisions
+type:
+- Game breaking
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,13 @@
+bug_number: 22
+campfire: Franka’s exit
+description: Couple problems in this room prior to getting the DCD. The dryosaurs
+  running around completely drown the audio with loud footsteps. The door sliders
+  are visible on the other side of the frame. The black machine in the corner is not
+  reflecting light. Voicelines here played fine.
+type:
+- Item placement
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

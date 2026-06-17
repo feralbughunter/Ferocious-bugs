@@ -1,0 +1,12 @@
+bug_number: 58
+campfire: Cavern outpost approach
+description: You can come here from the back side using the water gates which breaks
+  the logic of waypoints and there are no enemies here. The enemies will spawn if
+  you go far enough and then re-approach from the intended side.
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

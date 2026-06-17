@@ -1,0 +1,10 @@
+bug_number: 11
+campfire: Dino skull
+description: Something is wrong with their heads. Very disturbing. In front of the
+  temple entrance. 😀 After returning later they were fine. Probably respawned.
+type:
+- Broken model
+severity: Medium
+reproducibility: Sometimes
+status: unfixed
+version: 1.08.162.3935

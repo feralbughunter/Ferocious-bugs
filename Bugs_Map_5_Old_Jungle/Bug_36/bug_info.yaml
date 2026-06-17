@@ -1,0 +1,9 @@
+bug_number: 36
+campfire: Docks approach
+description: No collisions on these crane poles anywhere.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

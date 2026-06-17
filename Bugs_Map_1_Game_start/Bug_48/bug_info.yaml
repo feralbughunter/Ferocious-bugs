@@ -1,0 +1,10 @@
+bug_number: 48
+description: The map ends without confirmation once you use the cable cart. In my
+  opinion since you may have undiscovered secrets, you should have a choice to not
+  end the level yet.
+type:
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

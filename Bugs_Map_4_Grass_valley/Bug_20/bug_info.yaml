@@ -1,0 +1,10 @@
+bug_number: 20
+campfire: Abandoned camp
+description: The paper next to the statue is not placed on the table. In the top building
+  behind the grate door. Same room the blue box fell through the shelves.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

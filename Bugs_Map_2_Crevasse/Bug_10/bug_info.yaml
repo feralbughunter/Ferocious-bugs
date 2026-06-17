@@ -1,0 +1,9 @@
+bug_number: 10
+description: Dryosaurs sometimes make a very loud running sound not appropriate for
+  their size which sounds like someone dragging a rock on the floor. It sounds odd.
+type:
+- Broken logic
+severity: High
+reproducibility: Sometimes
+status: unfixed
+version: 1.08.162.3935

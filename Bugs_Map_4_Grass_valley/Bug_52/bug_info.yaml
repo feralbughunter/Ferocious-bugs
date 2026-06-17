@@ -1,0 +1,12 @@
+bug_number: 52
+campfire: Stepped temple mid level
+description: The dryosaur can not go in there, there seems to be an invisible wall.
+  I also can not aim for the statue and send him for it.
+type:
+- Invisible wall
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

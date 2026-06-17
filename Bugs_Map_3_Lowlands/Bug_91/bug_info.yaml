@@ -1,0 +1,9 @@
+bug_number: 91
+campfire: Main camp
+description: The ramp goes through the wall of the container in the Trex holding area.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

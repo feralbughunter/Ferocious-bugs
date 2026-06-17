@@ -1,0 +1,12 @@
+bug_number: 23
+campfire: Ransacked temple
+description: Buttons in this temple do not blink and do not have an interaction dot,
+  but you can reach in through the door and grab some of the items anyway.
+type:
+- Broken logic
+- Game breaking
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

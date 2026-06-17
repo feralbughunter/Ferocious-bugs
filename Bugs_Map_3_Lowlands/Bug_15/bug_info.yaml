@@ -1,0 +1,18 @@
+bug_number: 15
+campfire: Central camp entrance W
+description: Mounting a parasaur in this level will move the player at high speed
+  in a random direction. It is impossible to walk or control the dinosaur. The parasaur
+  does not respond to go to or follow commands and clips through terrain. Parasaur
+  tail does not collide with the player. The parasaur will walk correctly only under
+  water if you are accidentally shoved into the river during the chaotic movement.
+  When you touch any dinosaur on land here it will shove then away from you at high
+  speed. On a previous save from January the parasaurs work as intended and you can
+  not shove them. Making a campfire on the old save, saving and loading from it will
+  not break the parasaurs.
+type:
+- Game breaking
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

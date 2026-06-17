@@ -1,0 +1,9 @@
+bug_number: 28
+description: You can skin an animal even though your inventory is full wasting resources.
+  It could say inventory is full and prevent that.
+type:
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

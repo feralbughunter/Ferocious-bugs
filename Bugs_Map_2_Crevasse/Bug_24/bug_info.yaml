@@ -1,0 +1,9 @@
+bug_number: 24
+campfire: Franka’s exit
+description: The dryosaur hint is floating.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

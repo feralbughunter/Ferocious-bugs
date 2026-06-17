@@ -1,0 +1,9 @@
+bug_number: 22
+campfire: Shipwreck beach
+description: This forklift has an invisible wall on top of the box which blocks bullets.
+type:
+- Invisible wall
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

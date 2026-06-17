@@ -1,0 +1,10 @@
+bug_number: 42
+campfire: Stepped temple inside
+description: This door is crammed into a too small frame and freaks out when opened
+  or closed. Outside the temple leading to the gold underneath.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,10 @@
+bug_number: 72
+campfire: Sunken temple south exit
+description: Partial level escape leading to an area with broken geometry. Right behind
+  the Kayak gate.
+type:
+- Level escape
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,12 @@
+bug_number: 71
+campfire: Road checkpoint 3
+description: No collision on these bones. In this place you will hear the voice line
+  about raptors even if you clear half of the level and meet the raptors 10 times
+  before. Campfire name is missing spaces.
+type:
+- Collision missing
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

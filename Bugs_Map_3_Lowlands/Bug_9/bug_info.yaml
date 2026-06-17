@@ -1,0 +1,11 @@
+bug_number: 9
+description: When throwing grenades once you throw the last one, a grenade will remain
+  in your hand which you can not throw. Once you switch to another weapon only then
+  you can not go back to grenades.
+type:
+- Game breaking
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

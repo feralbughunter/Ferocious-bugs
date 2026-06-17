@@ -1,0 +1,10 @@
+bug_number: 48
+campfire: Lake camp south
+description: You can get past some of these barriers by climbing over the stones next
+  to it.
+type:
+- Invisible wall
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

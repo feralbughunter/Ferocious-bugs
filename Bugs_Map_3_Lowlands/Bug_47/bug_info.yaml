@@ -1,0 +1,10 @@
+bug_number: 47
+campfire: Drills dock
+description: Ammo has fallen through the box. When the box is hit with melee it does
+  nothing, second hit breaks it, but it just disappears and there is no sound.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

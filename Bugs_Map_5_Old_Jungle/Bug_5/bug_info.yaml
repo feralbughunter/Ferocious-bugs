@@ -1,0 +1,10 @@
+bug_number: 5
+description: Item pickup, rope sounds and dcd sounds/whistling stopped playing on
+  this map. Restarting the game does not help.
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Unknown
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,10 @@
+bug_number: 17
+campfire: Tunnel
+description: This button is blinking but can not be pushed, it has no interaction
+  dot.
+type:
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

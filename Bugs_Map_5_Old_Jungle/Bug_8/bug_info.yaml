@@ -1,0 +1,10 @@
+bug_number: 8
+campfire: Descent
+description: The old jungle key will no fall down.
+type:
+- Broken logic
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 21
+campfire: Hydro mid point
+description: The stone I am standing on has broken collisions at the tip.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

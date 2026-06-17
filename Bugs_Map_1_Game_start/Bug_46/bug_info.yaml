@@ -1,0 +1,9 @@
+bug_number: 46
+description: A hole in the level. You can swim here from the final base and you can
+  escape the map from here.
+type:
+- Level escape
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

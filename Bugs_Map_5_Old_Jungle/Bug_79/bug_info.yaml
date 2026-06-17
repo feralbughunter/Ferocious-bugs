@@ -1,0 +1,9 @@
+bug_number: 79
+campfire: Lab exterior lab entrance
+description: Some dinosaurs in this building are frozen and not moving.
+type:
+- Broken model
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

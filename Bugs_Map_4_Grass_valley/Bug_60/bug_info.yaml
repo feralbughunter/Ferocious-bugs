@@ -1,0 +1,11 @@
+bug_number: 60
+campfire: Dead end
+description: A bunch of these oddly shaped tents with no collision in the secret last
+  stand camp.
+type:
+- Collision missing
+- Broken model
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

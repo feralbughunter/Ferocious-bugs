@@ -1,0 +1,8 @@
+bug_number: 46
+description: The motor boat has the same map auto opening problem as the kayak.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

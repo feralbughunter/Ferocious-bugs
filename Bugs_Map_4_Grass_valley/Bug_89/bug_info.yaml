@@ -1,0 +1,10 @@
+bug_number: 89
+campfire: Central outpost
+description: Opening the mech gate makes no sound and the gate instantly snaps into
+  open position, no movement.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

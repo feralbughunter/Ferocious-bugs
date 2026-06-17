@@ -1,0 +1,10 @@
+bug_number: 37
+campfire: Temple South
+description: This door when approached has a dot but can not be opened unless you
+  jam yourself almost through it on a specific angle and jump. Leading to Temple Summit.
+type:
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

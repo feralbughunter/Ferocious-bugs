@@ -1,0 +1,9 @@
+bug_number: 70
+campfire: Temple campsite
+description: This gold has an interaction dot but can not be picked up.
+type:
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

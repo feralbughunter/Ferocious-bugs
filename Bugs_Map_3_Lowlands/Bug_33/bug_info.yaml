@@ -1,0 +1,9 @@
+bug_number: 33
+campfire: Jurassic fence
+description: No collision on these pieces of wood.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

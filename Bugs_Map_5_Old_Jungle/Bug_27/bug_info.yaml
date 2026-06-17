@@ -1,0 +1,9 @@
+bug_number: 27
+campfire: Hydro exit
+description: Up at the shrine on the log bridge the plants are not placed correctly.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

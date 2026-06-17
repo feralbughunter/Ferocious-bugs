@@ -1,0 +1,9 @@
+bug_number: 23
+campfire: Hydro exit
+description: Floating stick.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

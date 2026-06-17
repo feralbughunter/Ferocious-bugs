@@ -1,0 +1,10 @@
+bug_number: 54
+campfire: Parasaur plains approach
+description: This massive skull is blinking, has no collisions and you can get there.
+type:
+- Interaction issue
+- Invisible wall
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

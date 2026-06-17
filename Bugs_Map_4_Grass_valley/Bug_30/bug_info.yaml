@@ -1,0 +1,10 @@
+bug_number: 30
+campfire: Mech testing
+description: No collision on the ladder below the buggy and on the beams around the
+  pit.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

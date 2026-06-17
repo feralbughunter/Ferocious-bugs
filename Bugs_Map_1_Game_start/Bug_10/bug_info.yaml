@@ -1,0 +1,9 @@
+bug_number: 10
+campfire: Manifesto Outpost A Beach
+description: Parts of the dead shark are not solid.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

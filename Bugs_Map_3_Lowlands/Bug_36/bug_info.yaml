@@ -1,0 +1,9 @@
+bug_number: 36
+campfire: Scorched earth
+description: No collisions on this tree.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

@@ -1,0 +1,19 @@
+bug_number: 63
+campfire: Lab exterior lab entrance
+description: There is a voice line here about caged dinosaurs. If you use the button
+  on the building, all the cages will snap open with no animation, no sound and all
+  the dinosaurs in them are dead and skinable. The buttons here make no sound and
+  no indication that something has happened. The buttons with the green stripe do
+  not work at all, but they are blinking. The only two buttons on a cage that do work
+  is the larger button which will snap open the cage and spawn a raptor out of thin
+  air. This raptor will not spawn if you use the global button on the building but
+  will spawn if you then use the button on his cage. Then a voice line will play.
+  It will not play if you use the global button.
+type:
+- Broken logic
+- Interaction issue
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

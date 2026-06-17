@@ -1,0 +1,9 @@
+bug_number: 84
+campfire: Cliff base north entrance
+description: No collision on this ladder.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

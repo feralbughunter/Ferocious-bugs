@@ -1,0 +1,10 @@
+bug_number: 21
+campfire: Shipwreck
+description: Invisible wall in front of this box, it can not be approached. In the
+  caves next to the door to the next area.
+type:
+- Invisible wall
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

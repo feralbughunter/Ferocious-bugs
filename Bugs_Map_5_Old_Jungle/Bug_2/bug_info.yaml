@@ -1,0 +1,10 @@
+bug_number: 2
+campfire: Old jungle start
+description: You can not fall off this cliff there is an invisible wall. But you can
+  fall off just behind the corner.
+type:
+- Invisible wall
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 51
+campfire: Lake camp south
+description: Broken geometry on these rock.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,12 @@
+bug_number: 15
+campfire: Valley gates exit
+description: Walking down this waterfall will make you fall to the floor under it,
+  not into water, walking further will make you fall to the bottom of the map but
+  no water. You can go up the waterfall and behind the trex cutscene gate and possibly
+  skip it or break it.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

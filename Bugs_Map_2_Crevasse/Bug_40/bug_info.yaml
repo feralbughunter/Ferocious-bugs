@@ -1,0 +1,18 @@
+bug_number: 40
+campfire: Lowlands gate
+description: Couple problems with the final radio tower quest area. Titanoceratops
+  has wrong collisions. The “Ahh I wish this was just a dream” voiceline repeats infinitely.
+  Multiple hold the ladder points. Upon pressing the radio button, the interaction
+  dot moves up with the gate and floats in front of you. The entire area had 2 soldiers
+  defending it. If you save at the campfire next to the gate with the gate open and
+  load the save, the gate will be closed and the button will need to be pressed again.
+  After loading the game, the titanoceratops spawned once I left the area but not
+  near me where I saved. Follow command does not work on the titanoceratops.
+type:
+- Item placement
+- Broken logic
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

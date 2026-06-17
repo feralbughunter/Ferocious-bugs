@@ -1,0 +1,9 @@
+bug_number: 10
+campfire: Canal temple exit
+description: Floating objects to the left of the campfire.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

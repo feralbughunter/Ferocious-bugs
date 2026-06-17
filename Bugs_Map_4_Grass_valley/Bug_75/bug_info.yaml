@@ -1,0 +1,11 @@
+bug_number: 75
+campfire: North valley entrance
+description: Floating bone on a box that can be moved and a cloth which fell through
+  shelves and can not be picked up when close to it. Up at the gate with the first
+  radio tower in the secret fenced area.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

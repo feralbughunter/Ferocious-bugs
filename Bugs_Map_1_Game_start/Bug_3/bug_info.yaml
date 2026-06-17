@@ -1,0 +1,11 @@
+bug_number: 3
+campfire: First Manifesto Camp
+description: Level escape leading to an area with the underside of the map visible
+  on top of the first mechanical door cave. I found it by exploring the level and
+  coming across a cave that you can crouch into.
+type:
+- Level escape
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

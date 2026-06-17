@@ -1,0 +1,11 @@
+bug_number: 34
+campfire: River valley
+description: You can walk here from the titanoceratops arena, there is an invisible
+  wall here even though you could clearly pass through.
+type:
+- Game breaking
+- Invisible wall
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

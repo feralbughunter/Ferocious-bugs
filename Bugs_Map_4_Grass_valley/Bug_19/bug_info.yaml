@@ -1,0 +1,10 @@
+bug_number: 19
+campfire: Field hospital gates
+description: This rock does not reach all the way to the ground behind the secret
+  towards the beach.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

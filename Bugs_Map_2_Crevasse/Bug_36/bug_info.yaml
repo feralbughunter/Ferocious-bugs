@@ -1,0 +1,9 @@
+bug_number: 36
+campfire: Titan
+description: Gold is too deep in the stone.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

@@ -1,0 +1,9 @@
+bug_number: 21
+campfire: Abandoned camp
+description: Pilon is not touching the ground.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 4
+campfire: Old jungle start
+description: Floating objects on the log bridge.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

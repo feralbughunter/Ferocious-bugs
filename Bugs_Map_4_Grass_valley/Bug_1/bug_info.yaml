@@ -1,0 +1,10 @@
+bug_number: 1
+campfire: Grass valley start
+description: If you try to go back the way you came, there is a wall. This does not
+  make sense when you came from there from the previous level.
+type:
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 18
+campfire: Central camp entrance S
+description: This tent has no collisions and odd shape.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

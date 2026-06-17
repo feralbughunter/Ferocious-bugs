@@ -1,0 +1,10 @@
+bug_number: 51
+campfire: Drills dock rear
+description: This rock at the back of the refinery does not go deep enough, you can
+  swim under it.
+type:
+- Broken model
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

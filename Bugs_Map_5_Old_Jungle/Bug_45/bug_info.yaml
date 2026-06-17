@@ -1,0 +1,13 @@
+bug_number: 45
+campfire: Stepped camp
+description: This weapon is broken, it will not appear in your hands and mess up your
+  camera. Items fell through shelves, grass indoors.
+type:
+- Broken logic
+- Game breaking
+- Player confusion
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

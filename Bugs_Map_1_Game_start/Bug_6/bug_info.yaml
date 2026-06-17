@@ -1,0 +1,8 @@
+bug_number: 6
+description: Hand clips through spear.
+type:
+- Broken model
+severity: High
+reproducibility: Sometimes
+status: unfixed
+version: 1.08.162.3935

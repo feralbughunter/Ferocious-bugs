@@ -1,0 +1,10 @@
+bug_number: 48
+campfire: Stepped temple inside
+description: The rock slabs poke through the other side of the door frame when opened
+  and the button does no have a dryosaur hint.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,10 @@
+bug_number: 71
+campfire: Lab exterior lab entrance
+description: This dinosaur is not moving and has no collisions.
+type:
+- Broken model
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

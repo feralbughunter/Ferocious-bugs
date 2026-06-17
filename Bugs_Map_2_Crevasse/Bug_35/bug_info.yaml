@@ -1,0 +1,9 @@
+bug_number: 35
+campfire: River valley
+description: Dead titanoceratops has no collisions.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

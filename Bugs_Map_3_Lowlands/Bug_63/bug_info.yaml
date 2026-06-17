@@ -1,0 +1,9 @@
+bug_number: 63
+campfire: Sunken temple north
+description: Daemonosaur nest has a broken box of some sort in it.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

@@ -1,0 +1,9 @@
+bug_number: 86
+campfire: Main camp
+description: Floating rocks on the road to the final trex camp.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

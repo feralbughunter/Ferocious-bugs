@@ -1,0 +1,8 @@
+bug_number: 45
+description: Floating object in the distance behind the final base.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

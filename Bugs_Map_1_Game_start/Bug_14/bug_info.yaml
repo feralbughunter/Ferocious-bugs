@@ -1,0 +1,10 @@
+bug_number: 14
+campfire: Burning variant
+description: Some object visible through rocks but not intractable in the corridor
+  to the first soldier encounter.
+type:
+- Interaction issue
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

@@ -1,0 +1,9 @@
+bug_number: 85
+campfire: Main dock
+description: Partial level escape through here.
+type:
+- Level escape
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

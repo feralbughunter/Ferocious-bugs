@@ -1,0 +1,9 @@
+bug_number: 41
+campfire: River valley
+description: Returning here later will repeat the voiceline about needing a key.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

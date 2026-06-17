@@ -1,0 +1,9 @@
+bug_number: 56
+campfire: Lab exterior canyon
+description: Floating vegetation near the lab shore.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

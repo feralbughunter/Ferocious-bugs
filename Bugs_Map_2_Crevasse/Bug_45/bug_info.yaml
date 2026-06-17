@@ -1,0 +1,9 @@
+bug_number: 45
+description: The second map should end sooner, otherwise you can see the end of the
+  level.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

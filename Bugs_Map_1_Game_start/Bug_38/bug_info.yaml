@@ -1,0 +1,10 @@
+bug_number: 38
+campfire: Temple South
+description: Broken terrain. Hole through the level. I was going to the outpost with
+  the boats below, this felt like a viable route and nothing stopped me.
+type:
+- Player confusion
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

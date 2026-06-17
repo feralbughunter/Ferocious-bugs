@@ -1,0 +1,10 @@
+bug_number: 25
+campfire: Ransacked temple
+description: The texture of the stairs is misaligned and not reaching all the way
+  to the rocks. Stairs leading to the front exit.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

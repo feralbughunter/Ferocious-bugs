@@ -1,0 +1,9 @@
+bug_number: 10
+campfire: Central camp
+description: Climbing wines sticking through the ceiling.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

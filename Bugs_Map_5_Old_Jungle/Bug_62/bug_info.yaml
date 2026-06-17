@@ -1,0 +1,12 @@
+bug_number: 62
+campfire: Cavern outpost entrance
+description: When Rexie comes to this spot, she will disappear leaving behind a name.
+  She despawns when the player steps over a trigger that changes the map marker and
+  plays a broken audio file. There is a floating box up where the tower was.
+type:
+- Game breaking
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

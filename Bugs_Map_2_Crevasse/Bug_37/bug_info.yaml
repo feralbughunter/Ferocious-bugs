@@ -1,0 +1,9 @@
+bug_number: 37
+campfire: Titan
+description: The player does not switch to swimming in this cove. You just run underwater.
+type:
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

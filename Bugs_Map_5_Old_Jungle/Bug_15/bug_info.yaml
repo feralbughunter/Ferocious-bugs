@@ -1,0 +1,10 @@
+bug_number: 15
+campfire: Stepped camp
+description: Pressing this button makes no sound and the gate just disappears, no
+  gradual lowering.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

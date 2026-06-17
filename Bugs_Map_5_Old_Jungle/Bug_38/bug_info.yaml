@@ -1,0 +1,8 @@
+bug_number: 38
+description: The boat can get inside objects if you push into it twice.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

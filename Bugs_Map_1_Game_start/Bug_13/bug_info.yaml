@@ -1,0 +1,11 @@
+bug_number: 13
+campfire: Plateau
+description: Ammo falls through the box, if the box is destroyed the gun stays floating,
+  no sound when the box is destroyed, no debris either.
+type:
+- Item placement
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

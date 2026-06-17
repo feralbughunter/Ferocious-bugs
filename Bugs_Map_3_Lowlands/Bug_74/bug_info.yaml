@@ -1,0 +1,9 @@
+bug_number: 74
+campfire: Campsite
+description: Floating object inside the temple right behind the door.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

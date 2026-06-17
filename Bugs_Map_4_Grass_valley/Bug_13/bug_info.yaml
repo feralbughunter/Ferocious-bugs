@@ -1,0 +1,9 @@
+bug_number: 13
+campfire: Valley gates exit
+description: Items fell through shelves.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173

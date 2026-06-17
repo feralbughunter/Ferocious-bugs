@@ -1,0 +1,9 @@
+bug_number: 32
+campfire: Mech testing
+description: Titanoceratops randomly despawned and left his name behind
+type:
+- Broken logic
+severity: High
+reproducibility: Unknown
+status: unfixed
+version: 1.08.400.4173

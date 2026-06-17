@@ -1,0 +1,10 @@
+bug_number: 46
+campfire: Drills dock
+description: Pressing this button lowers the water gate but there is no sound.
+type:
+- Broken logic
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

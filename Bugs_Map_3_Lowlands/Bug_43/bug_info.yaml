@@ -1,0 +1,9 @@
+bug_number: 43
+campfire: Drills camp
+description: All of these stumps have no collision.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

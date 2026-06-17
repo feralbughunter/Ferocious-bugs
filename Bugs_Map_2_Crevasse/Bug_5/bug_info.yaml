@@ -1,0 +1,9 @@
+bug_number: 5
+campfire: Canyons
+description: Gold too deep in stone.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.162.3935

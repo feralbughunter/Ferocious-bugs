@@ -1,0 +1,9 @@
+bug_number: 81
+campfire: Main dock
+description: Items fell through shelves.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.08.400.4173
