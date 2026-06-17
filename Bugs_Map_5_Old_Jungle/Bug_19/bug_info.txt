@@ -1,0 +1,11 @@
+Bug #19
+==================================================
+
+Description:
+The map shows a campfire here but it is not in the world. Hydroplant side access. The boxes behind me are not placed on the ground.
+
+Type: Item placement, Broken logic
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

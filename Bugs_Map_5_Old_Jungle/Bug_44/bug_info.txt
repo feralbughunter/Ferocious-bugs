@@ -1,0 +1,13 @@
+Bug #44
+==================================================
+
+Description:
+Broken geometry under water, you can stand on it.
+
+Campfire: Stepped camp
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

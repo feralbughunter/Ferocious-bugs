@@ -1,0 +1,13 @@
+Bug #18
+==================================================
+
+Description:
+No collisions on this tent and the bone is floating.
+
+Campfire: Hidden camp
+
+Type: Collision missing, Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #14
+==================================================
+
+Description:
+No collisions on this ladder.
+
+Campfire: Fishing camp side entrance
+
+Type: Collision missing
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

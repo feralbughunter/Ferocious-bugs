@@ -1,0 +1,13 @@
+Bug #24
+==================================================
+
+Description:
+Broken geometry of the rocks.
+
+Campfire: Hydro exit
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

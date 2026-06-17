@@ -1,0 +1,13 @@
+Bug #12
+==================================================
+
+Description:
+No collision on these roots.
+
+Campfire: Canal temple exit
+
+Type: Collision missing
+Severity: Medium
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

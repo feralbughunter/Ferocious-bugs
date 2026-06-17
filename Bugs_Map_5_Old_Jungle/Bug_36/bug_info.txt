@@ -1,0 +1,13 @@
+Bug #36
+==================================================
+
+Description:
+No collisions on these crane poles anywhere.
+
+Campfire: Docks approach
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

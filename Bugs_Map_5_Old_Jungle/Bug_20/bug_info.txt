@@ -1,0 +1,13 @@
+Bug #20
+==================================================
+
+Description:
+Items fell through shelves and some can not be picked up.
+
+Campfire: Unknown, the hydroplant campfire is missing.
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

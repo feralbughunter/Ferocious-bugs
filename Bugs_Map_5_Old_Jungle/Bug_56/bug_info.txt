@@ -1,0 +1,13 @@
+Bug #56
+==================================================
+
+Description:
+Floating vegetation near the lab shore.
+
+Campfire: Lab exterior canyon
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

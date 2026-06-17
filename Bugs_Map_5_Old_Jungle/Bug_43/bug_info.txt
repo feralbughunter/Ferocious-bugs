@@ -1,0 +1,13 @@
+Bug #43
+==================================================
+
+Description:
+Floating ferns.
+
+Campfire: Canal temple interior
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

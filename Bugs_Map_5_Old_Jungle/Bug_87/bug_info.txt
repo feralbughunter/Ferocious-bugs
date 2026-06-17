@@ -1,0 +1,11 @@
+Bug #87
+==================================================
+
+Description:
+Burnt down bushes will regrow even after saving and loading.
+
+Type: Broken logic
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

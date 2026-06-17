@@ -1,0 +1,11 @@
+Bug #86
+==================================================
+
+Description:
+Post lab explosion lights are Sun level bright.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

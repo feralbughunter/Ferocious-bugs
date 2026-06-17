@@ -1,0 +1,13 @@
+Bug #57
+==================================================
+
+Description:
+Broken geometry.
+
+Campfire: Cavern outpost entrance
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

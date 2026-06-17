@@ -1,0 +1,13 @@
+Bug #91
+==================================================
+
+Description:
+Climbing up to the temple here will push you through rock.
+
+Campfire: Canal temple exit
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

@@ -1,0 +1,13 @@
+Bug #35
+==================================================
+
+Description:
+These pipes have no collisions and if you run into them you will get stuck.
+
+Campfire: Docks approach
+
+Type: Collision missing, Game breaking
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #73
+==================================================
+
+Description:
+When you shoot the glass in these windows, only the tile you hit will spawn.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

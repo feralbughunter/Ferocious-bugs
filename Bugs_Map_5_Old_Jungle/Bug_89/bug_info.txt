@@ -1,0 +1,13 @@
+Bug #89
+==================================================
+
+Description:
+The key will not drop.
+
+Campfire: Canyon
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

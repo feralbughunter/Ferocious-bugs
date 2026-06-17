@@ -1,0 +1,13 @@
+Bug #3
+==================================================
+
+Description:
+No collisions on these smaller roots before the log bridge.
+
+Campfire: Old jungle start
+
+Type: Collision missing
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

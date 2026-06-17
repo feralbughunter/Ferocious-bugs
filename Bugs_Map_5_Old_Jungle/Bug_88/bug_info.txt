@@ -1,0 +1,11 @@
+Bug #88
+==================================================
+
+Description:
+The side mission will restart later in the game with no enemies and can not be finished.
+
+Type: Broken logic, Player confusion
+Severity: High
+Reproducibility: Sometimes 
+Status: unfixed
+Version: 1.09.273.4211

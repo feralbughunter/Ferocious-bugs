@@ -1,0 +1,11 @@
+Bug #46
+==================================================
+
+Description:
+The motor boat has the same map auto opening problem as the kayak.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

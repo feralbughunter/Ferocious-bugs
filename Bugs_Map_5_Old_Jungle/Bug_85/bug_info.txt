@@ -1,0 +1,13 @@
+Bug #85
+==================================================
+
+Description:
+Floating and invisible items in the secret temple in the flamethrower mission.
+
+Campfire: Cavern temple left
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

@@ -1,0 +1,13 @@
+Bug #16
+==================================================
+
+Description:
+Floating ferns to the right and no collisions on the large tree stumps and the thick branches going down from the tree.
+
+Campfire: Stepped camp
+
+Type: Collision missing, Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

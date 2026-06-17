@@ -1,0 +1,13 @@
+Bug #22
+==================================================
+
+Description:
+In the hydroplant side house with the key the dryosaur will not find the ramp to go up the table to fetch the key. Fortunately the whole window side of the building is not solid, so you can just walk in :D The secret will not trigger and the question mark remains on the map.
+
+Campfire: Hydro mid point
+
+Type: Item placement, Broken logic, Game breaking
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

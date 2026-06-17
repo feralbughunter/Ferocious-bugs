@@ -1,0 +1,13 @@
+Bug #37
+==================================================
+
+Description:
+Floating item if the box is destroyed.
+
+Campfire: Canyon
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

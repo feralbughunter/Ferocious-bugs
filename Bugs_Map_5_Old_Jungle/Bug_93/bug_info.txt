@@ -1,0 +1,13 @@
+Bug #93
+==================================================
+
+Description:
+In the flooded temple secret, you can not walk through here without jumping.
+
+Campfire: Canal temple exit
+
+Type: Invisible wall
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

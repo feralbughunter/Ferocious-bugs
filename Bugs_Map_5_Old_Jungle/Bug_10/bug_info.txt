@@ -1,0 +1,13 @@
+Bug #10
+==================================================
+
+Description:
+Floating objects to the left of the campfire.
+
+Campfire: Canal temple exit
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

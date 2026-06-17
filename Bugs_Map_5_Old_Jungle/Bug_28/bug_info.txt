@@ -1,0 +1,13 @@
+Bug #28
+==================================================
+
+Description:
+This lighter tree has no collisions. I am standing on a rope icon which I think should have been the way to get to the secret shrine, but the rope is not there and I do not see any way of getting up here. I wall humped the mountain.
+
+Campfire: Hydro exit
+
+Type: Broken logic, Game breaking, Collision missing, Player confusion
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

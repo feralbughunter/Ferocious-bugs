@@ -1,0 +1,13 @@
+Bug #74
+==================================================
+
+Description:
+All of these yellow handrails block bullets in the open portion.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

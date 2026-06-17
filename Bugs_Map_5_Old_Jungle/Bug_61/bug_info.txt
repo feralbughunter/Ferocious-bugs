@@ -1,0 +1,13 @@
+Bug #61
+==================================================
+
+Description:
+Antenna is not standing on the floor.
+
+Campfire: Lake outpost approach
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

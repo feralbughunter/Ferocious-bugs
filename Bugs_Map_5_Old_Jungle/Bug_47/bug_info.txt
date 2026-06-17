@@ -1,0 +1,13 @@
+Bug #47
+==================================================
+
+Description:
+There is an invisible wall around the base of the twin statues.
+
+Campfire: Descent
+
+Type: Invisible wall
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

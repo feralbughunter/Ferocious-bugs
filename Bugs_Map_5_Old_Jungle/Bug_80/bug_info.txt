@@ -1,0 +1,13 @@
+Bug #80
+==================================================
+
+Description:
+These red boxes are blinking but you can not interact with them.
+
+Campfire: Lab exterior lab entrance
+
+Type: Interaction issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

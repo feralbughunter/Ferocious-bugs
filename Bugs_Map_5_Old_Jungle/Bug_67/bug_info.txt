@@ -1,0 +1,13 @@
+Bug #67
+==================================================
+
+Description:
+This barricade does not extend all the way to the building. If you go past it, it will trigger the "Maybe I can burn these bushes." voice line without a flame thrower. This should play at the end of the mission. You can then go behind the building and vault over the fence (with animation) to get to the back entrance. The metal bars are not solid, so you can enter the building out of sequence here. The tail of a dinosaur is poking through the wall there too.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken logic, Item placement, Game breaking
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

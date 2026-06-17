@@ -1,0 +1,11 @@
+Bug #29
+==================================================
+
+Description:
+Gold desert eagle is not golden in your hands. Camo guns also do not have camo skin in your hands.
+
+Type: Broken model, Game breaking
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

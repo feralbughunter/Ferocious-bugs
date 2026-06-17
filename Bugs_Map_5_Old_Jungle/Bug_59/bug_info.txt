@@ -1,0 +1,13 @@
+Bug #59
+==================================================
+
+Description:
+Floating empty paper.
+
+Campfire: Cavern temple left
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

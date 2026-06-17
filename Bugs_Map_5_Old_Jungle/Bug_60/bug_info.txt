@@ -1,0 +1,13 @@
+Bug #60
+==================================================
+
+Description:
+The bottom of this tree does not reach the floor and you can swim into it.
+
+Campfire: Lake outpost approach
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

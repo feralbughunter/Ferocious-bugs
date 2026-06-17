@@ -1,0 +1,13 @@
+Bug #34
+==================================================
+
+Description:
+The shelves are very dark and placed too close to the beam. The light has no shadows and does not react to flashlight. The items fell through the shelves.
+
+Campfire: Dock approach
+
+Type: Item placement, Broken model
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.08.400.4173

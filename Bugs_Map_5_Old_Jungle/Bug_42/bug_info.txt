@@ -1,0 +1,13 @@
+Bug #42
+==================================================
+
+Description:
+Rexie can get in here and into this position. She will get stuck there and stop following you.
+
+Campfire: Canal temple interior
+
+Type: Collision missing, Game breaking
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

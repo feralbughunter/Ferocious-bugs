@@ -1,0 +1,13 @@
+Bug #1
+==================================================
+
+Description:
+Right at the map start there is no collision on the smaller roots of these trees, probably all instances of this model. These trees also have odd models making it possible to run up them by sprinting into them and bouncing inside the ridges.
+
+Campfire: Old jungle start
+
+Type: Collision missing, Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

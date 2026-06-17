@@ -1,0 +1,13 @@
+Bug #64
+==================================================
+
+Description:
+Broken shadows on these items. Grass indoors, items falling through shelves.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model, Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

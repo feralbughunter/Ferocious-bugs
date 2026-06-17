@@ -1,0 +1,13 @@
+Bug #41
+==================================================
+
+Description:
+The doors opened without a sound and look like this with duplicate poles and some are not open.
+
+Campfire: Canal temple interior
+
+Type: Broken model, Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

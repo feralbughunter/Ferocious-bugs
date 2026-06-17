@@ -1,0 +1,13 @@
+Bug #66
+==================================================
+
+Description:
+These cages are not touching the ground.
+
+Campfire: Lab exterior lab entrance
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

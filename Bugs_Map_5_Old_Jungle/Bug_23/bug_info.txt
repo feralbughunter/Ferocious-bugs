@@ -1,0 +1,13 @@
+Bug #23
+==================================================
+
+Description:
+Floating stick.
+
+Campfire: Hydro exit
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

@@ -1,0 +1,13 @@
+Bug #45
+==================================================
+
+Description:
+This weapon is broken, it will not appear in your hands and mess up your camera. Items fell through shelves, grass indoors.
+
+Campfire: Stepped camp
+
+Type: Broken logic, Game breaking, Player confusion, Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

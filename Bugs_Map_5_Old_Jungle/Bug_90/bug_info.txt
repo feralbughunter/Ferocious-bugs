@@ -1,0 +1,13 @@
+Bug #90
+==================================================
+
+Description:
+The infected trex fight is extremely simple. She can not get you up here where the quest starts so you do not have to do anything. Her body is not solid. Campfire name is missing a -.
+
+Campfire: Canyon
+
+Type: Broken logic, Collision missing
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

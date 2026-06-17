@@ -1,0 +1,13 @@
+Bug #69
+==================================================
+
+Description:
+When approached exactly from this spot, the paper will not appear in your hand.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

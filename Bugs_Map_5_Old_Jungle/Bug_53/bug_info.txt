@@ -1,0 +1,13 @@
+Bug #53
+==================================================
+
+Description:
+The dryosaur here can not push the button. No glowing hint.
+
+Campfire: Parasaur plain approach
+
+Type: Game breaking, Interaction issue
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

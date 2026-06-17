@@ -1,0 +1,13 @@
+Bug #50
+==================================================
+
+Description:
+Same problem with invisible wall on the statue on the other side and there is nothing there to collect.
+
+Campfire: Lake camp south
+
+Type: Invisible wall
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

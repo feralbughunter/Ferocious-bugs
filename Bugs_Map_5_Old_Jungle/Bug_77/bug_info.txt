@@ -1,0 +1,13 @@
+Bug #77
+==================================================
+
+Description:
+These doors snap open with no sound from the button or the door. Behind the door items fell through the shelves.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model, Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

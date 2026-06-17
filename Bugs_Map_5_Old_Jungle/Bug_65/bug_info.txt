@@ -1,0 +1,12 @@
+Bug #65
+==================================================
+
+Description: Floating object on the helipad.
+
+Campfire: Lab exterior lab entrance
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

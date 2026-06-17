@@ -1,0 +1,13 @@
+Bug #33
+==================================================
+
+Description:
+These pipes have no collisions.
+
+Campfire: Docks approach
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

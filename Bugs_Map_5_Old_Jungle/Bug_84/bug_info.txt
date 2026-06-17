@@ -1,0 +1,13 @@
+Bug #84
+==================================================
+
+Description:
+The professor sequence is very broken. The room is very dark and switches to lit up after the explosion. Professor is not moving at all, will not leave. The Parasaur despawns with no animation. Several items from the room disappear after explosion. A campfire spawns in the corner once you leave through the door. The flamethrower spawns out of nothing. The sequence ends with an empty Confirm dialog. You can shoot him 10 times to get an achievement. He will not react to bullets. The light above the table activates after explosion. If you load the Campfire save here and leave through the door, you will get the empty Confirm dialog again. The glass Parasaur cage is not broken after explosion. How did he escape?
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model, Interaction issue, Player confusion, Game breaking
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

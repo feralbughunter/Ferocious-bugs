@@ -1,0 +1,13 @@
+Bug #83
+==================================================
+
+Description:
+The Parasaur cage glass is not solid to bullets.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

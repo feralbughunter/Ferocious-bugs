@@ -1,0 +1,13 @@
+Bug #68
+==================================================
+
+Description:
+Broken light reflections on these tables at the lab entrance.
+
+Campfire: Lab exterior lab entrance
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

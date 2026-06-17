@@ -1,0 +1,13 @@
+Bug #17
+==================================================
+
+Description:
+She can not go past this point even though nothing is blocking her path. The map beyond this point looks like she should be able to go here and break things.
+
+Campfire: Stepped camp
+
+Type: Broken logic, Game breaking, Invisible wall
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173

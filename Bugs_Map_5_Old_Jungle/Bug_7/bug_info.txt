@@ -1,0 +1,13 @@
+Bug #7
+==================================================
+
+Description:
+Couple issues in this location. The papers on the table have a very low visibility threshold, they appear in front of you when you come closer. Interaction dot on a hammer with no prompt to do anything. Right behind the camp fire.
+
+Campfire: Canal temple interior
+
+Type: Player confusion, Broken model
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.08.400.4173
