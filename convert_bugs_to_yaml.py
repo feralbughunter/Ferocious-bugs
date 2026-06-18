@@ -9,6 +9,25 @@ import os
 import re
 import yaml
 from pathlib import Path
+from typing import Dict, List, Any
+
+
+# Validation constants based on overall_info.txt
+ALLOWED_TYPES = {
+    'Item placement',
+    'Collision missing',
+    'Level escape',
+    'Broken model',
+    'Interaction issue',
+    'Player confusion',
+    'Invisible wall',
+    'Game breaking',
+    'Broken logic'
+}
+
+ALLOWED_SEVERITIES = {'High', 'Medium', 'Low'}
+ALLOWED_STATUSES = {'fixed', 'unfixed', 'notabug'}
+REQUIRED_FIELDS = {'bug_number', 'description', 'type', 'severity', 'status'}
 
 
 def parse_bug_info(file_path):
@@ -69,11 +88,73 @@ def parse_bug_info(file_path):
     return bug_data
 
 
+def validate_bug_data(bug_data: Dict[str, Any], file_path: Path) -> List[str]:
+    """
+    Validate bug data against required fields and allowed values.
+    Returns a list of validation errors (empty list if valid).
+    """
+    errors = []
+
+    # Check required fields
+    missing_fields = REQUIRED_FIELDS - bug_data.keys()
+    if missing_fields:
+        errors.append(f"Missing required fields: {', '.join(missing_fields)}")
+
+    # Validate bug_number is an integer
+    if 'bug_number' in bug_data:
+        if not isinstance(bug_data['bug_number'], int):
+            errors.append(f"bug_number must be an integer, got: {type(bug_data['bug_number']).__name__}")
+
+    # Validate type field (must be a list and all values must be in allowed types)
+    if 'type' in bug_data:
+        if not isinstance(bug_data['type'], list):
+            errors.append(f"type must be a list, got: {type(bug_data['type']).__name__}")
+        elif not bug_data['type']:
+            errors.append("type list cannot be empty")
+        else:
+            invalid_types = [t for t in bug_data['type'] if t not in ALLOWED_TYPES]
+            if invalid_types:
+                errors.append(f"Invalid type values: {', '.join(invalid_types)}. "
+                            f"Allowed: {', '.join(sorted(ALLOWED_TYPES))}")
+
+    # Validate severity
+    if 'severity' in bug_data:
+        if bug_data['severity'] not in ALLOWED_SEVERITIES:
+            errors.append(f"Invalid severity: '{bug_data['severity']}'. "
+                         f"Allowed: {', '.join(sorted(ALLOWED_SEVERITIES))}")
+
+    # Validate status
+    if 'status' in bug_data:
+        if bug_data['status'] not in ALLOWED_STATUSES:
+            errors.append(f"Invalid status: '{bug_data['status']}'. "
+                         f"Allowed: {', '.join(sorted(ALLOWED_STATUSES))}")
+
+    # Validate description is not empty (free-form text but should exist)
+    if 'description' in bug_data:
+        if not isinstance(bug_data['description'], str) or not bug_data['description'].strip():
+            errors.append("description must be a non-empty string")
+
+    # Validate campfire if present (free-form text, optional field)
+    if 'campfire' in bug_data:
+        if not isinstance(bug_data['campfire'], str):
+            errors.append(f"campfire must be a string, got: {type(bug_data['campfire']).__name__}")
+
+    return errors
+
+
 def convert_bug_to_yaml(txt_file_path):
-    """Convert a single bug_info.txt file to YAML format."""
+    """Convert a single bug_info.txt file to YAML format with validation."""
     try:
         # Parse the text file
         bug_data = parse_bug_info(txt_file_path)
+
+        # Validate the parsed data
+        validation_errors = validate_bug_data(bug_data, txt_file_path)
+        if validation_errors:
+            print(f"✗ Validation failed for {txt_file_path}:")
+            for error in validation_errors:
+                print(f"  - {error}")
+            return False
 
         # Create the YAML file path (same directory, different extension)
         yaml_file_path = txt_file_path.parent / 'bug_info.yaml'
@@ -109,6 +190,8 @@ def main():
     for bug_file in bug_files:
         if convert_bug_to_yaml(bug_file):
             success_count += 1
+        else:
+            return
 
     print(f"\n{'='*50}")
     print(f"Conversion complete: {success_count}/{len(bug_files)} files converted successfully")
