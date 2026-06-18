@@ -1,4 +1,6 @@
 bug_number: 13
+campfire: Fishing camp lake entrance
+description: Box is not standing on the ground.
 type:
 - Item placement
 severity: Low

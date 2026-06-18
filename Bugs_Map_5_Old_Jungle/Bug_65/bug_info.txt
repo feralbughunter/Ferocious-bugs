@@ -1,7 +1,8 @@
 Bug #65
 ==================================================
 
-Description: Floating object on the helipad.
+Description: 
+Floating object on the helipad.
 
 Campfire: Lab exterior lab entrance
 

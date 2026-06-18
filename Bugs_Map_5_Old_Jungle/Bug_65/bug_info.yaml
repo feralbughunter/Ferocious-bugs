@@ -1,4 +1,6 @@
 bug_number: 65
+campfire: Lab exterior lab entrance
+description: Floating object on the helipad.
 type:
 - Item placement
 severity: Low

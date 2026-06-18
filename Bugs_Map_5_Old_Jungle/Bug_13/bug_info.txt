@@ -1,7 +1,8 @@
 Bug #13
 ==================================================
 
-Description: Box is not standing on the ground.
+Description: 
+Box is not standing on the ground.
 
 Campfire: Fishing camp lake entrance
 
