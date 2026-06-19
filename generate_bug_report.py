@@ -959,7 +959,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
                 <p><strong>Severity:</strong> <span class="severity-badge {severity_class}">{bug_data['severity']}</span></p>
                 <p><strong>Reproducibility:</strong> {bug_data['reproducibility']}</p>
                 <p><strong>Version:</strong> {bug_data['version']}</p>
-                <p><strong>Reported:</strong> {bug_data['timestamp_human']}</p>"""
+                <p><strong>Found:</strong> {bug_data['timestamp_human']}</p>"""
 
             if bug_data['campfire']:
                 html += f"""
