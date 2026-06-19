@@ -1,0 +1,9 @@
+bug_number: 39
+campfire: Checkpoint backdoor
+description: You can save here through the window.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

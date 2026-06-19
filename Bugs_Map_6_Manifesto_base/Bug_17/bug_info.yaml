@@ -1,0 +1,9 @@
+bug_number: 17
+campfire: Cave exit
+description: The alarm is not standing on the ground.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

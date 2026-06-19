@@ -1,0 +1,9 @@
+bug_number: 112
+description: The general's mouth is not moving in the final cutscene. And the blue
+  flowers you place on the grave later are blinking as an interactable object.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

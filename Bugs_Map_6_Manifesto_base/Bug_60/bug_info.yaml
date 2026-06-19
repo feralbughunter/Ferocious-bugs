@@ -1,0 +1,9 @@
+bug_number: 60
+campfire: Manifesto base start
+description: Parasaur can clip through stairs.
+type:
+- Broken model
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,14 @@
+bug_number: 98
+campfire: Boss fight
+description: The Titanoceratops enclosure gate will teleport to open state, no sound,
+  no slow movement. Same problem with the Daemonosaur gate. Titanoceratops can clip
+  through the fence and while riding him, the garage door gate opposite the enclosure
+  door is not solid. He is very broken in the last fight area near the helipad. Does
+  not run up or falls through the terrain randomly.
+type:
+- Collision missing
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,13 @@
+Bug #108
+==================================================
+
+Description:
+The antennas up here are not properly seated.
+
+Campfire: Boss fight
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

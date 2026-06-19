@@ -1,0 +1,9 @@
+bug_number: 46
+campfire: Little camp front
+description: Floating bowls.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

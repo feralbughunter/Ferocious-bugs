@@ -1,0 +1,9 @@
+bug_number: 73
+campfire: Courtyard start
+description: There is a dot on this paper but you can not pick it up.
+type:
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

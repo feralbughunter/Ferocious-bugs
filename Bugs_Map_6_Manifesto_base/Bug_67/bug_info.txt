@@ -1,0 +1,13 @@
+Bug #67
+==================================================
+
+Description:
+The alarm is not sitting on the ground.
+
+Campfire: Garage
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

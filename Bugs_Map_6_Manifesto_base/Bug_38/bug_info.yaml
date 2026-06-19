@@ -1,0 +1,9 @@
+bug_number: 38
+campfire: Checkpoint mid
+description: Parts of this gate are not solid.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

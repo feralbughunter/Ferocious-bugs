@@ -1,0 +1,13 @@
+Bug #40
+==================================================
+
+Description:
+The money fell through the papers.
+
+Campfire: Checkpoint backdoor
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

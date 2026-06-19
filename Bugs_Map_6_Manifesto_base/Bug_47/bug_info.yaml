@@ -1,0 +1,10 @@
+bug_number: 47
+campfire: Little camp front
+description: I can not figure out how to open this door. Mid level of the excavations.
+type:
+- Broken logic
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

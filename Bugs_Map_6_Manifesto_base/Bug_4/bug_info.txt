@@ -1,0 +1,13 @@
+Bug #4
+==================================================
+
+Description:
+Level escape through there. The camp fire name is missing spaces
+
+Campfire: Cave entrance
+
+Type: Level escape
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

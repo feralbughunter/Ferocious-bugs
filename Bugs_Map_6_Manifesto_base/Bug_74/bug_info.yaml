@@ -1,0 +1,9 @@
+bug_number: 74
+campfire: Courtyard midpoint
+description: This metal piece has no collisions in the mech assembly area.
+type:
+- Collision missing
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,11 @@
+Bug #91
+==================================================
+
+Description:
+Gauss gun model is missing the underside of the orange flex cable below the scope on the right side, you can see through it.
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

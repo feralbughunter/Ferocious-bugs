@@ -1,0 +1,14 @@
+bug_number: 87
+description: Final mission office. The model of the island is not solid. The papers
+  maybe should not be papers, there is a board there, it does not make much sense.
+  One of the papers is too deep. When you use the touchscreen there is no sound and
+  the model of the buildings spawns in front of you instead of just having light shone
+  upon it.
+type:
+- Collision missing
+- Broken logic
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

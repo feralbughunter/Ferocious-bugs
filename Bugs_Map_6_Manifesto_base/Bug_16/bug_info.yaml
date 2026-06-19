@@ -1,0 +1,9 @@
+bug_number: 16
+campfire: Checkpoint
+description: Floating objects on a box that can be destroyed.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,10 @@
+bug_number: 24
+campfire: Checkpoint
+description: No collision on this stump. It seems every instance of every scale of
+  this model does not have collisions, so I stopped counting them as separate bugs.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

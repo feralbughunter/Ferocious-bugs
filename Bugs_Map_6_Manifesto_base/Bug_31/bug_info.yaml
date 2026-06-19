@@ -1,0 +1,12 @@
+bug_number: 31
+campfire: Harbor cliffs
+description: The rope here is not long enough, you can continue climbing on thin air
+  under water. Once under water the rock is not sitting on the ground and you cans
+  swim under the level.
+type:
+- Broken model
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

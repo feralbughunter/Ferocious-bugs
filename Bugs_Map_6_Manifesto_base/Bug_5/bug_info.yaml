@@ -1,0 +1,12 @@
+bug_number: 5
+campfire: Manifesto base start
+description: This map starts with an infiltrate objective, but you can get up there
+  through the temple without going through the trigger place and the map markers will
+  be broken.
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

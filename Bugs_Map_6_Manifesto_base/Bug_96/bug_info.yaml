@@ -1,0 +1,9 @@
+bug_number: 96
+campfire: Boss fight
+description: These dinosaurs can combine into one beast. No collision on tails.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

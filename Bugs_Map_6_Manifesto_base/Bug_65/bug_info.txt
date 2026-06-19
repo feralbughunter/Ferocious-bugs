@@ -1,0 +1,13 @@
+Bug #65
+==================================================
+
+Description:
+This button will open the cages which just disappear, no sound, no movement.
+
+Campfire: Garage
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

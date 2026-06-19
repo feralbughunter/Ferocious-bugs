@@ -1,0 +1,13 @@
+Bug #102
+==================================================
+
+Description:
+Raptor will not walk down these stairs.
+
+Campfire: Boss fight
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

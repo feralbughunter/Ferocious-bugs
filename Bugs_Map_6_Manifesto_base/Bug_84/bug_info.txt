@@ -1,0 +1,11 @@
+Bug #84
+==================================================
+
+Description:
+Shotgun shells are green, the shells that are loaded in the double barrel are white and the shells the come out are red. I could not figure out how to switch to slug shells. Shells loaded into the pump shotgun are red. Slug shells are not in the backpack.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

@@ -1,0 +1,11 @@
+bug_number: 110
+campfire: Boss fight
+description: Titanoceratops is having a bad day on this terrain. But you are not legally
+  supposed to get him here. I was trying to get on the roof and fall through the roof
+  into the inaccessible secret.
+type:
+- Broken model
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

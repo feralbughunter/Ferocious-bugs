@@ -1,0 +1,12 @@
+bug_number: 77
+campfire: Courtyard midpoint
+description: I figured out I can open these doors because I test the solidity of everything.
+  Otherwise nothing in the game shows it can be opened and all previous instances
+  were locked. There should probably be some green keypad or some sort of a hint the
+  door is open.
+type:
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

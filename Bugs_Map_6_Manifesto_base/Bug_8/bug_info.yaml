@@ -1,0 +1,9 @@
+bug_number: 8
+campfire: Cave exit
+description: These boxes also open into each other.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

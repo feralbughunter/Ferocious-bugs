@@ -1,0 +1,9 @@
+bug_number: 99
+campfire: Boss fight
+description: Parasaur can not walk up this ramp.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

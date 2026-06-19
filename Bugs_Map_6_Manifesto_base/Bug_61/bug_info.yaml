@@ -1,0 +1,9 @@
+bug_number: 61
+campfire: Manifesto base start
+description: You can get up here close and personal with these thin birds.
+type:
+- Invisible wall
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

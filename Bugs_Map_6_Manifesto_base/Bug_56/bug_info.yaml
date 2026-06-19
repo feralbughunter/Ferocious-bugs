@@ -1,0 +1,9 @@
+bug_number: 56
+campfire: Range exit
+description: The stairs are not connected to the building.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

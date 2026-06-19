@@ -1,0 +1,10 @@
+bug_number: 3
+campfire: Any
+description: Gold in this place respawns after being picked up if you make a campfire
+  up here save and load.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

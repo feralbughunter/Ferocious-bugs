@@ -1,0 +1,9 @@
+bug_number: 70
+campfire: Garage
+description: They can clip through wall in the cells here.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

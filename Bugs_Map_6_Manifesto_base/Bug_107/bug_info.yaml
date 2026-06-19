@@ -1,0 +1,10 @@
+bug_number: 107
+campfire: Boss fight
+description: You can not fit through this door to get the secret.
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

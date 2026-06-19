@@ -1,0 +1,10 @@
+bug_number: 48
+campfire: Little camp front
+description: If you jump into water here, you will quickly fall to the bottom and
+  die of fall damage.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

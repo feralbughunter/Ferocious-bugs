@@ -1,0 +1,9 @@
+bug_number: 55
+campfire: Campfire
+description: Firing range secret stash. Items fell through shelves.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

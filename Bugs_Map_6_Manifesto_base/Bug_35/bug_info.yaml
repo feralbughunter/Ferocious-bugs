@@ -1,0 +1,10 @@
+bug_number: 35
+campfire: Harbor entrance
+description: These cranes have odd properties. If you sprint into the side and jump
+  you can sometimes run up or vault through. Quite a view from up there.
+type:
+- Broken model
+severity: Low
+reproducibility: Sometimes
+status: unfixed
+version: 1.09.273.4211

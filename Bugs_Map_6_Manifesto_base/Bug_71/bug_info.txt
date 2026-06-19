@@ -1,0 +1,13 @@
+Bug #71
+==================================================
+
+Description:
+Weapon fell through object. Up in the container. The container doors have no collision, this model has that probably everywhere in the game.
+
+Campfire: Courtyard start
+
+Type: Item placement, Collision missing
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

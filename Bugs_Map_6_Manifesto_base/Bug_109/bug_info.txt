@@ -1,0 +1,13 @@
+Bug #109
+==================================================
+
+Description:
+The Pterosaur cage door keeps blinking after opening.
+
+Campfire: Boss fight
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

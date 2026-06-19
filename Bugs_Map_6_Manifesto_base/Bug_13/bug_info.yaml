@@ -1,0 +1,10 @@
+bug_number: 13
+campfire: Temple
+description: Is there a way to open these? They show on the map as a door that usually
+  can be opened.
+type:
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

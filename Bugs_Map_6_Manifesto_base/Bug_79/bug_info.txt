@@ -1,0 +1,13 @@
+Bug #79
+==================================================
+
+Description:
+Second Lowlands key lockbox with not way of opening it.
+
+Campfire: Courtyard midpoint
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

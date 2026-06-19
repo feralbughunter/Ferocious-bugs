@@ -1,0 +1,9 @@
+bug_number: 53
+campfire: Campfire
+description: Floating items from a box that was blown away. Firing range.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

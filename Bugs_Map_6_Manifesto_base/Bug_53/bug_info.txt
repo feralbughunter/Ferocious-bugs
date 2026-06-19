@@ -1,0 +1,13 @@
+Bug #53
+==================================================
+
+Description:
+Floating items from a box that was blown away. Firing range.
+
+Campfire: Campfire
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

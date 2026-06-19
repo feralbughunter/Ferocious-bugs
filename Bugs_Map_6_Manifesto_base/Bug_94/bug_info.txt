@@ -1,0 +1,13 @@
+Bug #94
+==================================================
+
+Description:
+You can not shoot through the open enclosure walls.
+
+Campfire: Boss fight
+
+Type: Broken model
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

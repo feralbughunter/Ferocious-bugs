@@ -1,0 +1,13 @@
+Bug #28
+==================================================
+
+Description:
+This weapon has no name. It seems to be missing sounds for shooting, reloading and inspection. It has rather broken attachments. Beta weapon?
+
+Campfire: Checkpoint
+
+Type: Broken model
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

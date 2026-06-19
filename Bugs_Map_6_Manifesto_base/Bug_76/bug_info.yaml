@@ -1,0 +1,9 @@
+bug_number: 76
+campfire: Courtyard midpoint
+description: Object clipping through floor in the courtyard lowest level.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,10 @@
+bug_number: 41
+campfire: Checkpoint backdoor
+description: Floating cup when the box underneath is destroyed. This problem will
+  be in many other places i missed most likely.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

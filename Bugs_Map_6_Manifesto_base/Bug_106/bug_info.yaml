@@ -1,0 +1,13 @@
+bug_number: 106
+campfire: Boss fight
+description: If you save after the drone has flown off and been damaged, the state
+  will not be preserved. Loading places the drone back on the helipad and the cage
+  door will be closed. You can open the door but can not send the pterosaur. You can
+  shoot the drone again and damage it, it will not fly up to it's position, the cage
+  door will automatically open and you still can not send the pterosaur.
+type:
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

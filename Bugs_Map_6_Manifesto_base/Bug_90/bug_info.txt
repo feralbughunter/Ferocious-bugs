@@ -1,0 +1,13 @@
+Bug #90
+==================================================
+
+Description:
+Boss fight entrance cliff, you can fall down here and get stuck.
+
+Campfire: Boss fight
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

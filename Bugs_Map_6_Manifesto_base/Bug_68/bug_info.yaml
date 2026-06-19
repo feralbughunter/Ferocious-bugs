@@ -1,0 +1,9 @@
+bug_number: 68
+campfire: Garage
+description: This leg is not properly inserted in the bucket.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

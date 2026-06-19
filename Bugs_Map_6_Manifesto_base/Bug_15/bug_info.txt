@@ -1,0 +1,13 @@
+Bug #15
+==================================================
+
+Description:
+At some point an older infiltrate HQ marker appeared on the map.
+
+Campfire: Cave exit
+
+Type: Broken logic
+Severity: High
+Reproducibility: Unknown 
+Status: unfixed
+Version: 1.09.273.4211

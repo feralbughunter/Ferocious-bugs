@@ -1,0 +1,13 @@
+Bug #37
+==================================================
+
+Description:
+The trex will stop here with no explanation. Was there supposed to be a cutscene?
+
+Campfire: Harbor cliffs
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.09.273.4211

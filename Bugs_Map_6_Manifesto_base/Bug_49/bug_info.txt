@@ -1,0 +1,13 @@
+Bug #49
+==================================================
+
+Description:
+It is impossible to go there and get the secret, the water will kill you.
+
+Campfire: Little camp front
+
+Type: Game breaking, Broken logic, Player confusion
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

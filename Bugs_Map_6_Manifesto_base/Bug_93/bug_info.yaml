@@ -1,0 +1,9 @@
+bug_number: 93
+campfire: Boss fight
+description: The drone clips through the wall.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

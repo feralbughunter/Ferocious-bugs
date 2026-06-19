@@ -1,0 +1,10 @@
+bug_number: 10
+description: The lightning gun does not have ani sights yet is can shoot over long
+  ranges. It uses flamethrower ammo?
+type:
+- Broken logic
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

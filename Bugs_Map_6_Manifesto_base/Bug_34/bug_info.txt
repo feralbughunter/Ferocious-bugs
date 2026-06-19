@@ -1,0 +1,13 @@
+Bug #34
+==================================================
+
+Description:
+These items clip through each other. 
+
+Campfire: Harbor entrance
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

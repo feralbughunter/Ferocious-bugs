@@ -1,0 +1,13 @@
+Bug #44
+==================================================
+
+Description:
+Gold is too deep in the stone. The button is in the statue and when pressed forces you through the elephant head first. I do not know what the button did.
+
+Campfire: Little camp front
+
+Type: Interaction issue, Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

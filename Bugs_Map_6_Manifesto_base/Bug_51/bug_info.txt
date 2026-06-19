@@ -1,0 +1,11 @@
+Bug #51
+==================================================
+
+Description:
+No collision on these doors anywhere in the game.
+
+Type: Collision missing
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

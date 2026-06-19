@@ -1,0 +1,11 @@
+Bug #86
+==================================================
+
+Description:
+Upper office. Under certain angles the lights in this room will flicker. Exact angle on screenshots.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

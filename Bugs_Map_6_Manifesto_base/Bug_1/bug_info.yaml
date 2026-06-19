@@ -1,0 +1,9 @@
+bug_number: 1
+campfire: Manifesto base start
+description: This whole area is blinking but has no interaction dot.
+type:
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

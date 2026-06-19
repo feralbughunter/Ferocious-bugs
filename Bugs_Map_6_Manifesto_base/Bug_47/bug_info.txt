@@ -1,0 +1,13 @@
+Bug #47
+==================================================
+
+Description:
+I can not figure out how to open this door. Mid level of the excavations.
+
+Campfire: Little camp front
+
+Type: Broken logic, Player confusion
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

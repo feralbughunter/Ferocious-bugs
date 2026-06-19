@@ -1,0 +1,9 @@
+bug_number: 113
+description: After the end, loading any save will get you a black screen. The main
+  menu will be black too. You have to quit the game and start it again to load normally.
+type:
+- Game breaking
+severity: High
+reproducibility: 'Status: unfixed'
+status: unfixed
+version: 1.09.273.4211

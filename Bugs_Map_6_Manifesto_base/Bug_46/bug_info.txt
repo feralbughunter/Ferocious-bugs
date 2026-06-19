@@ -1,0 +1,13 @@
+Bug #46
+==================================================
+
+Description:
+Floating bowls.
+
+Campfire: Little camp front
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

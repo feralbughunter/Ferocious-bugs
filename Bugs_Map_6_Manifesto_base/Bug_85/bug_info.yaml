@@ -1,0 +1,9 @@
+bug_number: 85
+description: Another instance of Lowlands supply key lockers. Final mission after
+  elevator behind locked doors.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,13 @@
+Bug #100
+==================================================
+
+Description:
+The final drone makes no sound when flying. The voice lines play several times over each other. If you shoot the drone before it takes off the voice lines will play faster and out of order, it will fly faster and there is no countdown. If you shoot it before it flies up enough the animation and voice lines will speed up and it will snap into place waiting for the pterosaur. It's propellers are not moving. If you shoot it after it reaches the midpoint where it would stop, it will speed up, the timer will disappear, it will fly behind the mountain and you will still die. It should probably stop where you shoot it, or fly around limping slowly. If you go open the pterosaur cage first, the voice lines will play over each other. The pterosaur cage will open on it's own when the drone is damaged.
+
+Campfire: Boss fight
+
+Type: Game breaking, Broken model, Broken logic
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.09.273.4211

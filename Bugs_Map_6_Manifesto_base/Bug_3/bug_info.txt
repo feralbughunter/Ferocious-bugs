@@ -1,0 +1,13 @@
+Bug #3
+==================================================
+
+Description:
+Gold in this place respawns after being picked up if you make a campfire up here save and load.
+
+Campfire: Any
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

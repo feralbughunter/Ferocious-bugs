@@ -1,0 +1,13 @@
+Bug #6
+==================================================
+
+Description:
+Floating brown object.
+
+Campfire: Cave exit
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always
+Status: unfixed
+Version: 1.09.273.4211

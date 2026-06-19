@@ -1,0 +1,9 @@
+bug_number: 7
+campfire: Cave exit
+description: The lower box has nowhere to open and clips through the top box.
+type:
+- Item placement
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

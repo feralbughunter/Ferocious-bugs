@@ -1,0 +1,9 @@
+bug_number: 32
+campfire: Harbor cliffs
+description: This ladder in the harbor base is not long enough.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

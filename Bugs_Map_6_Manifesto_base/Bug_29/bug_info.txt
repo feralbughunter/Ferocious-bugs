@@ -1,0 +1,13 @@
+Bug #29
+==================================================
+
+Description:
+This door can only be opened from the other side. Are you not supposed to go here from this side, but you can?
+
+Campfire: Checkpoint
+
+Type: Interaction issue, Player confusion
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

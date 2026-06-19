@@ -1,0 +1,9 @@
+bug_number: 6
+campfire: Cave exit
+description: Floating brown object.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

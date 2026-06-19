@@ -1,0 +1,9 @@
+bug_number: 30
+campfire: Harbor cliffs
+description: Level escape through here.
+type:
+- Level escape
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

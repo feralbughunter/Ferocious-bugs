@@ -1,0 +1,13 @@
+bug_number: 57
+campfire: Checkpoint
+description: You do not have to open the tunnel with C4, there is a secret entrance
+  under the waterfall. Maybe this is an intended secondary route though. If you do
+  break the tunnel door with the C4, it will blow up in your face immediately, no
+  sound and the door will disappear in front of you. This should probably kill you
+  and there should be a timer.
+type:
+- Player confusion
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

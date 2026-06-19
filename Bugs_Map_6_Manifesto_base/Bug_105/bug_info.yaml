@@ -1,0 +1,12 @@
+bug_number: 105
+campfire: Boss fight
+description: 'Pterosaur does not have a label from the DCD. Normally you also see
+  the Controlling: <dino name> info on the DCD display. The DCD commands like Attack
+  went missing here.'
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

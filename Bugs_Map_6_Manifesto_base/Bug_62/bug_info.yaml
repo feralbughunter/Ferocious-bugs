@@ -1,0 +1,10 @@
+bug_number: 62
+campfire: Checkpoint
+description: This door in the tunnel will snap close, no sound, no animation. The
+  door at the other end does that too.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

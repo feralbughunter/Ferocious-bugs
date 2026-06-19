@@ -1,0 +1,13 @@
+Bug #21
+==================================================
+
+Description:
+If you blow up this tower with the electro thrower (that thing is so ultra fun, but does not leave behind bodies to loot), it will leave behind floating items.
+
+Campfire: Checkpoint
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

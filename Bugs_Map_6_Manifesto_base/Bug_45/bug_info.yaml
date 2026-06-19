@@ -1,0 +1,9 @@
+bug_number: 45
+campfire: Little camp front
+description: These boxes are not on the ground.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,9 @@
+bug_number: 20
+description: Dragonflies can have two interaction dots. They will sometimes leave
+  behind a dot that continues flying.
+type:
+- Interaction issue
+severity: Low
+reproducibility: Sometimes
+status: unfixed
+version: 1.09.273.4211

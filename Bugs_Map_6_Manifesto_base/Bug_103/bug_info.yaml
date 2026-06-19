@@ -1,0 +1,9 @@
+bug_number: 103
+campfire: Boss fight
+description: Misplaced grass near the helipad towards the glass door.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

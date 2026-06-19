@@ -1,0 +1,9 @@
+bug_number: 58
+campfire: Desert tent
+description: This is a tiny tiny tiny key. In the secret hideout.
+type:
+- Item placement
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

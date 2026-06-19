@@ -1,0 +1,10 @@
+bug_number: 80
+campfire: Courtyard elevator
+description: Box is destroyed but the physics of the objects on top does not work
+  properly
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

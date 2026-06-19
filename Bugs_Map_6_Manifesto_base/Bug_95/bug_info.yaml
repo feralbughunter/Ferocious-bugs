@@ -1,0 +1,9 @@
+bug_number: 95
+campfire: Boss fight
+description: Missing mushrooms. Garages on the right.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

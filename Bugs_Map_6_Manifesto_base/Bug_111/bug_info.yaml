@@ -1,0 +1,13 @@
+bug_number: 111
+campfire: Boss fight
+description: When you send the pterosaur there is no Attack label on the drone, but
+  there is on a normal enemy. The moment you send him, the drone jumps. And in the
+  end of the animation the Pterosaur despawns in front of your eyes without flying
+  behind some cover. No sounds during their battle, no explosion or failing engines.
+  The hovering drone also makes no sound.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

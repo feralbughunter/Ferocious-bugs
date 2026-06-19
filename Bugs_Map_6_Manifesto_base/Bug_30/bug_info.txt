@@ -1,0 +1,13 @@
+Bug #30
+==================================================
+
+Description:
+Level escape through here.
+
+Campfire: Harbor cliffs
+
+Type: Level escape
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

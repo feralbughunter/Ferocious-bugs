@@ -1,0 +1,13 @@
+Bug #36
+==================================================
+
+Description:
+After the submarine cutscene the trex will disappear and run up to you from behind. This might be related to the Parasaur bug because you can shove him with much ease and if you skip the cutscene, you will see him flying back.
+
+Campfire: Harbor entrance
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

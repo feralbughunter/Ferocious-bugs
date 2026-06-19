@@ -1,0 +1,8 @@
+bug_number: 51
+description: No collision on these doors anywhere in the game.
+type:
+- Collision missing
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

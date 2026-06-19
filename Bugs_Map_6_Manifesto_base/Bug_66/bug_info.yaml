@@ -1,0 +1,9 @@
+bug_number: 66
+description: Reloading the gauss cannon will make the magazine disappear in your hand
+  at the end of the animation.
+type:
+- Broken model
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

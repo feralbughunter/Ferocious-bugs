@@ -1,0 +1,12 @@
+bug_number: 50
+campfire: Little camp front
+description: I do not have a flame thrower here. Am I supposed to go there to get
+  the plant? You can still get there using illegal means and there are items here
+  suggesting you should be able to get here.
+type:
+- Player confusion
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

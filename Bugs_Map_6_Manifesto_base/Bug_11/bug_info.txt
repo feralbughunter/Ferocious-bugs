@@ -1,0 +1,13 @@
+Bug #11
+==================================================
+
+Description:
+You can grab both these things through the door.
+
+Campfire: Cave exit
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

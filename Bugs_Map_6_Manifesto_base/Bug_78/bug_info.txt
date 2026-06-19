@@ -1,0 +1,13 @@
+Bug #78
+==================================================
+
+Description:
+Paper remains floating after the box is destroyed. These permanent items with no physics should be placed on immovable objects.
+
+Campfire: Courtyard midpoint
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

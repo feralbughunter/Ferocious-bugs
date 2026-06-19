@@ -1,0 +1,9 @@
+bug_number: 108
+campfire: Boss fight
+description: The antennas up here are not properly seated.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

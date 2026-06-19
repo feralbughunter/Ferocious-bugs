@@ -1,0 +1,9 @@
+bug_number: 27
+campfire: Checkpoint
+description: Level escape through here. Secret above the Checkpoint campfire.
+type:
+- Level escape
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

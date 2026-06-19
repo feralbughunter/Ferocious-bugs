@@ -1,0 +1,13 @@
+Bug #82
+==================================================
+
+Description:
+Upon pressing the elevator button the doors will jump a little, you will register it as movement and it will feel odd. The elevator makes no sound, the buttons make no sound either. When you jump in the elevator, the ceiling light is not solid.
+
+Campfire: Courtyard elevator
+
+Type: Broken logic, Collision missing
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

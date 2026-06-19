@@ -1,0 +1,13 @@
+bug_number: 43
+campfire: Little camp front
+description: You can fall down here and not be able to jump back up. In there you
+  will find a few unreachable interaction points. You need to go there to uncover
+  the secret but you can not get out. Is this supposed to be connected to the chamber
+  below?
+type:
+- Game breaking
+- Interaction issue
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

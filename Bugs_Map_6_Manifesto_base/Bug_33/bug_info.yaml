@@ -1,0 +1,9 @@
+bug_number: 33
+campfire: Harbor entrance
+description: The wall is getting slimed.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,13 @@
+Bug #18
+==================================================
+
+Description:
+Level escape through here.
+
+Campfire: Checkpoint
+
+Type: Level escape
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

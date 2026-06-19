@@ -1,0 +1,13 @@
+Bug #38
+==================================================
+
+Description:
+Parts of this gate are not solid.
+
+Campfire: Checkpoint mid
+
+Type: Collision missing
+Severity: Low
+Reproducibility: Always
+Status: unfixed
+Version: 1.09.273.4211

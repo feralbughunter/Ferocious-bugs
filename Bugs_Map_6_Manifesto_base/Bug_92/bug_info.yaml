@@ -1,0 +1,10 @@
+bug_number: 92
+campfire: Boss fight
+description: Level escape through there from the final cliff. You can get quite far
+  away this way.
+type:
+- Level escape
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

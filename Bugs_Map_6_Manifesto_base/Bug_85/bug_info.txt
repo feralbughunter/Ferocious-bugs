@@ -1,0 +1,11 @@
+Bug #85
+==================================================
+
+Description:
+Another instance of Lowlands supply key lockers. Final mission after elevator behind locked doors.
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

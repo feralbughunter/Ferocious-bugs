@@ -1,0 +1,13 @@
+Bug #54
+==================================================
+
+Description:
+Bones have no collisions. 
+
+Campfire: Campfire
+
+Type: Collision missing
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

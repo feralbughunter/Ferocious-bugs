@@ -1,0 +1,13 @@
+Bug #68
+==================================================
+
+Description:
+This leg is not properly inserted in the bucket.
+
+Campfire: Garage
+
+Type: Item placement
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

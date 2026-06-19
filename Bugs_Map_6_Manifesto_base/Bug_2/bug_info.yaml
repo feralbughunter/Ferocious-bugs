@@ -1,0 +1,9 @@
+bug_number: 2
+campfire: Manifesto base start
+description: Something is wrong with this corner, you can not go there.
+type:
+- Invisible wall
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,13 @@
+Bug #69
+==================================================
+
+Description:
+Raptor can not go through the door. The other door on the other side as well.
+
+Campfire: Garage
+
+Type: Broken model
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

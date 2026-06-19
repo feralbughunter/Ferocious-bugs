@@ -1,0 +1,10 @@
+bug_number: 64
+campfire: Garage
+description: Lowlands key required. This seems to be a copy paste error.
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

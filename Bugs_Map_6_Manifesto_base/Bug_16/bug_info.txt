@@ -1,0 +1,13 @@
+Bug #16
+==================================================
+
+Description:
+Floating objects on a box that can be destroyed.
+
+Campfire: Checkpoint
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

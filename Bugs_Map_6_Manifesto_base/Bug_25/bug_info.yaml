@@ -1,0 +1,10 @@
+bug_number: 25
+description: Most ammo has None description in the journal. This is present for a
+  lot of other items too.
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

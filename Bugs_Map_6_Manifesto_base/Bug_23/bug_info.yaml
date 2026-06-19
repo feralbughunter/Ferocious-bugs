@@ -1,0 +1,11 @@
+bug_number: 23
+campfire: Checkpoint
+description: The skull in the water here is blinking with no interaction and is not
+  solid.
+type:
+- Collision missing
+- Interaction issue
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

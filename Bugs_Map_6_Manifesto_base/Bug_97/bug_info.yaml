@@ -1,0 +1,10 @@
+bug_number: 97
+campfire: Boss fight
+description: I have brightness at 0 in settings and this is blindingly shiny. Also
+  it is a paper on a board with text. This applies to all the info boards here.
+type:
+- Broken model
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

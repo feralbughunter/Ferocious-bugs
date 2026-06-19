@@ -1,0 +1,11 @@
+Bug #88
+==================================================
+
+Description:
+There is no indication that some of these doors can be opened. Until this map all doors like this were locked. You will not know to try to open them. There should be a green keypad, a light above them or some hint that you can walk through them. Final battle in the office.
+
+Type: Player confusion
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

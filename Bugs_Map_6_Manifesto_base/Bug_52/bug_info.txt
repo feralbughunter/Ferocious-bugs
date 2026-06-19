@@ -1,0 +1,13 @@
+Bug #52
+==================================================
+
+Description:
+You can pick up a scope here that shows just 1x at the bottom right. Campfire here has no name. It is at the firing range.
+
+Campfire: Campfire
+
+Type: Player confusion, Broken logic
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.09.273.4211

@@ -1,0 +1,11 @@
+Bug #83
+==================================================
+
+Description:
+You can not make campfire on the metal but can on the concrete, sometimes you can not make one on rocks. Final mission after elevator.
+
+Type: Item placement, Broken logic
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

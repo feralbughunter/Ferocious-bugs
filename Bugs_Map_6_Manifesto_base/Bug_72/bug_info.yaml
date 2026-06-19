@@ -1,0 +1,11 @@
+bug_number: 72
+campfire: Courtyard start
+description: Broken see through model from the back side. All of these half built
+  mechs show up on the map even if you can not drive them.
+type:
+- Broken model
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,12 @@
+bug_number: 49
+campfire: Little camp front
+description: It is impossible to go there and get the secret, the water will kill
+  you.
+type:
+- Game breaking
+- Broken logic
+- Player confusion
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

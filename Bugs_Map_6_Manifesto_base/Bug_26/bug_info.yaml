@@ -1,0 +1,10 @@
+bug_number: 26
+description: What is banana for? You can use it in the backpack but I did not figure
+  out what it does.
+type:
+- Player confusion
+- Broken logic
+severity: Medium
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

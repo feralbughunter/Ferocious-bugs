@@ -1,0 +1,13 @@
+Bug #14
+==================================================
+
+Description:
+This level is inside the statue and there is no explanation in the game that you should be looking for these. It is also clipping through. The animation on it is broken.
+
+Campfire: Cave exit
+
+Type: Player confusion, Item placement, Game breaking
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

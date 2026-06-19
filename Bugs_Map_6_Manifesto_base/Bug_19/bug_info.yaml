@@ -1,0 +1,9 @@
+bug_number: 19
+campfire: Checkpoint
+description: The key is floating.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

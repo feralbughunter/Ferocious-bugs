@@ -1,0 +1,13 @@
+Bug #63
+==================================================
+
+Description:
+Items fell through shelves.
+
+Campfire: Garage
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

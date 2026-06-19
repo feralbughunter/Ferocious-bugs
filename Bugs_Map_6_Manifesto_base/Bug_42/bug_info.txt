@@ -1,0 +1,13 @@
+Bug #42
+==================================================
+
+Description:
+If you swim to the waterfall there underwater yo will drop to the ground in a half swimming state.
+
+Campfire: Little camp main entrance
+
+Type: Broken logic
+Severity: Low
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

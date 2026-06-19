@@ -1,0 +1,9 @@
+bug_number: 75
+campfire: Courtyard midpoint
+description: Level escape through there.
+type:
+- Level escape
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,12 @@
+bug_number: 59
+campfire: Manifesto base start
+description: This door seems to suggest you need a dryosaur, but there are none here
+  in the valley and I have not see any anywhere else. You can get there using illegal
+  means by escaping onto the mountains from the nearest secret to the left.
+type:
+- Broken logic
+- Game breaking
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

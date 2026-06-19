@@ -1,0 +1,13 @@
+Bug #9
+==================================================
+
+Description:
+Items on this box clip into it when opened.
+
+Campfire: Cave exit
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always
+Status: unfixed
+Version: 1.09.273.4211

@@ -1,0 +1,13 @@
+Bug #81
+==================================================
+
+Description:
+If you turn this gun left you can be put behind the railing. Mid fight the gun will tilt a little. Maybe it is intended to show damage?
+
+Campfire: Courtyard elevator
+
+Type: Item placement
+Severity: Medium
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

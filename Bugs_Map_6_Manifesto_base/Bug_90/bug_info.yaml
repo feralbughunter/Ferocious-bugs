@@ -1,0 +1,9 @@
+bug_number: 90
+campfire: Boss fight
+description: Boss fight entrance cliff, you can fall down here and get stuck.
+type:
+- Item placement
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

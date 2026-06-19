@@ -1,0 +1,13 @@
+Bug #22
+==================================================
+
+Description:
+This door has broken hinges and gets stuck. Right below the cave exit campfire.
+
+Campfire: Cave exit
+
+Type: Item placement
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

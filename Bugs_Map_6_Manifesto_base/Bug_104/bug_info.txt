@@ -1,0 +1,13 @@
+Bug #104
+==================================================
+
+Description:
+The Pterosaur cage button does not open the front door, but only the top. The door will open on it's own when the drone is damaged which makes no sense. Also no sounds or animation, the roof snaps open. You do not even need to open the top because he will fly out the front door. Why is this option here then? 
+
+Campfire: Boss fight
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always 
+Status: unfixed
+Version: 1.09.273.4211

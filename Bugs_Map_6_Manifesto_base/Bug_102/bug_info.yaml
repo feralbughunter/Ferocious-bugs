@@ -1,0 +1,9 @@
+bug_number: 102
+campfire: Boss fight
+description: Raptor will not walk down these stairs.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

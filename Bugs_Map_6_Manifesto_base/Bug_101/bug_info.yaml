@@ -1,0 +1,11 @@
+bug_number: 101
+campfire: Boss fight
+description: The helipad is not solid. Call a raptor to follow you up here and watch
+  where he goes over the fence on the right.
+type:
+- Collision missing
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

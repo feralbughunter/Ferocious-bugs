@@ -1,0 +1,9 @@
+bug_number: 54
+campfire: Campfire
+description: Bones have no collisions.
+type:
+- Collision missing
+severity: Low
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

@@ -1,0 +1,11 @@
+bug_number: 12
+campfire: Cave exit
+description: You can get here by jumping over the rocks and the wall. This is probably
+  not the intended solution.
+type:
+- Broken logic
+- Invisible wall
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

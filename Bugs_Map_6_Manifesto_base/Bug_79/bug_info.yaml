@@ -1,0 +1,9 @@
+bug_number: 79
+campfire: Courtyard midpoint
+description: Second Lowlands key lockbox with not way of opening it.
+type:
+- Broken logic
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211

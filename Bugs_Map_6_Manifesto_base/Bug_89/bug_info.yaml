@@ -1,0 +1,9 @@
+bug_number: 89
+description: You can not shoot through this very obvious empty space in the main office
+  garden. Texture cut of on the right.
+type:
+- Broken model
+severity: High
+reproducibility: Always
+status: unfixed
+version: 1.09.273.4211
