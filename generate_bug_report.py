@@ -7,8 +7,10 @@ Scans Bugs_Map_* folders and generates a comprehensive HTML report.
 import os
 import re
 import sys
+import yaml
 from pathlib import Path
 from collections import defaultdict
+from datetime import datetime
 from PIL import Image
 
 
@@ -73,7 +75,7 @@ def parse_overall_info(filepath):
 
 
 def parse_bug_info(filepath):
-    """Parse bug_info.txt to extract bug details."""
+    """Parse bug_info.yaml to extract bug details."""
     bug = {
         'number': '',
         'description': '',
@@ -82,40 +84,40 @@ def parse_bug_info(filepath):
         'reproducibility': '',
         'campfire': '',
         'status': 'unfixed',
-        'version': ''
+        'version': '',
+        'timestamp': None,
+        'timestamp_human': ''
     }
 
     with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
+        data = yaml.safe_load(f)
 
-    lines = content.strip().split('\n')
+    # Extract data from YAML structure
+    bug['number'] = str(data.get('bug_number', ''))
+    bug['description'] = data.get('description', '')
 
-    for i, line in enumerate(lines):
-        line_stripped = line.strip()
+    # Handle type field - can be a list or string
+    type_value = data.get('type', '')
+    if isinstance(type_value, list):
+        # Sort types alphabetically if multiple types
+        sorted_types = sorted(type_value)
+        bug['type'] = ', '.join(sorted_types)
+    else:
+        bug['type'] = type_value
 
-        if line_stripped.startswith('Bug #'):
-            bug['number'] = line_stripped.replace('Bug #', '').strip()
-        elif line_stripped.startswith('Description:'):
-            desc_lines = []
-            for j in range(i + 1, len(lines)):
-                next_line = lines[j].strip()
-                if next_line and not next_line.startswith('Type:') and not next_line.startswith('Campfire:'):
-                    desc_lines.append(next_line)
-                else:
-                    break
-            bug['description'] = ' '.join(desc_lines)
-        elif line_stripped.startswith('Campfire:'):
-            bug['campfire'] = line_stripped.split(':', 1)[1].strip()
-        elif line_stripped.startswith('Type:'):
-            bug['type'] = line_stripped.split(':', 1)[1].strip()
-        elif line_stripped.startswith('Severity:'):
-            bug['severity'] = line_stripped.split(':', 1)[1].strip()
-        elif line_stripped.startswith('Reproducibility:'):
-            bug['reproducibility'] = line_stripped.split(':', 1)[1].strip()
-        elif line_stripped.startswith('Status:'):
-            bug['status'] = line_stripped.split(':', 1)[1].strip().lower()
-        elif line_stripped.startswith('Version:'):
-            bug['version'] = line_stripped.split(':', 1)[1].strip()
+    bug['severity'] = data.get('severity', '')
+    bug['reproducibility'] = data.get('reproducibility', '')
+    bug['campfire'] = data.get('campfire', '')
+    bug['status'] = data.get('status', 'unfixed').lower()
+    bug['version'] = data.get('version', '')
+
+    # Handle timestamp
+    timestamp = data.get('timestamp')
+    if timestamp:
+        bug['timestamp'] = timestamp
+        # Convert epoch seconds to human-readable format
+        dt = datetime.fromtimestamp(timestamp)
+        bug['timestamp_human'] = dt.strftime('%Y-%m-%d %H:%M:%S')
 
     return bug
 
@@ -170,26 +172,33 @@ def validate_bug_values(bugs_by_map, overall_info):
         for bug_id, bug_data in map_info['bugs'].items():
             bug_path = bug_data['path']
 
+            # Validate timestamp is present
+            if bug_data['timestamp'] is None:
+                errors.append(
+                    f"Missing timestamp in {bug_path}/bug_info.yaml\n"
+                    f"  A timestamp field is required"
+                )
+
             # Validate bug types (handle comma-separated types)
             bug_types = [t.strip() for t in bug_data['type'].split(',') if t.strip()]
             for bug_type in bug_types:
                 if bug_type not in valid_bug_types:
                     errors.append(
-                        f"Invalid Bug type '{bug_type}' in {bug_path}/bug_info.txt\n"
+                        f"Invalid Bug type '{bug_type}' in {bug_path}/bug_info.yaml\n"
                         f"  Valid types: {', '.join(sorted(valid_bug_types))}"
                     )
 
             # Validate severity
             if bug_data['severity'] and bug_data['severity'] not in valid_severities:
                 errors.append(
-                    f"Invalid Severity '{bug_data['severity']}' in {bug_path}/bug_info.txt\n"
+                    f"Invalid Severity '{bug_data['severity']}' in {bug_path}/bug_info.yaml\n"
                     f"  Valid severities: {', '.join(sorted(valid_severities))}"
                 )
 
             # Validate status
             if bug_data['status'] and bug_data['status'] not in valid_statuses:
                 errors.append(
-                    f"Invalid Bug Status '{bug_data['status']}' in {bug_path}/bug_info.txt\n"
+                    f"Invalid Bug Status '{bug_data['status']}' in {bug_path}/bug_info.yaml\n"
                     f"  Valid statuses: {', '.join(sorted(valid_statuses))}"
                 )
 
@@ -917,7 +926,7 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
             html += f"""                <li class="{list_bg_class}" id="list-{map_name}-{bug_id}" data-bug-types="{bug_types_for_filter}" data-severity="{bug_data['severity']}" data-status="{bug_data['status']}">
                     <a href="#bug-{map_name}-{bug_id}">
                         <span class="severity-badge {severity_class}">{bug_data['severity']}</span>
-                        <span>Map {map_number} Bug #{bug_id} - {bug_type_html} - <strong>{status_text}</strong> - v{bug_data['version']}</span>
+                        <span>Map {map_number} Bug #{bug_id} - {bug_type_html} - <strong>{status_text}</strong> - v{bug_data['version']} - Date: {bug_data['timestamp_human']}</span>
                     </a>
                 </li>
 """
@@ -949,7 +958,8 @@ def generate_html(bugs_by_map, overall_info, total_bugs, type_counts, status_cou
                 <p><strong>Type:</strong> {bug_data['type']}</p>
                 <p><strong>Severity:</strong> <span class="severity-badge {severity_class}">{bug_data['severity']}</span></p>
                 <p><strong>Reproducibility:</strong> {bug_data['reproducibility']}</p>
-                <p><strong>Version:</strong> {bug_data['version']}</p>"""
+                <p><strong>Version:</strong> {bug_data['version']}</p>
+                <p><strong>Reported:</strong> {bug_data['timestamp_human']}</p>"""
 
             if bug_data['campfire']:
                 html += f"""
@@ -1233,7 +1243,7 @@ def main():
 
                 for bug_dir in sorted(item.iterdir()):
                     if bug_dir.is_dir() and bug_dir.name.startswith('Bug_'):
-                        bug_info_path = bug_dir / 'bug_info.txt'
+                        bug_info_path = bug_dir / 'bug_info.yaml'
                         if bug_info_path.exists():
                             bug_data = parse_bug_info(bug_info_path)
                             bug_data['images'] = find_images(bug_dir)
@@ -1255,7 +1265,7 @@ def main():
     # Validate bug values against overall_info.txt
     validation_errors = validate_bug_values(bugs_by_map, overall_info)
     if validation_errors:
-        print("ERROR: Found invalid values in bug_info.txt files:")
+        print("ERROR: Found invalid values in bug_info.yaml files:")
         print()
         for error in validation_errors:
             print(error)

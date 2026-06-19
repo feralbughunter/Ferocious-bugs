@@ -1,14 +1,12 @@
 bug_number: 82
+campfire: Main dock
 description: 'Shooting the 50.cal the ammunition does not move. The gun stops shooting
   at one point with no indication why or any sound. You can then remount it and continue
   shooting.
 
   There should probably be some clue for the player to understand what is happening.
 
-  This gun is awkwardly placed and pushes you into the sandbags.
-
-
-  Campfire:'
+  This gun is awkwardly placed and pushes you into the sandbags.'
 type:
 - Broken logic
 - Item placement
@@ -17,3 +15,4 @@ severity: High
 reproducibility: Always
 status: unfixed
 version: 1.08.400.4173
+timestamp: 1781457798

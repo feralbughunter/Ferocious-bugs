@@ -4,6 +4,7 @@ description: After the end, loading any save will get you a black screen. The ma
 type:
 - Game breaking
 severity: High
-reproducibility: 'Status: unfixed'
+reproducibility: Always
 status: unfixed
 version: 1.09.273.4211
+timestamp: 1781862822

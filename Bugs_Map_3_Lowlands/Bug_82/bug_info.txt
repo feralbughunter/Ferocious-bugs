@@ -6,7 +6,7 @@ Shooting the 50.cal the ammunition does not move. The gun stops shooting at one 
 There should probably be some clue for the player to understand what is happening.
 This gun is awkwardly placed and pushes you into the sandbags.
 
-Campfire: 
+Campfire: Main dock
 
 Type: Broken logic, Item placement, Player confusion
 Severity: High
