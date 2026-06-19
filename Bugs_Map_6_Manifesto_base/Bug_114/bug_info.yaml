@@ -1,7 +1,7 @@
 bug_number: 114
 description: In the end game credits there is one name in " " where the ending double
   quote has empty spaces in front of it. Middle of the screen. In the community QA
-  section, the last name seems to consist invalid characters.
+  section, the last name seems to be made of invalid characters.
 type:
 - Broken logic
 severity: High
