@@ -1,0 +1,13 @@
+Bug #115
+==================================================
+
+Description:
+Looking through a scope through a fence will make the grating disappear. Probably present everywhere.
+
+Campfire: Garage
+
+Type: Broken logic
+Severity: High
+Reproducibility: Always
+Status: unfixed
+Version: 1.09.273.4211
